@@ -1,0 +1,12 @@
+#!/bin/bash
+
+
+# Random function -------------------------------------------------------------
+# Generate a random base 64 encoded string
+# Can pass in a number as first argument to adjust length
+# Copys the value to clipboard
+function rand() {
+	openssl rand -base64 $((${1:-16} * 3)) | tr -d '\n' | pbcopy && pbpaste && echo;
+}
+
+rand "$1"

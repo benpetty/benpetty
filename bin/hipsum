@@ -1,0 +1,14 @@
+#!/bin/bash
+
+
+# Hipsum has a JSON API that anyone is welcome to use.
+# https://hipsum.co/the-api/
+
+
+function hipsum(){
+    curl -s "https://hipsum.co/api/?type=hipster-latin&sentences=${1:-1}" \
+        | jq -r '.[0]' \
+        | pbcopy && pbpaste && echo
+}
+
+hipsum "$1"

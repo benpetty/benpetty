@@ -1,0 +1,1 @@
+To create a custom bin directory in Unix, first create a directory named '`bin`' in your home directory (e.g., `mkdir ~/bin`), then add it to your PATH by editing your `.bashrc` file to include the line `export PATH=~/bin:$PATH`.

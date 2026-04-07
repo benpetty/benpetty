@@ -1,0 +1,60 @@
+#!/bin/bash
+
+OUTPUT_DIR="aws-audit-$(date +%Y%m%d-%H%M%S)"
+mkdir -p $OUTPUT_DIR
+
+echo "Starting AWS Full Account Audit..."
+echo "Results will be saved to $OUTPUT_DIR"
+
+regions=$(aws ec2 describe-regions --query "Regions[].RegionName" --output text)
+
+for region in $regions; do
+  echo "Scanning region: $region"
+
+  mkdir -p $OUTPUT_DIR/$region
+
+  aws ec2 describe-instances --region $region > $OUTPUT_DIR/$region/ec2_instances.json
+  aws ec2 describe-volumes --region $region > $OUTPUT_DIR/$region/ebs_volumes.json
+  aws ec2 describe-snapshots --owner-ids self --region $region > $OUTPUT_DIR/$region/ebs_snapshots.json
+  aws ec2 describe-addresses --region $region > $OUTPUT_DIR/$region/elastic_ips.json
+  aws ec2 describe-nat-gateways --region $region > $OUTPUT_DIR/$region/nat_gateways.json
+  aws ec2 describe-security-groups --region $region > $OUTPUT_DIR/$region/security_groups.json
+  aws ec2 describe-vpcs --region $region > $OUTPUT_DIR/$region/vpcs.json
+  aws ec2 describe-subnets --region $region > $OUTPUT_DIR/$region/subnets.json
+
+  aws elbv2 describe-load-balancers --region $region > $OUTPUT_DIR/$region/alb_nlb.json
+  aws elb describe-load-balancers --region $region > $OUTPUT_DIR/$region/classic_elb.json
+
+  aws autoscaling describe-auto-scaling-groups --region $region > $OUTPUT_DIR/$region/autoscaling_groups.json
+
+  aws rds describe-db-instances --region $region > $OUTPUT_DIR/$region/rds_instances.json
+  aws rds describe-db-snapshots --region $region > $OUTPUT_DIR/$region/rds_snapshots.json
+
+  aws dynamodb list-tables --region $region > $OUTPUT_DIR/$region/dynamodb_tables.json
+
+  aws lambda list-functions --region $region > $OUTPUT_DIR/$region/lambda_functions.json
+
+  aws ecs list-clusters --region $region > $OUTPUT_DIR/$region/ecs_clusters.json
+  aws eks list-clusters --region $region > $OUTPUT_DIR/$region/eks_clusters.json
+
+  aws apigateway get-rest-apis --region $region > $OUTPUT_DIR/$region/api_gateway_rest.json
+  aws apigatewayv2 get-apis --region $region > $OUTPUT_DIR/$region/api_gateway_http.json
+
+  aws cloudformation list-stacks --region $region > $OUTPUT_DIR/$region/cloudformation_stacks.json
+
+  aws elasticbeanstalk describe-environments --region $region > $OUTPUT_DIR/$region/elasticbeanstalk_env.json
+
+  aws stepfunctions list-state-machines --region $region > $OUTPUT_DIR/$region/stepfunctions.json
+
+done
+
+echo "Scanning global services..."
+
+aws s3api list-buckets > $OUTPUT_DIR/s3_buckets.json
+aws cloudfront list-distributions > $OUTPUT_DIR/cloudfront.json
+aws iam list-roles > $OUTPUT_DIR/iam_roles.json
+aws iam list-users > $OUTPUT_DIR/iam_users.json
+aws iam list-policies --scope Local > $OUTPUT_DIR/iam_policies.json
+aws route53 list-hosted-zones > $OUTPUT_DIR/route53_zones.json
+
+echo "Audit complete. All results saved in $OUTPUT_DIR"

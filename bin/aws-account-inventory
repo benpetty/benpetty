@@ -1,0 +1,81 @@
+#!/bin/bash
+
+regions=$(aws ec2 describe-regions --query "Regions[].RegionName" --output text)
+
+echo "Scanning AWS account for resources..."
+
+for region in $regions; do
+  echo "====================================="
+  echo "Region: $region"
+  echo "====================================="
+
+  echo "EC2 Instances:"
+  aws ec2 describe-instances --region $region --query "Reservations[].Instances[].InstanceId" --output text
+
+  echo "EBS Volumes:"
+  aws ec2 describe-volumes --region $region --query "Volumes[].VolumeId" --output text
+
+  echo "Elastic IPs:"
+  aws ec2 describe-addresses --region $region --query "Addresses[].PublicIp" --output text
+
+  echo "NAT Gateways:"
+  aws ec2 describe-nat-gateways --region $region --query "NatGateways[].NatGatewayId" --output text
+
+  echo "Load Balancers:"
+  aws elbv2 describe-load-balancers --region $region --query "LoadBalancers[].LoadBalancerName" --output text
+
+  echo "Classic Load Balancers:"
+  aws elb describe-load-balancers --region $region --query "LoadBalancerDescriptions[].LoadBalancerName" --output text
+
+  echo "Auto Scaling Groups:"
+  aws autoscaling describe-auto-scaling-groups --region $region --query "AutoScalingGroups[].AutoScalingGroupName" --output text
+
+  echo "RDS Databases:"
+  aws rds describe-db-instances --region $region --query "DBInstances[].DBInstanceIdentifier" --output text
+
+  echo "DynamoDB Tables:"
+  aws dynamodb list-tables --region $region --query "TableNames[]" --output text
+
+  echo "Lambda Functions:"
+  aws lambda list-functions --region $region --query "Functions[].FunctionName" --output text
+
+  echo "ECS Clusters:"
+  aws ecs list-clusters --region $region --query "clusterArns[]" --output text
+
+  echo "EKS Clusters:"
+  aws eks list-clusters --region $region --query "clusters[]" --output text
+
+  echo "API Gateways:"
+  aws apigateway get-rest-apis --region $region --query "items[].name" --output text
+
+  echo "HTTP APIs:"
+  aws apigatewayv2 get-apis --region $region --query "Items[].Name" --output text
+
+  echo "CloudFormation Stacks:"
+  aws cloudformation list-stacks --region $region --query "StackSummaries[].StackName" --output text
+
+  echo "Step Functions:"
+  aws stepfunctions list-state-machines --region $region --query "stateMachines[].name" --output text
+
+  echo "Elastic Beanstalk:"
+  aws elasticbeanstalk describe-environments --region $region --query "Environments[].EnvironmentName" --output text
+
+done
+
+echo "====================================="
+echo "Global Services"
+echo "====================================="
+
+echo "S3 Buckets:"
+aws s3api list-buckets --query "Buckets[].Name"
+
+echo "CloudFront Distributions:"
+aws cloudfront list-distributions --query "DistributionList.Items[].Id"
+
+echo "IAM Roles:"
+aws iam list-roles --query "Roles[].RoleName"
+
+echo "Route53 Hosted Zones:"
+aws route53 list-hosted-zones --query "HostedZones[].Name"
+
+echo "Done scanning account."

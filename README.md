@@ -44,8 +44,8 @@ pre-transcoded audio, broadcast in sync to every listener.
 ### Northwest Local Cannabis · Co-Founder · 2021–Present
 [nw-local.com](https://nw-local.com)
 
-Washington State i502 licensed craft cannabis producer/processor. Co-founded the
-business in 2021; built and now run the consumer brand site.
+Co-founder of Northwest Local Cannabis, a WA i502 licensed craft cannabis
+producer/processor. Cultivator-operator across grow, tech, brand, and distribution.
 
 - Astro 6 SSG with Sanity CMS as single source of truth for strains, products, blog
   posts, retailer partners, and site settings; deployed to GitHub Pages.

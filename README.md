@@ -10,7 +10,7 @@ Founder and senior engineer with 24+ years building products end-to-end. Current
 |---|---|---|---|
 | **Audeos** | Founder & Engineer | 2023 | [audeos.com](https://audeos.com) |
 | **Northwest Local Cannabis** | Co-Founder | 2021 | [nw-local.com](https://nw-local.com) |
-| **NW Clothing** | Founder | 2001 | [nwclothing.com](https://nwclothing.com) |
+| **The North West Clothing** | Founder | 2001 | [nwclothing.com](https://nwclothing.com) |
 | **Rooted Community** | Engineer | 2024 | [rootedcommunity.org](https://rootedcommunity.org) |
 
 [**benpetty.github.io/benpetty**](https://benpetty.github.io/benpetty/) · [Resume PDF ↓](resume.pdf)
@@ -56,7 +56,7 @@ business in 2021; built and now run the consumer brand site.
 - 21+ age-gate overlay; build-time GROQ queries; static OG/JSON-LD generation.
 - **Stack:** Astro · Sanity · TypeScript · GitHub Actions
 
-### NW Clothing · Founder · 2001–Present
+### The North West Clothing · Founder · 2001–Present
 [nwclothing.com](https://nwclothing.com)
 
 Independent Pacific Northwest apparel brand specializing in design, decoration, and
@@ -158,8 +158,8 @@ for the public launch and grew through promotion to SDE II over 4+ years.
 
 *Docker · Node · WordPress · MySQL · GitHub Actions · WPEngine · Jest*
 
-- Delivered a complete website redesign for the nonprofit BlackSpace alongside the
-  agency's design and dev teams.
+- Delivered a complete website redesign for the nonprofit
+  [BlackSpace](https://blackspace.org/) alongside the agency's design and dev teams.
 - Built a containerized dev environment to streamline frontend onboarding; wrote
   scripts to sync content between remote and local databases.
 - Set up custom CI/CD pipelines with GitHub Actions and WPEngine.

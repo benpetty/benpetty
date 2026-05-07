@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Benjamin S. Petty — Founder & Engineer</title>
+  <meta name="description" content="Founder and senior engineer building independent Pacific Northwest brands — Audeos, Northwest Local Cannabis, NW Clothing, Rooted Community.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="nav-row">
+  <span>benpetty.com</span>
+  <span><a href="#resume">Resume</a> · <a href="resume.pdf" download>PDF ↓</a></span>
+</div>
+
+<header class="hero">
+  <h1>Benjamin S. Petty</h1>
+  <p class="tagline">Founder · Engineer · Pacific Northwest</p>
+  <p class="bio">Founder and senior engineer with 24+ years building products end-to-end. Currently running four consumer-facing PNW brands; previously senior engineer at Tomorrow (acq. Ethos Life), Crowd Cow, and U.S. LawShield.</p>
+  <div class="ventures">
+    <a class="venture" href="https://audeos.com">
+      <p class="v-name">Audeos</p>
+      <p class="v-role">Founder &amp; Engineer · 2023</p>
+      <p class="v-desc">Multi-channel live-streaming radio platform.</p>
+      <p class="v-url">audeos.com</p>
+    </a>
+    <a class="venture" href="https://nw-local.com">
+      <p class="v-name">Northwest Local Cannabis</p>
+      <p class="v-role">Co-Founder · 2021</p>
+      <p class="v-desc">i502 craft cannabis producer / processor.</p>
+      <p class="v-url">nw-local.com</p>
+    </a>
+    <a class="venture" href="https://nwclothing.com">
+      <p class="v-name">NW Clothing</p>
+      <p class="v-role">Founder · 2001</p>
+      <p class="v-desc">Independent PNW apparel brand.</p>
+      <p class="v-url">nwclothing.com</p>
+    </a>
+    <a class="venture" href="https://rootedcommunity.org">
+      <p class="v-name">Rooted Community</p>
+      <p class="v-role">Engineer · 2024</p>
+      <p class="v-desc">Nonprofit serving system-impacted BIPOC.</p>
+      <p class="v-url">rootedcommunity.org</p>
+    </a>
+  </div>
+</header>
+
+<main id="resume">
+<article class="resume">
+<h1 id="benjamin-s.-petty">Benjamin S. Petty</h1>
+<p><strong>Founder &amp; Engineer</strong> · Seattle, WA · (206)
+353-9874 benjamin.s.petty@gmail.com · linkedin.com/in/benjaminpetty ·
+github.com/benpetty</p>
+<hr />
+<p>Founder and senior engineer with 24+ years of building products
+end-to-end — from the 2001 launch of an independent Pacific Northwest
+apparel brand through eight years as a senior engineer at SaaS companies
+(Tomorrow Ideas, acq. Ethos Life; Crowd Cow; U.S. LawShield). Currently
+running four consumer-facing businesses across cannabis, music
+streaming, apparel, and nonprofit work — co-founder on Northwest Local
+Cannabis, solo founder/engineer on the others, owning design,
+engineering, deploy, and operations end-to-end.</p>
+<hr />
+<h2 id="current-ventures-2021present">Current Ventures ·
+2021–Present</h2>
+<h3 id="audeos-founder-engineer-2023present">Audeos · Founder &amp;
+Engineer · 2023–Present</h3>
+<p><a href="https://audeos.com">audeos.com</a> · <a
+href="https://play.audeos.com">play.audeos.com</a></p>
+<p>Multi-channel live-streaming radio platform. Each channel loops a
+curated playlist of pre-transcoded audio, broadcast in sync to every
+listener.</p>
+<ul>
+<li>Realtime engine on Phoenix LiveView with one
+<code>ChannelEngine</code> GenServer per active channel under a custom
+loop-engine state machine; PubSub fan-out keyed by stable channel id;
+lookahead/cursor model gives listeners a visible “next N” plan.</li>
+<li>HLS pipeline: ffmpeg transcoder converts uploaded audio into rolling
+segments; Cloudflare R2 for object storage; MediaMTX RTMP relay; Oban
+background workers handle transcode, cleanup, and database backups.</li>
+<li>Solo deploy on Fly.io with telemetry-driven incident response,
+Sentry integration with PII scrubbing, and a documented
+postmortem-driven invariants culture.</li>
+<li>Marketing site (audeos.com): Next.js 16 + Contentful with build-time
+Spotify playlist integration and client-side Fuse.js search, deployed to
+GitHub Pages.</li>
+<li><strong>Stack:</strong> Elixir · Phoenix · LiveView · Postgres ·
+Oban · Cloudflare R2 · MediaMTX · Sentry · Fly.io · Next.js ·
+Contentful</li>
+</ul>
+<h3 id="northwest-local-cannabis-co-founder-2021present">Northwest Local
+Cannabis · Co-Founder · 2021–Present</h3>
+<p><a href="https://nw-local.com">nw-local.com</a></p>
+<p>Washington State i502 licensed craft cannabis producer/processor.
+Co-founded the business in 2021; built and now run the consumer brand
+site.</p>
+<ul>
+<li>Astro 6 SSG with Sanity CMS as single source of truth for strains,
+products, blog posts, retailer partners, and site settings; deployed to
+GitHub Pages.</li>
+<li>Sanity content publish triggers GitHub Actions rebuild via
+<code>workflow_dispatch</code> webhook for ~1–2 minute end-to-end
+propagation.</li>
+<li>Custom Claude Code skills (<code>/new-strain</code>,
+<code>/new-product</code>, <code>/new-post</code>,
+<code>/audit-content</code>, <code>/describe-assets</code>) automate the
+content workflows.</li>
+<li>21+ age-gate overlay; build-time GROQ queries; static OG/JSON-LD
+generation.</li>
+<li><strong>Stack:</strong> Astro · Sanity · TypeScript · GitHub
+Actions</li>
+</ul>
+<h3 id="nw-clothing-founder-2001present">NW Clothing · Founder ·
+2001–Present</h3>
+<p><a href="https://nwclothing.com">nwclothing.com</a></p>
+<p>Independent Pacific Northwest apparel brand specializing in design,
+decoration, and distribution. Founded 2001; relaunched in 2026 on a
+modern stack with print-on-demand fulfillment.</p>
+<ul>
+<li>Original era (2001–2015): generated up to $5K/day in online sales
+through targeted campaigns; up to $20K gross revenue per weekend at
+sponsored events and festivals; trained employees across retail,
+warehouse, and screen-printing operations; sustained inventory levels
+via demand forecasting from sales analytics.</li>
+<li>2026 relaunch: custom Shopify OS 2.0 theme (Dawn-based) with Vite +
+SCSS + Alpine.js build pipeline; TypeScript CLI built on Shopify Admin
+GraphQL and Printful REST for POD fulfillment; conversational content
+management via custom Claude Code skills.</li>
+<li><strong>Stack:</strong> Shopify · Liquid · Vite · TypeScript ·
+Alpine.js · SCSS · Printful API</li>
+</ul>
+<h3 id="rooted-community-engineer-2024present">Rooted Community ·
+Engineer · 2024–Present</h3>
+<p><a href="https://rootedcommunity.org">rootedcommunity.org</a></p>
+<p>Marketing site for a small Washington nonprofit serving
+system-impacted BIPOC community members in King, Snohomish, and Pierce
+counties.</p>
+<ul>
+<li>Astro 6 + Sanity v6 with editorial design system (Newsreader serif +
+Inter, custom cream/forest/clay palette); self-hosted variable fonts;
+build-time GROQ only.</li>
+<li>8 routes plus dynamic program-detail pages; pages render gracefully
+with sparse fields so the org can publish and fill in over time.</li>
+<li>CI pipeline: typecheck + audit on PR, full deploy chain on
+<code>main</code>, nightly audit run; lychee link checking and
+Lighthouse audits in CI.</li>
+<li><strong>Stack:</strong> Astro · Sanity · TypeScript · GitHub
+Actions</li>
+</ul>
+<hr />
+<h2 id="engineering-experience">Engineering Experience</h2>
+<h3
+id="u.s.-lawshield-senior-software-development-engineer-contract-sep-2022-aug-2025">U.S.
+LawShield · Senior Software Development Engineer (Contract) · Sep 2022 –
+Aug 2025</h3>
+<p><a href="https://uslawshield.com">uslawshield.com</a></p>
+<p><em>PHP · Laravel · Docker · Kubernetes · AWS EKS · Helm · React ·
+Next.js · Tailwind · GitLab</em></p>
+<ul>
+<li>Maintained backwards compatibility with the legacy API while
+building multiple new backend services and migrating a poorly-structured
+monolith into modern, scalable service architecture supporting continued
+product growth.</li>
+<li>Partnered with the DevOps lead to containerize applications and
+upgrade the CI/CD pipelines using Docker, Kubernetes, AWS EKS, Helm
+charts, and GitLab.</li>
+<li>Added automated unit tests and test coverage to previously untested
+or manually-tested code bases.</li>
+<li>Built a React-based employee dashboard used by customer support
+agents, admins, attorneys, and executives, with role-based access
+control (RBAC) for permissions.</li>
+</ul>
+<h3 id="crowd-cow-software-engineer-fte-may-2021-dec-2021">Crowd Cow ·
+Software Engineer (FTE) · May 2021 – Dec 2021</h3>
+<p><a href="https://crowdcow.com">crowdcow.com</a></p>
+<p><em>Ruby on Rails · Vue.js · Sass · Redis · MySQL · Docker · Heroku ·
+RSpec</em></p>
+<ul>
+<li><strong>Redesigned the legacy credit-card processing module, raising
+subscription payment acceptance from 70% to 90%.</strong> Categorized
+failed-charge decline codes from the payment processor and strategically
+targeted retry scenarios — for example, timing retries on
+insufficient-funds declines for likely account-replenishment
+windows.</li>
+<li>On-call rotation for site reliability and production incident
+response; primary point of contact for team support tickets.</li>
+</ul>
+<h3 id="tomorrow-ideas-acq.-ethos-life-mar-2017-may-2021">Tomorrow Ideas
+(acq. Ethos Life) · Mar 2017 – May 2021</h3>
+<p><a href="https://tmro.com">tmro.com</a></p>
+<p>Early-stage fintech startup; acquired by Ethos Life. Joined as
+contract project lead for the public launch and grew through promotion
+to SDE II over 4+ years.</p>
+<p><strong>Software Development Engineer II (FTE) · Aug 2020 – May
+2021</strong></p>
+<p><em>TypeScript · React · Redux · Node · Express · Tailwind · Redis ·
+Docker · GitHub Actions · AWS · Jest</em></p>
+<ul>
+<li>Engineering project lead for a complete UI/UX redesign of the app’s
+web experience, pivoting from a native-app-funnel model to a web-centric
+desktop-friendly product built from the ground up.</li>
+<li>Collaborated with external partners and engineers on exclusive
+integrations with Tomorrow’s app and APIs.</li>
+</ul>
+<p><strong>Software Engineer (FTE) · Aug 2017 – Jul 2020</strong></p>
+<p><em>Python · Django · PHP · Laravel · React · Redux · Sass · Redis ·
+PostgreSQL · Docker · TravisCI · AWS · PHPUnit</em></p>
+<ul>
+<li>Led refactoring projects on the monolithic API codebase, converting
+key modules into containerized services; built efficient, reliable CI/CD
+pipelines for all backend services and web projects.</li>
+<li>Built a custom admin dashboard with on-demand features for
+executive, BI, marketing, product, and customer-support teams.</li>
+<li>Identified and repaired bottlenecks in page-load and server response
+times.</li>
+<li>Mentored junior engineers via regular pair-programming and code
+review.</li>
+</ul>
+<p><strong>Software Engineer (Contract) · Mar 2017 – Jul
+2017</strong></p>
+<p><em>Python · Django · Wagtail CMS · React · Redux · PostgreSQL ·
+CircleCI · AWS · Pytest</em></p>
+<ul>
+<li>Project lead for the launch of Tomorrow’s marketing site and
+flagship web app. Owned all web-development tasks for the company’s
+public product announcement and initial release.</li>
+</ul>
+<h3
+id="instrument-full-stack-engineer-contract-jun-2022-sep-2022">Instrument
+· Full Stack Engineer (Contract) · Jun 2022 – Sep 2022</h3>
+<p><a href="https://instrument.com">instrument.com</a></p>
+<p><em>Docker · Node · WordPress · MySQL · GitHub Actions · WPEngine ·
+Jest</em></p>
+<ul>
+<li>Delivered a complete website redesign for the nonprofit BlackSpace
+alongside the agency’s design and dev teams.</li>
+<li>Built a containerized dev environment to streamline frontend
+onboarding; wrote scripts to sync content between remote and local
+databases.</li>
+<li>Set up custom CI/CD pipelines with GitHub Actions and WPEngine.</li>
+</ul>
+<hr />
+<h2 id="technical">Technical</h2>
+<p><strong>Languages</strong> TypeScript · JavaScript · Elixir · Python
+· Ruby · PHP · Bash</p>
+<p><strong>Frontend</strong> Astro · Next.js · React · Phoenix LiveView
+· Alpine.js · Tailwind · SCSS</p>
+<p><strong>Backend</strong> Phoenix · Django · Express · Rails ·
+Laravel</p>
+<p><strong>Data</strong> PostgreSQL · MySQL · Redis · MongoDB ·
+Cloudflare R2</p>
+<p><strong>Infrastructure</strong> AWS (EKS) · Fly.io · Docker ·
+Kubernetes · Helm · GitHub Actions · GitLab CI</p>
+<p><strong>Content &amp; commerce</strong> Sanity · Contentful ·
+WordPress · Shopify (Admin GraphQL) · Printful</p>
+<p><strong>Practices</strong> SOLID · Service-Oriented Architecture ·
+Test-Driven Development · RBAC · CI/CD · Postmortem-driven
+invariants</p>
+<hr />
+<h2 id="education">Education</h2>
+<p><strong>International Business &amp; Trade, AAS</strong> · Highline
+College, Des Moines WA · 2018</p>
+<p>President’s List · Vice President’s Honor Roll · Phi Theta Kappa
+Honor Society</p>
+</article>
+
+</main>
+
+</body>
+</html>

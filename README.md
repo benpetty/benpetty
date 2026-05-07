@@ -8,7 +8,7 @@ Founder and senior engineer with 24+ years building products end-to-end. Current
 
 | Venture | Role | Since | |
 |---|---|---|---|
-| **Audeos** | Founder & Engineer | 2023 | [audeos.com](https://audeos.com) |
+| **Audeos.fm** | Founder & Engineer | 2023 | [audeos.com](https://audeos.com) |
 | **Northwest Local Cannabis** | Co-Founder | 2021 | [nw-local.com](https://nw-local.com) |
 | **The North West Clothing** | Founder | 2001 | [nwclothing.com](https://nwclothing.com) |
 | **Rooted Community** | Engineer | 2024 | [rootedcommunity.org](https://rootedcommunity.org) |
@@ -22,8 +22,8 @@ Founder and senior engineer with 24+ years building products end-to-end. Current
 
 ## Current Ventures · 2021–Present
 
-### Audeos · Founder & Engineer · 2023–Present
-[audeos.com](https://audeos.com) · [play.audeos.com](https://play.audeos.com)
+### Audeos.fm · Founder & Engineer · 2023–Present
+[audeos.com](https://audeos.com) · [audeos.fm](https://audeos.fm)
 
 Multi-channel live-streaming radio platform. Each channel loops a curated playlist of
 pre-transcoded audio, broadcast in sync to every listener.

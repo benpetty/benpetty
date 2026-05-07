@@ -13,7 +13,7 @@ Founder and senior engineer with 24+ years building products end-to-end. Current
 | **The North West Clothing** | Founder | 2001 | [nwclothing.com](https://nwclothing.com) |
 | **Rooted Community** | Engineer | 2024 | [rootedcommunity.org](https://rootedcommunity.org) |
 
-[**benpetty.github.io/benpetty**](https://benpetty.github.io/benpetty/) · [Resume PDF ↓](resume.pdf)
+[**ben-petty.com**](https://ben-petty.com/) · [Resume PDF ↓](resume.pdf)
 
 ---
 

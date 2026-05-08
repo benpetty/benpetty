@@ -66,6 +66,9 @@ body {
   line-height: 1.55;
   color: var(--ink);
   background: var(--bg);
+  text-rendering: optimizeLegibility;
+  font-feature-settings: 'kern' 1;
+  font-kerning: normal;
 }
 
 a { color: var(--ink); text-decoration: none; border-bottom: 1px solid currentColor; }

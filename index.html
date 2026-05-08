@@ -72,10 +72,9 @@ href="https://audeos.fm">audeos.fm</a></p>
 curated playlist of pre-transcoded audio, broadcast in sync to every
 listener.</p>
 <ul>
-<li>Realtime engine on Phoenix LiveView with one
-<code>ChannelEngine</code> GenServer per active channel under a custom
-loop-engine state machine; PubSub fan-out keyed by stable channel id;
-lookahead/cursor model gives listeners a visible “next N” plan.</li>
+<li>Realtime engine on Phoenix LiveView: a GenServer-per-channel state
+machine with PubSub fan-out keeps every listener synced to the same
+audio segment in real time.</li>
 <li>HLS pipeline: ffmpeg transcoder converts uploaded audio into rolling
 segments; Cloudflare R2 for object storage; MediaMTX RTMP relay; Oban
 background workers handle transcode, cleanup, and database backups.</li>

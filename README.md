@@ -28,9 +28,8 @@ Founder and senior engineer with 24+ years building products end-to-end. Current
 Multi-channel live-streaming radio platform. Each channel loops a curated playlist of
 pre-transcoded audio, broadcast in sync to every listener.
 
-- Realtime engine on Phoenix LiveView with one `ChannelEngine` GenServer per active
-  channel under a custom loop-engine state machine; PubSub fan-out keyed by stable
-  channel id; lookahead/cursor model gives listeners a visible "next N" plan.
+- Realtime engine on Phoenix LiveView: a GenServer-per-channel state machine with
+  PubSub fan-out keeps every listener synced to the same audio segment in real time.
 - HLS pipeline: ffmpeg transcoder converts uploaded audio into rolling segments;
   Cloudflare R2 for object storage; MediaMTX RTMP relay; Oban background workers
   handle transcode, cleanup, and database backups.

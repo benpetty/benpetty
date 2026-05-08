@@ -57,10 +57,11 @@ github.com/benpetty</p>
 end-to-end — from the 2001 launch of an independent Pacific Northwest
 apparel brand through eight years as a senior engineer at SaaS companies
 (Tomorrow Ideas, acq. Ethos Life; Crowd Cow; U.S. LawShield). Currently
-running four consumer-facing businesses across cannabis, music
-streaming, apparel, and nonprofit work — co-founder on Northwest Local
-Cannabis, solo founder/engineer on the others, owning design,
-engineering, deploy, and operations end-to-end.</p>
+running three consumer-facing businesses across cannabis, music
+streaming, and apparel — co-founder on Northwest Local Cannabis, solo
+founder/engineer on the others, owning design, engineering, deploy, and
+operations end-to-end — plus pro-bono engineering for Rooted Community,
+a Washington nonprofit.</p>
 <hr />
 <h2 id="current-ventures-2021present">Current Ventures ·
 2021–Present</h2>
@@ -98,22 +99,10 @@ brand, and distribution.</p>
 <li>Astro 6 SSG with Sanity CMS as single source of truth for strains,
 products, blog posts, retailer partners, and site settings; deployed to
 GitHub Pages.</li>
-<li>Sanity content publish triggers GitHub Actions rebuild via
-<code>workflow_dispatch</code> webhook for ~1–2 minute end-to-end
-propagation.</li>
-<li>Custom Claude Code skills (<code>/new-strain</code>,
-<code>/new-product</code>, <code>/new-post</code>,
-<code>/audit-content</code>, <code>/describe-assets</code>) automate the
-content workflows.</li>
-<li>21+ age-gate overlay; build-time GROQ queries; static OG/JSON-LD
-generation.</li>
-<li>Internal ops backend in development (<code>nw-local-ops</code>):
-Django 6 + HTMX + Postgres CRM with magic-link auth and a one-way Sanity
-push so retailers flagged <code>listed_publicly</code> mirror
-automatically to the public site; expanding to plant management, SOPs,
-harvest tracking, and best-effort traceability sync.</li>
-<li><strong>Stack:</strong> Astro · Sanity · Django · HTMX · Postgres ·
-TypeScript · GitHub Actions · Fly.io</li>
+<li>Custom Claude Code skills automate content workflows — scaffolding
+new entries (strains, products, posts) and auditing the catalog.</li>
+<li><strong>Stack:</strong> Astro · Sanity · TypeScript · GitHub
+Actions</li>
 </ul>
 <h3 id="the-north-west-clothing-founder-2001present">The North West
 Clothing · Founder · 2001–Present</h3>
@@ -141,14 +130,6 @@ Engineer · 2024–Present</h3>
 system-impacted BIPOC community members in King, Snohomish, and Pierce
 counties.</p>
 <ul>
-<li>Astro 6 + Sanity v6 with editorial design system (Newsreader serif +
-Inter, custom cream/forest/clay palette); self-hosted variable fonts;
-build-time GROQ only.</li>
-<li>8 routes plus dynamic program-detail pages; pages render gracefully
-with sparse fields so the org can publish and fill in over time.</li>
-<li>CI pipeline: typecheck + audit on PR, full deploy chain on
-<code>main</code>, nightly audit run; lychee link checking and
-Lighthouse audits in CI.</li>
 <li><strong>Stack:</strong> Astro · Sanity · TypeScript · GitHub
 Actions</li>
 </ul>
@@ -255,12 +236,12 @@ databases.</li>
 Laravel</p>
 <p><strong>Data</strong> PostgreSQL · MySQL · Redis · MongoDB ·
 Cloudflare R2</p>
-<p><strong>Infrastructure</strong> AWS (EKS) · Fly.io · Docker ·
-Kubernetes · Helm · GitHub Actions · GitLab CI</p>
+<p><strong>Infrastructure</strong> AWS · Cloudflare · Fly.io · Docker ·
+GitHub Actions</p>
 <p><strong>Content &amp; commerce</strong> Sanity · Contentful ·
-WordPress · Shopify (Admin GraphQL) · Printful</p>
+WordPress · Shopify (Admin GraphQL)</p>
 <p><strong>Practices</strong> SOLID · Service-Oriented Architecture ·
-Test-Driven Development · RBAC · CI/CD · Postmortem-driven
+Test-Driven Development · RBAC · CI/CD · IaC · Postmortem-driven
 invariants</p>
 <hr />
 <h2 id="education">Education</h2>

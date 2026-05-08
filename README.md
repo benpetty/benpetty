@@ -48,16 +48,9 @@ producer/processor. Cultivator-operator across grow, tech, brand, and distributi
 
 - Astro 6 SSG with Sanity CMS as single source of truth for strains, products, blog
   posts, retailer partners, and site settings; deployed to GitHub Pages.
-- Sanity content publish triggers GitHub Actions rebuild via `workflow_dispatch`
-  webhook for ~1–2 minute end-to-end propagation.
-- Custom Claude Code skills (`/new-strain`, `/new-product`, `/new-post`,
-  `/audit-content`, `/describe-assets`) automate the content workflows.
-- 21+ age-gate overlay; build-time GROQ queries; static OG/JSON-LD generation.
-- Internal ops backend in development (`nw-local-ops`): Django 6 + HTMX + Postgres
-  CRM with magic-link auth and a one-way Sanity push so retailers flagged
-  `listed_publicly` mirror automatically to the public site; expanding to plant
-  management, SOPs, harvest tracking, and best-effort traceability sync.
-- **Stack:** Astro · Sanity · Django · HTMX · Postgres · TypeScript · GitHub Actions · Fly.io
+- Custom Claude Code skills automate content workflows — scaffolding new entries
+  (strains, products, posts) and auditing the catalog.
+- **Stack:** Astro · Sanity · TypeScript · GitHub Actions
 
 ### The North West Clothing · Founder · 2001–Present
 [nwclothing.com](https://nwclothing.com)
@@ -81,12 +74,6 @@ fulfillment.
 Marketing site for a small Washington nonprofit serving system-impacted BIPOC
 community members in King, Snohomish, and Pierce counties.
 
-- Astro 6 + Sanity v6 with editorial design system (Newsreader serif + Inter, custom
-  cream/forest/clay palette); self-hosted variable fonts; build-time GROQ only.
-- 8 routes plus dynamic program-detail pages; pages render gracefully with sparse
-  fields so the org can publish and fill in over time.
-- CI pipeline: typecheck + audit on PR, full deploy chain on `main`, nightly audit
-  run; lychee link checking and Lighthouse audits in CI.
 - **Stack:** Astro · Sanity · TypeScript · GitHub Actions
 
 ---
@@ -179,11 +166,11 @@ for the public launch and grew through promotion to SDE II over 4+ years.
 
 **Data** PostgreSQL · MySQL · Redis · MongoDB · Cloudflare R2
 
-**Infrastructure** AWS (EKS) · Fly.io · Docker · Kubernetes · Helm · GitHub Actions · GitLab CI
+**Infrastructure** AWS · Cloudflare · Fly.io · Docker · GitHub Actions
 
-**Content & commerce** Sanity · Contentful · WordPress · Shopify (Admin GraphQL) · Printful
+**Content & commerce** Sanity · Contentful · WordPress · Shopify (Admin GraphQL)
 
-**Practices** SOLID · Service-Oriented Architecture · Test-Driven Development · RBAC · CI/CD · Postmortem-driven invariants
+**Practices** SOLID · Service-Oriented Architecture · Test-Driven Development · RBAC · CI/CD · IaC · Postmortem-driven invariants
 
 ---
 

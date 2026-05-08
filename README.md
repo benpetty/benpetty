@@ -53,7 +53,11 @@ producer/processor. Cultivator-operator across grow, tech, brand, and distributi
 - Custom Claude Code skills (`/new-strain`, `/new-product`, `/new-post`,
   `/audit-content`, `/describe-assets`) automate the content workflows.
 - 21+ age-gate overlay; build-time GROQ queries; static OG/JSON-LD generation.
-- **Stack:** Astro · Sanity · TypeScript · GitHub Actions
+- Internal ops backend in development (`nw-local-ops`): Django 6 + HTMX + Postgres
+  CRM with magic-link auth and a one-way Sanity push so retailers flagged
+  `listed_publicly` mirror automatically to the public site; expanding to plant
+  management, SOPs, harvest tracking, and best-effort traceability sync.
+- **Stack:** Astro · Sanity · Django · HTMX · Postgres · TypeScript · GitHub Actions · Fly.io
 
 ### The North West Clothing · Founder · 2001–Present
 [nwclothing.com](https://nwclothing.com)

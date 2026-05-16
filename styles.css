@@ -116,8 +116,40 @@ a:hover { color: var(--accent); }
   font-size: 15px;
   line-height: 1.6;
   color: var(--ink);
-  margin: 0 0 28px;
+  margin: 0 0 18px;
   max-width: 60ch;
+}
+
+.cta-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 28px;
+  flex-wrap: wrap;
+}
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--accent);
+  color: #fff;
+  border-bottom: none;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  transition: background 0.15s, transform 0.15s;
+}
+.cta:hover {
+  background: #163826;
+  color: #fff;
+  transform: translateY(-1px);
+}
+.cta-hint {
+  font-size: 12px;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
 }
 
 .ventures {

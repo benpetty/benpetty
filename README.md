@@ -2,7 +2,7 @@
 
 > Senior Software Engineer & Founder · Pacific Northwest
 
-Senior software engineer with 24+ years building products end-to-end — currently designing, building, and operating production systems across four independent Pacific Northwest brands; previously senior engineer at Tomorrow (acq. Ethos Life), Crowd Cow, and U.S. LawShield. **Open to senior engineering roles and contract/fractional engagements.**
+Senior software engineer with 24+ years building full-stack products end-to-end — eight years on SaaS teams (Tomorrow Ideas, acq. Ethos Life; Crowd Cow; U.S. LawShield), now founding and running four independent Pacific Northwest brands. Across all four I've built custom Claude Code agent tooling — conversational skills (26 on the apparel store alone) that run production storefronts, content catalogs, and deploy pipelines day to day. **Open to senior engineering roles and contract/fractional engagements.**
 
 ## Currently building
 

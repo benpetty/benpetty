@@ -1,8 +1,8 @@
 # Benjamin S. Petty
 
-> Founder · Engineer · Pacific Northwest
+> Senior Software Engineer & Founder · Pacific Northwest
 
-Founder and senior engineer with 24+ years building products end-to-end. Currently running four consumer-facing PNW brands; previously senior engineer at Tomorrow (acq. Ethos Life), Crowd Cow, and U.S. LawShield.
+Senior software engineer with 24+ years building products end-to-end — currently designing, building, and operating production systems across four independent Pacific Northwest brands; previously senior engineer at Tomorrow (acq. Ethos Life), Crowd Cow, and U.S. LawShield. **Open to senior engineering roles and contract/fractional engagements.**
 
 ## Currently building
 

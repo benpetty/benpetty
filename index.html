@@ -77,7 +77,7 @@
   <div class="ventures">
     <a class="venture" href="https://audeos.com">
       <p class="v-name">Audeos.fm</p>
-      <p class="v-role">Founder &amp; Engineer · 2023</p>
+      <p class="v-role">Founder &amp; Engineer · 2026</p>
       <p class="v-desc">Multi-channel live-streaming radio platform.</p>
       <p class="v-url">audeos.com</p>
     </a>
@@ -127,8 +127,8 @@ engagements.</strong></p>
 <hr />
 <h2 id="current-ventures-2021present">Current Ventures ·
 2021–Present</h2>
-<h3 id="audeos.fm-founder-engineer-2023present">Audeos.fm · Founder
-&amp; Engineer · 2023–Present</h3>
+<h3 id="audeos.fm-founder-engineer-2026present">Audeos.fm · Founder
+&amp; Engineer · 2026–Present</h3>
 <p><a href="https://audeos.com">audeos.com</a> · <a
 href="https://audeos.fm">audeos.fm</a></p>
 <p>Multi-channel live-streaming radio platform. Each channel loops a
@@ -349,10 +349,11 @@ databases.</li>
 <p><em>Self-directed works in progress — problem domains outside the
 ventures.</em></p>
 <ul>
-<li><strong>crate-agent</strong> — macOS DJ library manager
-(Swift/SwiftUI + Rust via UniFFI): an event-sourced mutation engine with
-structural undo, and a from-scratch parser for Serato’s binary crate
-format with byte-exact round-tripping of unknown tags.</li>
+<li><strong>crate-agent</strong> — native macOS companion app for Serato
+DJ (Swift/SwiftUI + Rust via UniFFI) that keeps the Serato library in
+sync when tracks are renamed or moved in Finder: watches the filesystem
+and rewrites Serato’s binary library files so their absolute-path track
+links never silently break.</li>
 <li><strong>kraang</strong> — self-hosted personal knowledge graph
 (FastAPI · GraphQL · Postgres): a five-worker IMAP ingestion pipeline
 with an auditable state machine and Postgres-role service isolation,

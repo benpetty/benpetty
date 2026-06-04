@@ -22,7 +22,7 @@ Senior software engineer with 24+ years building products end-to-end — current
 
 ## Current Ventures · 2021–Present
 
-### Audeos.fm · Founder & Engineer · 2023–Present
+### Audeos.fm · Founder & Engineer · 2026–Present
 [audeos.com](https://audeos.com) · [audeos.fm](https://audeos.fm)
 
 Multi-channel live-streaming radio platform. Each channel loops a curated playlist of
@@ -203,9 +203,10 @@ for the public launch and grew through promotion to SDE II over 4+ years.
 
 *Self-directed works in progress — problem domains outside the ventures.*
 
-- **crate-agent** — macOS DJ library manager (Swift/SwiftUI + Rust via UniFFI): an
-  event-sourced mutation engine with structural undo, and a from-scratch parser for
-  Serato's binary crate format with byte-exact round-tripping of unknown tags.
+- **crate-agent** — native macOS companion app for Serato DJ (Swift/SwiftUI + Rust via
+  UniFFI) that keeps the Serato library in sync when tracks are renamed or moved in
+  Finder: watches the filesystem and rewrites Serato's binary library files so their
+  absolute-path track links never silently break.
 - **kraang** — self-hosted personal knowledge graph (FastAPI · GraphQL · Postgres): a
   five-worker IMAP ingestion pipeline with an auditable state machine and Postgres-role
   service isolation, plus Claude Code skills wired to the live API for AI-assisted

@@ -30,15 +30,35 @@ pre-transcoded audio, broadcast in sync to every listener.
 
 - Realtime engine on Phoenix LiveView: a GenServer-per-channel state machine with
   PubSub fan-out keeps every listener synced to the same audio segment in real time.
-- HLS pipeline: ffmpeg transcoder converts uploaded audio into rolling segments;
-  Cloudflare R2 for object storage; MediaMTX RTMP relay; Oban background workers
-  handle transcode, cleanup, and database backups.
-- Solo deploy on Fly.io with telemetry-driven incident response, Sentry integration
-  with PII scrubbing, and a documented postmortem-driven invariants culture.
-- Marketing site (audeos.com): Next.js 16 + Contentful with build-time Spotify
-  playlist integration and client-side Fuse.js search, deployed to GitHub Pages.
-- **Stack:** Elixir · Phoenix · LiveView · Postgres · Oban · Cloudflare R2 · MediaMTX
-  · Sentry · Fly.io · Next.js · Contentful
+- HLS pipeline: an ffmpeg transcoder converts uploaded audio into rolling segments
+  across four bitrate variants; Cloudflare R2 for object storage; MediaMTX RTMP relay;
+  Oban background workers handle transcode, cleanup, and database backups.
+- Resumable transcode checkpointing: on interruption (deploy, OOM), retry probes R2
+  segment counts across all four bitrate variants and resumes encoding from the safe
+  overlap point, keeping every ladder in sync through partial failures.
+- Custom Oban phantom-slot reconciler (GenServer) that reconciles in-memory producer
+  state against the database in both directions — written after a production incident
+  where Oban's built-in Lifeline plugin rescued still-running jobs.
+- Transactional email on AWS SES with an SNS bounce/complaint webhook: SSRF-hardened
+  X.509 signature verification and a suppression-mirror table that fast-fails sends to
+  dead addresses.
+- Privacy by design: MaxMind GeoLite2 resolves listener country at write time and
+  discards the raw IP (powering admin activity + geographic heatmaps); self-serve GDPR
+  export/delete runs behind magic-link confirmation, one-time tokens, and an audit log.
+- Solo-operate on Fly.io with telemetry-driven incident response and PII-scrubbed
+  Sentry; maintain an in-repo invariants doc of 15+ production failure modes (each tied
+  to a PR) plus auth-gated, in-app ADR documentation served at `/admin/docs`.
+- Marketing site (audeos.com), Next.js 16 / React 19 / TypeScript on Turbopack:
+  snapshot-gated Spotify caching (a daily cron commits the cache and redeploys, so
+  playlists stay live with zero runtime dependency), promise-level Contentful
+  memoization cutting ~200 API calls to 3 per build, build-time RSS/Atom/JSON
+  syndication, and oEmbed XSS hardening (host-allowlisted iframes, JSDOM script-stripping).
+- Post-deploy CI on every merge: sitemap crawl, RSS link-check, whole-site Lychee
+  broken-link scan, and Lighthouse audits with enforced thresholds (SEO ≥90, a11y ≥90);
+  OpenTofu manages the site's own Route 53 zone and DMARC policy.
+- **Stack:** Elixir · Phoenix · LiveView · Bandit · Postgres · Oban · Cloudflare R2 ·
+  MediaMTX · AWS SES/SNS · MaxMind · Sentry · OpenTofu · Fly.io · Next.js · React ·
+  Turbopack · Contentful
 
 ### Northwest Local Cannabis · Co-Founder · 2021–Present
 [nw-local.com](https://nw-local.com)
@@ -48,9 +68,22 @@ producer/processor. Cultivator-operator across grow, tech, brand, and distributi
 
 - Astro 6 SSG with Sanity CMS as single source of truth for strains, products, blog
   posts, retailer partners, and site settings; deployed to GitHub Pages.
-- Custom Claude Code skills automate content workflows — scaffolding new entries
-  (strains, products, posts) and auditing the catalog.
-- **Stack:** Astro · Sanity · TypeScript · GitHub Actions
+- Typed Schema.org JSON-LD factory emitting Organization / Product / Article /
+  BreadcrumbList structured data per page, with a Portable-Text→plaintext extractor.
+- Terpene↔strain content graph: a `terpene` document type cross-referenced via a GROQ
+  reverse join, surfaced as `/terpenes/[slug]` pages; the content-scaffolding skill
+  auto-provisions terpene docs with AI-generated hero imagery.
+- Nightly four-job CI audit (build · sitemap validation · Lychee link-health ·
+  Lighthouse) wired as a reusable workflow on PRs and a schedule.
+- Custom Claude Code skills run content ops conversationally — scaffolding
+  strains/products/posts, catalog auditing, multimodal alt-text backfill at the Sanity
+  asset level, and a bash image-ingest pipeline (HEIC→JPEG, slug renames, SHA-256 dedup).
+- Internal ops platform (ops.nw-local.com): a Django 6 + HTMX CRM (Retailer / Deal /
+  Activity) that pushes to Sanity via `post_save` signals to keep the public wholesale
+  page in sync, with passwordless magic-link auth (custom fix for a discovered
+  django-allauth allowlist-bypass), containerized and shipped to Fly.io via CI/CD.
+- **Stack:** Astro · Sanity · astro-portabletext · TypeScript · GitHub Actions ·
+  Django 6 · Python 3.14 · Postgres 18 · HTMX · AWS SES · OpenTofu
 
 ### The North West Clothing · Founder · 2001–Present
 [nwclothing.com](https://nwclothing.com)
@@ -63,10 +96,22 @@ fulfillment.
   campaigns; up to $20K gross revenue per weekend at sponsored events and festivals;
   trained employees across retail, warehouse, and screen-printing operations;
   sustained inventory levels via demand forecasting from sales analytics.
-- 2026 relaunch: custom Shopify OS 2.0 theme (Dawn-based) with Vite + SCSS + Alpine.js
-  build pipeline; TypeScript CLI built on Shopify Admin GraphQL and Printful REST for
-  POD fulfillment; conversational content management via custom Claude Code skills.
-- **Stack:** Shopify · Liquid · Vite · TypeScript · Alpine.js · SCSS · Printful API
+- 2026 relaunch: custom Shopify OS 2.0 theme (Dawn-based) with a Vite + SCSS + Alpine.js
+  build pipeline; store run conversationally through a 26-skill Claude Code surface.
+- Order-forwarding bridge on a Cloudflare Worker: a 15-minute cron polls Shopify for
+  paid, unfulfilled orders and forwards them to a Manual-API Printful store (which
+  Shopify's native integration can't create programmatically), with exactly-once
+  delivery via Printful `external_id` + order tagging, per-order error metafields, and
+  Resend failure alerts.
+- Declarative product pipeline: Zod-validated YAML specs resolve against the live
+  Printful catalog (with margins) to build the full Size × Fabric × Colorway matrix in
+  Shopify via the Admin GraphQL `productSet` mutation, then publish, create 301
+  redirects, and archive superseded products — dry-run by default.
+- SEO intelligence layer joining Google Search Console + GA4 traffic + a structural
+  audit into a P0–P3 prioritized opportunity report, with URL Inspection API
+  indexability checks.
+- **Stack:** Shopify (Admin GraphQL) · Liquid · Vite · TypeScript · Zod · Alpine.js ·
+  SCSS · Cloudflare Workers · Printful API · Google APIs (GSC + GA4) · Resend · Vitest
 
 ### Rooted Community · Engineer · 2024–Present
 [rootedcommunity.org](https://rootedcommunity.org)
@@ -74,7 +119,16 @@ fulfillment.
 Marketing site for a small Washington nonprofit serving system-impacted BIPOC
 community members in King, Snohomish, and Pierce counties.
 
-- **Stack:** Astro · Sanity · TypeScript · GitHub Actions
+- Zero-touch content deploys: a Sanity→GitHub webhook fires `repository_dispatch` on
+  every Studio publish; CI is ordered so type-check and audits gate the deploy,
+  preventing a bad push from racing to production.
+- Funder-due-diligence schema: site settings carry EIN, 501(c)(3) status, and Form 990
+  URL, flowing into an NGO Schema.org payload (`taxID`, `nonprofitStatus`, `areaServed`
+  by county) on every page — built for foundation program officers, not just crawlers.
+- Lighthouse-driven accessibility to 100/100/100/100: heading-order fixes via a
+  composable typed `headingLevel` prop plus a focus-revealed skip link.
+- **Stack:** Astro 6 · Sanity · TypeScript · self-hosted variable fonts · Lighthouse CI
+  · Lychee · GitHub Actions
 
 ---
 
@@ -166,7 +220,7 @@ for the public launch and grew through promotion to SDE II over 4+ years.
 
 **Data** PostgreSQL · MySQL · Redis · MongoDB · Cloudflare R2
 
-**Infrastructure** AWS · Cloudflare · Fly.io · Docker · GitHub Actions
+**Infrastructure** AWS · Cloudflare · Cloudflare Workers · Fly.io · Docker · GitHub Actions · OpenTofu
 
 **Content & commerce** Sanity · Contentful · WordPress · Shopify (Admin GraphQL)
 

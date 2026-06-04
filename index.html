@@ -69,7 +69,6 @@
 <header class="hero">
   <h1>Benjamin S. Petty</h1>
   <p class="tagline">Senior Engineer · Founder · Pacific Northwest</p>
-  <p class="bio">Senior software engineer with 24+ years building products end-to-end — currently designing, building, and operating production systems across four independent Pacific Northwest brands; previously senior engineer at Tomorrow (acq. Ethos Life), Crowd Cow, and U.S. LawShield. <strong>Open to senior engineering roles and contract/fractional engagements.</strong></p>
   <p class="cta-row">
     <a class="cta" href="https://cal.com/benpetty">Book a call <span aria-hidden="true">→</span></a>
     <span class="cta-hint">cal.com/benpetty</span>
@@ -234,11 +233,6 @@ counties.</p>
 <code>repository_dispatch</code> on every Studio publish; CI is ordered
 so type-check and audits gate the deploy, preventing a bad push from
 racing to production.</li>
-<li>Funder-due-diligence schema: site settings carry EIN, 501(c)(3)
-status, and Form 990 URL, flowing into an NGO Schema.org payload
-(<code>taxID</code>, <code>nonprofitStatus</code>,
-<code>areaServed</code> by county) on every page — built for foundation
-program officers, not just crawlers.</li>
 <li>Lighthouse-driven accessibility to 100/100/100/100: heading-order
 fixes via a composable typed <code>headingLevel</code> prop plus a
 focus-revealed skip link.</li>

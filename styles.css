@@ -112,13 +112,6 @@ a:hover { color: var(--accent); }
   font-weight: 700;
   margin: 0 0 20px;
 }
-.hero .bio {
-  font-size: 15px;
-  line-height: 1.6;
-  color: var(--ink);
-  margin: 0 0 18px;
-  max-width: 60ch;
-}
 
 .cta-row {
   display: flex;

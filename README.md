@@ -8,7 +8,7 @@ Senior software engineer with 24+ years building products end-to-end — current
 
 | Venture | Role | Since | |
 |---|---|---|---|
-| **Audeos.fm** | Founder & Engineer | 2023 | [audeos.com](https://audeos.com) |
+| **Audeos.fm** | Founder & Engineer | 2026 | [audeos.com](https://audeos.com) |
 | **Northwest Local Cannabis** | Co-Founder | 2021 | [nw-local.com](https://nw-local.com) |
 | **The North West Clothing** | Founder | 2001 | [nwclothing.com](https://nwclothing.com) |
 | **Rooted Community** | Engineer | 2024 | [rootedcommunity.org](https://rootedcommunity.org) |
@@ -111,9 +111,6 @@ community members in King, Snohomish, and Pierce counties.
 - Zero-touch content deploys: a Sanity→GitHub webhook fires `repository_dispatch` on
   every Studio publish; CI is ordered so type-check and audits gate the deploy,
   preventing a bad push from racing to production.
-- Funder-due-diligence schema: site settings carry EIN, 501(c)(3) status, and Form 990
-  URL, flowing into an NGO Schema.org payload (`taxID`, `nonprofitStatus`, `areaServed`
-  by county) on every page — built for foundation program officers, not just crawlers.
 - Lighthouse-driven accessibility to 100/100/100/100: heading-order fixes via a
   composable typed `headingLevel` prop plus a focus-revealed skip link.
 - **Stack:** Astro 6 · Sanity · TypeScript · self-hosted variable fonts · Lighthouse CI

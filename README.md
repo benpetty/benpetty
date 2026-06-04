@@ -30,32 +30,22 @@ pre-transcoded audio, broadcast in sync to every listener.
 
 - Realtime engine on Phoenix LiveView: a GenServer-per-channel state machine with
   PubSub fan-out keeps every listener synced to the same audio segment in real time.
-- HLS pipeline: an ffmpeg transcoder converts uploaded audio into rolling segments
-  across four bitrate variants; Cloudflare R2 for object storage; MediaMTX RTMP relay;
-  Oban background workers handle transcode, cleanup, and database backups.
-- Resumable transcode checkpointing: on interruption (deploy, OOM), retry probes R2
-  segment counts across all four bitrate variants and resumes encoding from the safe
-  overlap point, keeping every ladder in sync through partial failures.
+- HLS pipeline with resumable transcode checkpointing: ffmpeg converts uploads into
+  rolling segments across four bitrate variants (Cloudflare R2 storage, MediaMTX RTMP
+  relay, Oban workers for transcode/cleanup/backups); on interruption, retry probes R2
+  segment counts across all variants and resumes from the safe overlap point, keeping
+  every ladder in sync through partial failures.
 - Custom Oban phantom-slot reconciler (GenServer) that reconciles in-memory producer
   state against the database in both directions — written after a production incident
   where Oban's built-in Lifeline plugin rescued still-running jobs.
-- Transactional email on AWS SES with an SNS bounce/complaint webhook: SSRF-hardened
-  X.509 signature verification and a suppression-mirror table that fast-fails sends to
-  dead addresses.
-- Privacy by design: MaxMind GeoLite2 resolves listener country at write time and
-  discards the raw IP (powering admin activity + geographic heatmaps); self-serve GDPR
-  export/delete runs behind magic-link confirmation, one-time tokens, and an audit log.
-- Solo-operate on Fly.io with telemetry-driven incident response and PII-scrubbed
-  Sentry; maintain an in-repo invariants doc of 15+ production failure modes (each tied
-  to a PR) plus auth-gated, in-app ADR documentation served at `/admin/docs`.
-- Marketing site (audeos.com), Next.js 16 / React 19 / TypeScript on Turbopack:
-  snapshot-gated Spotify caching (a daily cron commits the cache and redeploys, so
-  playlists stay live with zero runtime dependency), promise-level Contentful
-  memoization cutting ~200 API calls to 3 per build, build-time RSS/Atom/JSON
-  syndication, and oEmbed XSS hardening (host-allowlisted iframes, JSDOM script-stripping).
-- Post-deploy CI on every merge: sitemap crawl, RSS link-check, whole-site Lychee
-  broken-link scan, and Lighthouse audits with enforced thresholds (SEO ≥90, a11y ≥90);
-  OpenTofu manages the site's own Route 53 zone and DMARC policy.
+- Production operations: AWS SES/SNS email with SSRF-hardened X.509 webhook
+  verification; privacy-by-design analytics (MaxMind country resolution at write time,
+  raw IP discarded); self-serve GDPR export/delete; and a postmortem-driven invariants
+  doc (15+ documented failure modes) backing telemetry-driven incident response on Fly.io.
+- Marketing site (audeos.com), Next.js 16 / React 19 on Turbopack: snapshot-gated
+  Spotify caching and promise-level Contentful memoization (~200 API calls → 3 per
+  build); post-deploy CI runs a sitemap crawl, link-check, Lychee scan, and Lighthouse
+  audits (SEO ≥90, a11y ≥90) on every merge; OpenTofu owns the site's DNS and DMARC.
 - **Stack:** Elixir · Phoenix · LiveView · Bandit · Postgres · Oban · Cloudflare R2 ·
   MediaMTX · AWS SES/SNS · MaxMind · Sentry · OpenTofu · Fly.io · Next.js · React ·
   Turbopack · Contentful
@@ -78,10 +68,10 @@ producer/processor. Cultivator-operator across grow, tech, brand, and distributi
 - Custom Claude Code skills run content ops conversationally — scaffolding
   strains/products/posts, catalog auditing, multimodal alt-text backfill at the Sanity
   asset level, and a bash image-ingest pipeline (HEIC→JPEG, slug renames, SHA-256 dedup).
-- Internal ops platform (ops.nw-local.com): a Django 6 + HTMX CRM (Retailer / Deal /
-  Activity) that pushes to Sanity via `post_save` signals to keep the public wholesale
-  page in sync, with passwordless magic-link auth (custom fix for a discovered
-  django-allauth allowlist-bypass), containerized and shipped to Fly.io via CI/CD.
+- Internal ops platform (ops.nw-local.com): a Django 6 + HTMX CRM that pushes to Sanity
+  via `post_save` signals to keep the public wholesale page in sync, with passwordless
+  magic-link auth (custom fix for a django-allauth allowlist-bypass), shipped to Fly.io
+  via CI/CD.
 - **Stack:** Astro · Sanity · astro-portabletext · TypeScript · GitHub Actions ·
   Django 6 · Python 3.14 · Postgres 18 · HTMX · AWS SES · OpenTofu
 
@@ -98,11 +88,10 @@ fulfillment.
   sustained inventory levels via demand forecasting from sales analytics.
 - 2026 relaunch: custom Shopify OS 2.0 theme (Dawn-based) with a Vite + SCSS + Alpine.js
   build pipeline; store run conversationally through a 26-skill Claude Code surface.
-- Order-forwarding bridge on a Cloudflare Worker: a 15-minute cron polls Shopify for
-  paid, unfulfilled orders and forwards them to a Manual-API Printful store (which
-  Shopify's native integration can't create programmatically), with exactly-once
-  delivery via Printful `external_id` + order tagging, per-order error metafields, and
-  Resend failure alerts.
+- Order-forwarding bridge on a Cloudflare Worker: a 15-minute cron forwards paid Shopify
+  orders to a Manual-API Printful store (which Shopify's native integration can't create
+  programmatically), with exactly-once delivery via Printful `external_id`, per-order
+  error metafields, and Resend failure alerts.
 - Declarative product pipeline: Zod-validated YAML specs resolve against the live
   Printful catalog (with margins) to build the full Size × Fabric × Colorway matrix in
   Shopify via the Admin GraphQL `productSet` mutation, then publish, create 301
@@ -207,6 +196,20 @@ for the public launch and grew through promotion to SDE II over 4+ years.
 - Built a containerized dev environment to streamline frontend onboarding; wrote
   scripts to sync content between remote and local databases.
 - Set up custom CI/CD pipelines with GitHub Actions and WPEngine.
+
+---
+
+## Selected Projects
+
+*Self-directed works in progress — problem domains outside the ventures.*
+
+- **crate-agent** — macOS DJ library manager (Swift/SwiftUI + Rust via UniFFI): an
+  event-sourced mutation engine with structural undo, and a from-scratch parser for
+  Serato's binary crate format with byte-exact round-tripping of unknown tags.
+- **kraang** — self-hosted personal knowledge graph (FastAPI · GraphQL · Postgres): a
+  five-worker IMAP ingestion pipeline with an auditable state machine and Postgres-role
+  service isolation, plus Claude Code skills wired to the live API for AI-assisted
+  document review.
 
 ---
 

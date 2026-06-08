@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Benjamin S. Petty — Senior Backend Engineer</title>
+  <meta name="description" content="Senior backend engineer — realtime systems, data pipelines, payments, and service-oriented architecture. Elixir, Ruby, PHP, Node, Postgres.">
+  <meta name="author" content="Benjamin S. Petty">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#1f5135">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="stylesheet" href="/styles.css">
+  <style>
+    /* Targeted resumes are one-page artifacts: tighten print spacing a touch
+       so a full page of content clears a single sheet with margin. Scoped to
+       these pages only — the shared hub resume keeps its roomier spacing. */
+    @media print {
+      .resume li { margin-bottom: 1.5pt; line-height: 1.34; }
+      .resume ul { margin: 2pt 0 6pt; }
+      .resume p { margin: 2.5pt 0; }
+      .resume h3 { margin: 7pt 0 2pt; }
+      .resume h2 { margin: 10pt 0 4pt; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="nav-row">
+  <span>Benjamin S. Petty</span>
+  <span><a href="#" onclick="event.preventDefault(); window.print();">Print</a></span>
+</div>
+
+<main id="resume">
+<article class="resume">
+<h1 id="benjamin-s.-petty">Benjamin S. Petty</h1>
+<p><strong>Senior Backend Engineer</strong> · Seattle, WA · (206)
+353-9874 · benjamin.s.petty@gmail.com · linkedin.com/in/benjaminpetty ·
+github.com/benpetty</p>
+<hr />
+<p>Senior backend engineer with 8+ years shipping production services
+end-to-end — realtime systems, data pipelines, payment reliability, and
+monolith-to-services migrations.</p>
+<hr />
+<h2 id="engineering-experience">Engineering Experience</h2>
+<h3 id="independent-engineering-2021present">Independent Engineering ·
+2021–Present</h3>
+<ul>
+<li>Built a multi-channel live-audio streaming backend on Elixir/Phoenix
+— a GenServer-per-channel state machine with PubSub fan-out keeps every
+listener synced to the same audio segment in real time.</li>
+<li>Designed a resumable HLS transcode pipeline (ffmpeg → four bitrate
+variants on Oban workers); on interruption, retry resumes from the safe
+segment-overlap point instead of restarting the job.</li>
+<li>Ran production ops: SSRF-hardened X.509 webhook verification,
+privacy-by-design analytics, and a postmortem-driven invariants doc
+backing telemetry-driven incident response on Fly.io.</li>
+</ul>
+<h3
+id="u.s.-lawshield-senior-software-development-engineer-sep-2022-aug-2025">U.S.
+LawShield · Senior Software Development Engineer · Sep 2022 – Aug
+2025</h3>
+<p><em>PHP · Laravel · Docker · Kubernetes · AWS EKS · Helm ·
+GitLab</em></p>
+<ul>
+<li>Migrated a poorly-structured monolith into modern, scalable service
+architecture while maintaining backwards compatibility with the legacy
+API.</li>
+<li>Containerized applications and upgraded CI/CD with Docker,
+Kubernetes, AWS EKS, Helm, and GitLab; added automated test coverage to
+untested codebases.</li>
+</ul>
+<h3 id="crowd-cow-software-engineer-may-2021-dec-2021">Crowd Cow ·
+Software Engineer · May 2021 – Dec 2021</h3>
+<p><em>Ruby on Rails · Redis · MySQL · Heroku · RSpec</em></p>
+<ul>
+<li>Redesigned the legacy credit-card processing module, raising
+subscription payment acceptance from 70% to 90% — categorized decline
+codes and timed retries to likely account-replenishment windows. On-call
+for incident response.</li>
+</ul>
+<h3
+id="tomorrow-ideas-acq.-ethos-life-software-engineer-sde-ii-mar-2017-may-2021">Tomorrow
+Ideas (acq. Ethos Life) · Software Engineer → SDE II · Mar 2017 – May
+2021</h3>
+<p><em>Python · Django · Node · Express · PostgreSQL · Redis · Docker ·
+AWS</em></p>
+<ul>
+<li>Led refactoring of a monolithic API into containerized services;
+built efficient, reliable CI/CD pipelines for all backend services.</li>
+<li>Built internal dashboards for executive, BI, marketing, product, and
+support teams; mentored junior engineers.</li>
+</ul>
+<h2 id="technical">Technical</h2>
+<p><strong>Languages</strong> Elixir · Ruby · PHP · TypeScript · Python
+· SQL · Bash</p>
+<p><strong>Backend &amp; data</strong> Phoenix · Rails · Laravel ·
+Express · Django · PostgreSQL · MySQL · Redis</p>
+<p><strong>Infrastructure</strong> AWS · Docker · Kubernetes · Fly.io ·
+GitHub Actions · OpenTofu</p>
+<p><strong>Practices</strong> Service-Oriented Architecture · TDD ·
+CI/CD · RBAC · Postmortem-driven invariants</p>
+<p><strong>Education</strong> International Business &amp; Trade, AAS ·
+Highline College, Des Moines WA · 2018</p>
+</article>
+
+</main>
+
+</body>
+</html>

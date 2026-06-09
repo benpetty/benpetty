@@ -15,11 +15,11 @@
        so a full page of content clears a single sheet with margin. Scoped to
        these pages only — the shared hub resume keeps its roomier spacing. */
     @media print {
-      .resume li { margin-bottom: 0.5pt; line-height: 1.3; }
-      .resume ul { margin: 2pt 0 3pt; }
-      .resume p { margin: 1.5pt 0; }
-      .resume h3 { margin: 5pt 0 2pt; }
-      .resume h2 { margin: 8pt 0 3pt; }
+      .resume li { margin-bottom: 0.4pt; line-height: 1.27; }
+      .resume ul { margin: 2pt 0 2pt; }
+      .resume p { margin: 1.25pt 0; }
+      .resume h3 { margin: 4pt 0 2pt; }
+      .resume h2 { margin: 6.5pt 0 3pt; }
       /* Reclaim the vertical whitespace stacked around the summary: tighten the
          contact line and collapse the two dividers bracketing it. The densest
          variant (/fullstack) needs this to clear a single sheet; the others have
@@ -43,7 +43,7 @@
 353-9874 · benjamin.s.petty@gmail.com · linkedin.com/in/benjaminpetty ·
 github.com/benpetty</p>
 <hr />
-<p>Senior software engineer with 8+ years shipping production web apps
+<p>Senior software engineer with 9+ years shipping production web apps
 and services end-to-end — React/Next.js frontends, Elixir/Phoenix, Node,
 and Django backends, with depth in realtime systems and payment
 reliability.</p>
@@ -52,20 +52,23 @@ reliability.</p>
 2021–Present</h3>
 <ul>
 <li>Built a multi-channel live-audio streaming backend on Elixir/Phoenix
-— a GenServer-per-channel state machine with PubSub fan-out syncs every
-listener to the same segment in real time, with LiveView UIs and no
-hand-written client glue.</li>
+— a GenServer-per-channel state machine with PubSub fan-out keeps every
+listener synced to the same segment in real time, behind server-driven
+LiveView UIs.</li>
 <li>Built a Next.js 16 / React 19 marketing site on Turbopack with
 snapshot-gated caching and promise-level memoization (~200 API calls → 3
-per build); CI gates every merge on Lighthouse SEO and a11y ≥90.</li>
+per build); every merge is CI-gated on Lighthouse SEO/a11y ≥90.</li>
 <li>Designed a resumable HLS transcode pipeline (ffmpeg → four bitrate
 variants on Oban workers); shipped typed-Sanity Astro SSG sites to
 perfect Lighthouse scores.</li>
+<li>Built conversational AI agent tooling — 26 custom Claude Code skills
+that run production storefront operations, content catalogs, and deploy
+pipelines day to day.</li>
 </ul>
 <h3
-id="u.s.-lawshield-senior-software-development-engineer-sep-2022-aug-2025">U.S.
-LawShield · Senior Software Development Engineer · Sep 2022 – Aug
-2025</h3>
+id="u.s.-lawshield-senior-software-development-engineer-contract-sep-2022-aug-2025">U.S.
+LawShield · Senior Software Development Engineer (Contract) · Sep 2022 –
+Aug 2025</h3>
 <p><em>React · Next.js · TypeScript · PHP · Laravel · Docker ·
 Kubernetes · AWS EKS</em></p>
 <ul>
@@ -92,12 +95,12 @@ Ideas (acq. Ethos Life) · Software Engineer → SDE II · Mar 2017 – May
 <p><em>TypeScript · React · Redux · Python · Django · Node · PostgreSQL
 · AWS</em></p>
 <ul>
-<li>Engineering project lead for a ground-up web app redesign
-(native-app funnel → desktop-friendly web); led the monolith →
-containerized-services refactor and built CI/CD pipelines for all
-backend services.</li>
-<li>Built internal dashboards for executive, BI, marketing, product, and
-support teams; mentored junior engineers.</li>
+<li>Engineering project lead from the company’s public product launch
+through a ground-up web app redesign (native-app funnel →
+desktop-friendly web); led the monolith → containerized-services
+refactor and built CI/CD pipelines for all backend services.</li>
+<li>Built executive, BI, marketing, product, and support dashboards;
+mentored junior engineers.</li>
 </ul>
 <h2 id="technical">Technical</h2>
 <p><strong>Languages</strong> TypeScript · Elixir · Python · PHP · SQL ·
@@ -105,7 +108,7 @@ Ruby · JavaScript · Bash</p>
 <p><strong>Frontend</strong> React · Next.js · Astro · Phoenix LiveView
 · Redux · Tailwind · SCSS</p>
 <p><strong>Backend &amp; data</strong> Phoenix · Laravel · Express ·
-Django · Rails · PostgreSQL · MySQL · Redis</p>
+Django · Rails · GraphQL · PostgreSQL · MySQL · Redis</p>
 <p><strong>Infrastructure</strong> AWS · Docker · Kubernetes · Fly.io ·
 GitHub Actions · OpenTofu</p>
 <p><strong>Practices</strong> Service-Oriented Architecture · TDD ·

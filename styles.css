@@ -213,7 +213,9 @@ a:hover { color: var(--accent); }
   body { font-size: 10.25pt; line-height: 1.4; widows: 3; orphans: 3; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   .nav-row, .hero { display: none !important; }
   .resume { padding: 0; max-width: none; }
-  .resume h1 { font-size: 22pt; margin-bottom: 3pt; }
+  /* Negative tracking on the name makes PDF text extractors (ATS parsers)
+     drop the word spaces — "Benjamin S.Petty". Print at natural spacing. */
+  .resume h1 { font-size: 22pt; margin-bottom: 3pt; letter-spacing: 0; }
   .resume h2 { font-size: 9pt; margin: 11pt 0 5pt; }
   .resume h3 { font-size: 11.5pt; margin: 8pt 0 2pt; }
   .resume hr { margin: 10pt 0; }

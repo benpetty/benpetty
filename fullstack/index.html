@@ -15,11 +15,17 @@
        so a full page of content clears a single sheet with margin. Scoped to
        these pages only — the shared hub resume keeps its roomier spacing. */
     @media print {
-      .resume li { margin-bottom: 1.5pt; line-height: 1.34; }
-      .resume ul { margin: 2pt 0 6pt; }
-      .resume p { margin: 2.5pt 0; }
-      .resume h3 { margin: 7pt 0 2pt; }
-      .resume h2 { margin: 10pt 0 4pt; }
+      .resume li { margin-bottom: 0.5pt; line-height: 1.3; }
+      .resume ul { margin: 2pt 0 3pt; }
+      .resume p { margin: 1.5pt 0; }
+      .resume h3 { margin: 5pt 0 2pt; }
+      .resume h2 { margin: 8pt 0 3pt; }
+      /* Reclaim the vertical whitespace stacked around the summary: tighten the
+         contact line and collapse the two dividers bracketing it. The densest
+         variant (/fullstack) needs this to clear a single sheet; the others have
+         room to spare, so it costs them nothing. */
+      .resume h1 + p { margin: 0 0 2pt; }
+      .resume hr { margin: 3pt 0; }
     }
   </style>
 </head>
@@ -38,24 +44,23 @@
 github.com/benpetty</p>
 <hr />
 <p>Senior software engineer with 8+ years shipping production web apps
-and services end-to-end — React/Next.js frontends and Elixir/Phoenix,
-Node, and Django backends, with depth in realtime systems, data
-pipelines, and payment reliability.</p>
-<hr />
+and services end-to-end — React/Next.js frontends, Elixir/Phoenix, Node,
+and Django backends, with depth in realtime systems and payment
+reliability.</p>
 <h2 id="engineering-experience">Engineering Experience</h2>
 <h3 id="independent-engineering-2021present">Independent Engineering ·
 2021–Present</h3>
 <ul>
 <li>Built a multi-channel live-audio streaming backend on Elixir/Phoenix
-— a GenServer-per-channel state machine with PubSub fan-out keeps every
-listener synced to the same audio segment in real time, driving LiveView
-UIs from the same server state with no hand-written client glue.</li>
+— a GenServer-per-channel state machine with PubSub fan-out syncs every
+listener to the same segment in real time, with LiveView UIs and no
+hand-written client glue.</li>
 <li>Built a Next.js 16 / React 19 marketing site on Turbopack with
 snapshot-gated caching and promise-level memoization (~200 API calls → 3
 per build); CI gates every merge on Lighthouse SEO and a11y ≥90.</li>
 <li>Designed a resumable HLS transcode pipeline (ffmpeg → four bitrate
-variants on Oban workers) and shipped typed-Sanity Astro SSG sites, one
-to a perfect Lighthouse 100/100/100/100.</li>
+variants on Oban workers); shipped typed-Sanity Astro SSG sites to
+perfect Lighthouse scores.</li>
 </ul>
 <h3
 id="u.s.-lawshield-senior-software-development-engineer-sep-2022-aug-2025">U.S.
@@ -64,10 +69,9 @@ LawShield · Senior Software Development Engineer · Sep 2022 – Aug
 <p><em>React · Next.js · TypeScript · PHP · Laravel · Docker ·
 Kubernetes · AWS EKS</em></p>
 <ul>
-<li>Migrated a poorly-structured monolith into modern, scalable service
-architecture while maintaining backwards compatibility with the legacy
-API; containerized with Docker, Kubernetes, AWS EKS, Helm, and
-GitLab.</li>
+<li>Migrated a monolith into a scalable service architecture while
+keeping the legacy API backwards-compatible; containerized with Docker,
+Kubernetes, AWS EKS, Helm, and GitLab.</li>
 <li>Built a React employee dashboard with role-based access control
 (RBAC) for support agents, admins, attorneys, and executives; added
 automated test coverage to previously-untested codebases.</li>
@@ -89,8 +93,8 @@ Ideas (acq. Ethos Life) · Software Engineer → SDE II · Mar 2017 – May
 · AWS</em></p>
 <ul>
 <li>Engineering project lead for a ground-up web app redesign
-(native-app funnel → desktop-friendly web product); led the monolith →
-containerized services refactor and built CI/CD pipelines for all
+(native-app funnel → desktop-friendly web); led the monolith →
+containerized-services refactor and built CI/CD pipelines for all
 backend services.</li>
 <li>Built internal dashboards for executive, BI, marketing, product, and
 support teams; mentored junior engineers.</li>

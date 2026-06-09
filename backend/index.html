@@ -57,9 +57,18 @@ listener synced to the same audio segment in real time.</li>
 <li>Designed a resumable HLS transcode pipeline (ffmpeg → four bitrate
 variants on Oban workers); on interruption, retry resumes from the safe
 segment-overlap point instead of restarting the job.</li>
+<li>Built a GenServer reconciler that audits the job queue’s in-memory
+producer state against the database in both directions — closing a
+stuck-jobs failure mode surfaced by a production incident.</li>
+<li>Built a cron-driven order-forwarding bridge between Shopify and
+Printful on a Cloudflare Worker — exactly-once delivery via idempotency
+keys, per-order error metadata, and failure alerting.</li>
 <li>Ran production ops: SSRF-hardened X.509 webhook verification,
 privacy-by-design analytics, and a postmortem-driven invariants doc
 backing telemetry-driven incident response on Fly.io.</li>
+<li>Built conversational AI agent tooling — 26 custom Claude Code skills
+that run production storefront operations, content catalogs, and deploy
+pipelines day to day.</li>
 </ul>
 <h3
 id="u.s.-lawshield-senior-software-development-engineer-contract-sep-2022-aug-2025">U.S.
@@ -93,14 +102,14 @@ AWS</em></p>
 <ul>
 <li>Led refactoring of a monolithic API into containerized services;
 built efficient, reliable CI/CD pipelines for all backend services.</li>
-<li>Built internal dashboards for executive, BI, marketing, product, and
-support teams; mentored junior engineers.</li>
+<li>Built executive, BI, marketing, product, and support dashboards;
+mentored junior engineers.</li>
 </ul>
 <h2 id="technical">Technical</h2>
 <p><strong>Languages</strong> Elixir · PHP · TypeScript · Python · SQL ·
 Ruby · Bash</p>
-<p><strong>Backend &amp; data</strong> Phoenix · Laravel · Express ·
-Django · Rails · GraphQL · REST · PostgreSQL · MySQL · Redis</p>
+<p><strong>Backend &amp; data</strong> Phoenix · Laravel · Django ·
+Rails · GraphQL · REST · PostgreSQL · MySQL · Redis</p>
 <p><strong>Infrastructure</strong> AWS · Docker · Kubernetes · Fly.io ·
 GitHub Actions · OpenTofu</p>
 <p><strong>Practices</strong> Service-Oriented Architecture · TDD ·

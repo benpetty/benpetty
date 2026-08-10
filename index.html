@@ -108,13 +108,10 @@
 · (206) 353-9874 · benjamin.s.petty@gmail.com ·
 linkedin.com/in/benjaminpetty · github.com/benpetty</p>
 <hr />
-<p>Senior software engineer with 24+ years building full-stack products
-end-to-end — eight years on SaaS teams (Tomorrow Ideas, acq. Ethos Life;
-Crowd Cow; U.S. LawShield), now founding and running four independent
-Pacific Northwest brands. Across all four I’ve built custom Claude Code
-agent tooling — conversational skills (26 on the apparel store alone)
-that run production storefronts, content catalogs, and deploy pipelines
-day to day.</p>
+<p>Senior software engineer and founder. Eight years on SaaS engineering
+teams at Tomorrow Ideas (acq. Ethos Life), Crowd Cow, and U.S.
+LawShield. Since 2001 I’ve built and run the software behind four
+independent Pacific Northwest businesses.</p>
 <p><strong>Open to senior engineering roles and contract/fractional
 engagements.</strong></p>
 <hr />
@@ -124,120 +121,73 @@ engagements.</strong></p>
 &amp; Engineer · 2026–Present</h3>
 <p><a href="https://audeos.com">audeos.com</a> · <a
 href="https://audeos.fm">audeos.fm</a></p>
-<p>Multi-channel live-streaming radio platform. Each channel loops a
-curated playlist of pre-transcoded audio, broadcast in sync to every
-listener.</p>
+<p>Live-streaming radio. Each channel plays a curated loop of audio, in
+sync for every listener.</p>
+<p><em>Elixir · Phoenix · LiveView · Postgres · Oban · Cloudflare R2 ·
+AWS SES · Fly.io · Next.js · React</em></p>
 <ul>
-<li>Realtime engine on Phoenix LiveView: a GenServer-per-channel state
-machine with PubSub fan-out keeps every listener synced to the same
-audio segment in real time.</li>
-<li>HLS pipeline with resumable transcode checkpointing: ffmpeg converts
-uploads into rolling segments across four bitrate variants (Cloudflare
-R2 storage, MediaMTX RTMP relay, Oban workers for
-transcode/cleanup/backups); on interruption, retry probes R2 segment
-counts across all variants and resumes from the safe overlap point,
-keeping every ladder in sync through partial failures.</li>
-<li>Custom Oban phantom-slot reconciler (GenServer) that reconciles
-in-memory producer state against the database in both directions —
-written after a production incident where Oban’s built-in Lifeline
-plugin rescued still-running jobs.</li>
-<li>Production operations: AWS SES/SNS email with SSRF-hardened X.509
-webhook verification; privacy-by-design analytics (MaxMind country
-resolution at write time, raw IP discarded); self-serve GDPR
-export/delete; and a postmortem-driven invariants doc (15+ documented
-failure modes) backing telemetry-driven incident response on
-Fly.io.</li>
-<li>Marketing site (audeos.com), Next.js 16 / React 19 on Turbopack:
-snapshot-gated Spotify caching and promise-level Contentful memoization
-(~200 API calls → 3 per build); post-deploy CI runs a sitemap crawl,
-link-check, Lychee scan, and Lighthouse audits (SEO ≥90, a11y ≥90) on
-every merge; OpenTofu owns the site’s DNS and DMARC.</li>
-<li><strong>Stack:</strong> Elixir · Phoenix · LiveView · Bandit ·
-Postgres · Oban · Cloudflare R2 · MediaMTX · AWS SES/SNS · MaxMind ·
-Sentry · OpenTofu · Fly.io · Next.js · React · Turbopack ·
-Contentful</li>
+<li>Built the live-audio engine in Elixir. One process per channel keeps
+every listener on the same segment.</li>
+<li>Built the transcode pipeline. ffmpeg cuts uploads into HLS segments
+at four bitrates on Cloudflare R2, with background workers handling
+transcode, cleanup, and backups. An interrupted job resumes from the
+last complete segment rather than starting over.</li>
+<li>Run it in production: transactional email, analytics that resolve
+country at write time and discard the IP, self-serve GDPR export and
+delete, and a written record of every failure mode I’ve hit so far.</li>
+<li>Built the marketing site on Next.js. Caching and memoization took it
+from roughly 200 API calls per build down to 3.</li>
 </ul>
 <h3 id="northwest-local-cannabis-co-founder-2021present">Northwest Local
 Cannabis · Co-Founder · 2021–Present</h3>
 <p><a href="https://nw-local.com">nw-local.com</a></p>
-<p>Co-founder of Northwest Local Cannabis, a WA i502 licensed craft
-cannabis producer/processor. Cultivator-operator across grow, tech,
-brand, and distribution.</p>
+<p>Licensed craft cannabis producer and processor in Washington. I cover
+the grow, the tech, the brand, and distribution.</p>
+<p><em>Astro · Sanity · TypeScript · Django · Python · Postgres · HTMX ·
+Fly.io</em></p>
 <ul>
-<li>Astro 6 SSG with Sanity CMS as single source of truth for strains,
-products, blog posts, retailer partners, and site settings; deployed to
-GitHub Pages.</li>
-<li>Typed Schema.org JSON-LD factory emitting Organization / Product /
-Article / BreadcrumbList structured data per page, with a
-Portable-Text→plaintext extractor.</li>
-<li>Terpene↔︎strain content graph: a <code>terpene</code> document type
-cross-referenced via a GROQ reverse join, surfaced as
-<code>/terpenes/[slug]</code> pages; the content-scaffolding skill
-auto-provisions terpene docs with AI-generated hero imagery.</li>
-<li>Nightly four-job CI audit (build · sitemap validation · Lychee
-link-health · Lighthouse) wired as a reusable workflow on PRs and a
-schedule.</li>
-<li>Custom Claude Code skills run content ops conversationally —
-scaffolding strains/products/posts, catalog auditing, multimodal
-alt-text backfill at the Sanity asset level, and a bash image-ingest
-pipeline (HEIC→JPEG, slug renames, SHA-256 dedup).</li>
-<li>Internal ops platform (ops.nw-local.com): a Django 6 + HTMX CRM that
-pushes to Sanity via <code>post_save</code> signals to keep the public
-wholesale page in sync, with passwordless magic-link auth (custom fix
-for a django-allauth allowlist-bypass), shipped to Fly.io via
-CI/CD.</li>
-<li><strong>Stack:</strong> Astro · Sanity · astro-portabletext ·
-TypeScript · GitHub Actions · Django 6 · Python 3.14 · Postgres 18 ·
-HTMX · AWS SES · OpenTofu</li>
+<li>Built the brand site on Astro and Sanity, with the CMS as the single
+source of truth for strains, products, posts, and retail partners.</li>
+<li>Built the internal ops platform: a Django and HTMX CRM for
+retailers, contacts, and deals, with magic-link sign-in. Changes push to
+Sanity, so the public wholesale page stays current.</li>
+<li>Wrote the content tooling: structured-data generation, a nightly CI
+audit of the build, sitemap, links, and Lighthouse scores, and an image
+pipeline that converts HEIC to JPEG, renames by slug, and drops
+duplicates by hash.</li>
 </ul>
 <h3 id="the-north-west-clothing-founder-2001present">The North West
 Clothing · Founder · 2001–Present</h3>
 <p><a href="https://nwclothing.com">nwclothing.com</a></p>
-<p>Independent Pacific Northwest apparel brand specializing in design,
-decoration, and distribution. Founded 2001; relaunched in 2026 on a
-modern stack with print-on-demand fulfillment.</p>
+<p>Pacific Northwest apparel brand. Founded in 2001, relaunched in 2026
+with print-on-demand fulfillment.</p>
+<p><em>Shopify (Admin GraphQL) · Liquid · Vite · TypeScript · Alpine.js
+· Cloudflare Workers · Printful API</em></p>
 <ul>
-<li>Original era (2001–2015): generated up to $5K/day in online sales
-through targeted campaigns; up to $20K gross revenue per weekend at
-sponsored events and festivals; trained employees across retail,
-warehouse, and screen-printing operations; sustained inventory levels
-via demand forecasting from sales analytics.</li>
-<li>2026 relaunch: custom Shopify OS 2.0 theme (Dawn-based) with a Vite
-+ SCSS + Alpine.js build pipeline; store run conversationally through a
-26-skill Claude Code surface.</li>
-<li>Order-forwarding bridge on a Cloudflare Worker: a 15-minute cron
-forwards paid Shopify orders to a Manual-API Printful store (which
-Shopify’s native integration can’t create programmatically), with
-exactly-once delivery via Printful <code>external_id</code>, per-order
-error metafields, and Resend failure alerts.</li>
-<li>Declarative product pipeline: Zod-validated YAML specs resolve
-against the live Printful catalog (with margins) to build the full Size
-× Fabric × Colorway matrix in Shopify via the Admin GraphQL
-<code>productSet</code> mutation, then publish, create 301 redirects,
-and archive superseded products — dry-run by default.</li>
-<li>SEO intelligence layer joining Google Search Console + GA4 traffic +
-a structural audit into a P0–P3 prioritized opportunity report, with URL
-Inspection API indexability checks.</li>
-<li><strong>Stack:</strong> Shopify (Admin GraphQL) · Liquid · Vite ·
-TypeScript · Zod · Alpine.js · SCSS · Cloudflare Workers · Printful API
-· Google APIs (GSC + GA4) · Resend · Vitest</li>
+<li>2001–2015: up to $5K/day in online sales, and up to $20K in a
+weekend at events and festivals. Forecast demand from sales data and
+trained staff across retail, warehouse, and screen printing.</li>
+<li>Relaunched the store in 2026 on a custom Shopify theme. Catalog and
+deploy work runs through 26 custom Claude Code skills I wrote for
+it.</li>
+<li>Built the order bridge on a Cloudflare Worker. A cron job forwards
+paid Shopify orders to Printful, delivers each one exactly once, and
+alerts on failures.</li>
+<li>Built the product pipeline. YAML specs resolve against the live
+Printful catalog and generate the full size, fabric, and color matrix
+through Shopify’s Admin GraphQL API, then publish and redirect. Dry-run
+by default.</li>
 </ul>
 <h3 id="rooted-community-engineer-2024present">Rooted Community ·
 Engineer · 2024–Present</h3>
 <p><a href="https://rootedcommunity.org">rootedcommunity.org</a></p>
-<p>Marketing site for a small Washington nonprofit serving
-system-impacted BIPOC community members in King, Snohomish, and Pierce
-counties.</p>
+<p>Website for a Washington nonprofit serving system-impacted BIPOC
+community members. Pro bono.</p>
+<p><em>Astro · Sanity · TypeScript · GitHub Actions</em></p>
 <ul>
-<li>Zero-touch content deploys: a Sanity→GitHub webhook fires
-<code>repository_dispatch</code> on every Studio publish; CI is ordered
-so type-check and audits gate the deploy, preventing a bad push from
-racing to production.</li>
-<li>Lighthouse-driven accessibility to 100/100/100/100: heading-order
-fixes via a composable typed <code>headingLevel</code> prop plus a
-focus-revealed skip link.</li>
-<li><strong>Stack:</strong> Astro 6 · Sanity · TypeScript · self-hosted
-variable fonts · Lighthouse CI · Lychee · GitHub Actions</li>
+<li>Publishing in the CMS triggers a deploy. Type-checks and audits run
+before it, not after.</li>
+<li>Took the site to 100 in all four Lighthouse categories.</li>
 </ul>
 <hr />
 <h2 id="engineering-experience">Engineering Experience</h2>
@@ -245,150 +195,112 @@ variable fonts · Lighthouse CI · Lychee · GitHub Actions</li>
 Software Consultant · 2026–Present</h3>
 <p>Records and document systems for a community association management
 firm.</p>
-<p><em>Python 3 · pypdfium2 · Apple Vision · tesseract · pytest ·
-ruff</em></p>
+<p><em>Python · pypdfium2 · Apple Vision · tesseract · pytest</em></p>
 <ul>
-<li>Records-production audit pipeline: SHA-256 content matching across a
-document archive — zip archives expanded recursively — classifies every
-document as produced or withheld, then compares withheld PDFs page by
-page to separate partly-produced documents from fully withheld
-ones.</li>
-<li>Built for the legal record: every deliverable package is
-byte-reproducible, carries a SHA-256 manifest, and prints its own hash
-for the transmittal record, so a re-run months later proves nothing
-changed.</li>
-<li>Full-text index over the same archive: reads each document’s own
-text layer and OCRs the pages that lack one through two independent
-engines, with per-document coverage reporting so an unreadable document
-is never silently indistinguishable from a searchable one.</li>
-<li>Correspondence archive rendered to a bookmarked PDF for legal
-review, with remote image loading blocked so opening it cannot signal
-back to the original senders.</li>
+<li>Built an audit pipeline for a records request. It hashes every file
+in a document archive, including files nested inside zip archives, to
+separate what was produced from what was withheld, then compares
+withheld PDFs page by page.</li>
+<li>Every output package is byte-reproducible and ships with a SHA-256
+manifest and its own hash for the transmittal record.</li>
+<li>Built a full-text index over the same archive. It reads each
+document’s text layer and OCRs the pages that lack one through two
+engines, then reports coverage per document, so an unreadable file is
+never mistaken for an empty one.</li>
+<li>Rendered an email archive to a bookmarked PDF for legal review.
+Remote images are blocked, so opening it does not notify the
+senders.</li>
 </ul>
 <h3
 id="u.s.-lawshield-senior-software-development-engineer-contract-sep-2022-aug-2025">U.S.
 LawShield · Senior Software Development Engineer (Contract) · Sep 2022 –
 Aug 2025</h3>
 <p><a href="https://uslawshield.com">uslawshield.com</a></p>
-<p><em>PHP · Laravel · Docker · Kubernetes · AWS EKS · Helm · React ·
-Next.js · Tailwind · GitLab</em></p>
+<p><em>PHP · Laravel · React · Next.js · Docker · Kubernetes · AWS EKS ·
+Helm · GitLab</em></p>
 <ul>
-<li>Maintained backwards compatibility with the legacy API while
-building multiple new backend services and migrating a poorly-structured
-monolith into modern, scalable service architecture supporting continued
-product growth.</li>
-<li>Partnered with the DevOps lead to containerize applications and
-upgrade the CI/CD pipelines using Docker, Kubernetes, AWS EKS, Helm
-charts, and GitLab.</li>
-<li>Added automated unit tests and test coverage to previously untested
-or manually-tested code bases.</li>
-<li>Built a React-based employee dashboard used by customer support
-agents, admins, attorneys, and executives, with role-based access
-control (RBAC) for permissions.</li>
+<li>Migrated a monolith into separate services while keeping the legacy
+API working for the clients already on it.</li>
+<li>Built product and coverage logic for a legal-services platform whose
+offerings are regulated separately in all 50 states.</li>
+<li>Built the internal dashboard used by support agents, admins,
+attorneys, and executives, with per-role permissions.</li>
+<li>Containerized the applications on Docker, Kubernetes, and AWS EKS
+with the DevOps lead, and added test coverage to code that had
+none.</li>
 </ul>
 <h3 id="crowd-cow-software-engineer-fte-may-2021-dec-2021">Crowd Cow ·
 Software Engineer (FTE) · May 2021 – Dec 2021</h3>
 <p><a href="https://crowdcow.com">crowdcow.com</a></p>
-<p><em>Ruby on Rails · Vue.js · Sass · Redis · MySQL · Docker · Heroku ·
+<p><em>Ruby on Rails · Vue.js · Redis · MySQL · Docker · Heroku ·
 RSpec</em></p>
 <ul>
-<li>Redesigned the legacy credit-card processing module, raising
-subscription payment acceptance from 70% to 90%. Categorized
-failed-charge decline codes from the payment processor and strategically
-targeted retry scenarios — for example, timing retries on
-insufficient-funds declines for likely account-replenishment
-windows.</li>
-<li>On-call rotation for site reliability and production incident
-response; primary point of contact for team support tickets.</li>
+<li>Redesigned the credit-card processing module and raised subscription
+payment acceptance from 70% to 90%. Sorted decline codes by reason and
+retried each one when it was most likely to clear, such as retrying
+insufficient funds on payday.</li>
+<li>On call for site reliability and production incidents, and the first
+point of contact for team support tickets.</li>
 </ul>
-<h3 id="tomorrow-ideas-acq.-ethos-life-mar-2017-may-2021">Tomorrow Ideas
-(acq. Ethos Life) · Mar 2017 – May 2021</h3>
+<h3
+id="tomorrow-ideas-acq.-ethos-life-software-engineer-sde-ii-mar-2017-may-2021">Tomorrow
+Ideas (acq. Ethos Life) · Software Engineer → SDE II · Mar 2017 – May
+2021</h3>
 <p><a href="https://tmro.com">tmro.com</a></p>
-<p>Early-stage fintech startup; acquired by Ethos Life. Joined as
-contract project lead for the public launch and grew through promotion
-to SDE II over 4+ years.</p>
-<p><strong>Software Development Engineer II (FTE) · Aug 2020 – May
-2021</strong></p>
-<p><em>TypeScript · React · Redux · Node · Express · Tailwind · Redis ·
-Docker · GitHub Actions · AWS · Jest</em></p>
+<p>Estate-planning app, acquired by Ethos Life. Joined as a contractor
+to lead the launch and was promoted to SDE II over four years. The
+product was the legal documents themselves, which had to meet the
+requirements of all 50 states.</p>
+<p><em>Python · Django · TypeScript · React · Redux · Node · PostgreSQL
+· Docker · AWS</em></p>
 <ul>
-<li>Engineering project lead for a complete UI/UX redesign of the app’s
-web experience, pivoting from a native-app-funnel model to a web-centric
-desktop-friendly product built from the ground up.</li>
-<li>Collaborated with external partners and engineers on exclusive
-integrations with Tomorrow’s app and APIs.</li>
-</ul>
-<p><strong>Software Engineer (FTE) · Aug 2017 – Jul 2020</strong></p>
-<p><em>Python · Django · PHP · Laravel · React · Redux · Sass · Redis ·
-PostgreSQL · Docker · TravisCI · AWS · PHPUnit</em></p>
-<ul>
-<li>Led refactoring projects on the monolithic API codebase, converting
-key modules into containerized services; built efficient, reliable CI/CD
-pipelines for all backend services and web projects.</li>
-<li>Built a custom admin dashboard with on-demand features for
-executive, BI, marketing, product, and customer-support teams.</li>
-<li>Identified and repaired bottlenecks in page-load and server response
-times.</li>
-<li>Mentored junior engineers via regular pair-programming and code
-review.</li>
-</ul>
-<p><strong>Software Engineer (Contract) · Mar 2017 – Jul
-2017</strong></p>
-<p><em>Python · Django · Wagtail CMS · React · Redux · PostgreSQL ·
-CircleCI · AWS · Pytest</em></p>
-<ul>
-<li>Project lead for the launch of Tomorrow’s marketing site and
-flagship web app. Owned all web-development tasks for the company’s
-public product announcement and initial release.</li>
+<li>Led the web build for the public launch: the marketing site and the
+first release of the app.</li>
+<li>Built document generation for wills and related instruments against
+each state’s execution requirements.</li>
+<li>Led the redesign that moved the product from a native-app funnel to
+a desktop-friendly web app.</li>
+<li>Converted modules of the monolithic API into containerized services
+and built the CI/CD pipelines for them.</li>
+<li>Built the internal dashboard used by the executive, BI, marketing,
+product, and support teams.</li>
+<li>Mentored junior engineers through pairing and code review.</li>
 </ul>
 <h3
 id="instrument-full-stack-engineer-contract-jun-2022-sep-2022">Instrument
 · Full Stack Engineer (Contract) · Jun 2022 – Sep 2022</h3>
 <p><a href="https://instrument.com">instrument.com</a></p>
-<p><em>Docker · Node · WordPress · MySQL · GitHub Actions · WPEngine ·
-Jest</em></p>
+<p><em>Docker · Node · WordPress · MySQL · GitHub Actions ·
+WPEngine</em></p>
 <ul>
-<li>Delivered a complete website redesign for the nonprofit <a
-href="https://blackspace.org/">BlackSpace</a> alongside the agency’s
-design and dev teams.</li>
-<li>Built a containerized dev environment to streamline frontend
-onboarding; wrote scripts to sync content between remote and local
-databases.</li>
-<li>Set up custom CI/CD pipelines with GitHub Actions and WPEngine.</li>
+<li>Rebuilt the website for the nonprofit <a
+href="https://blackspace.org/">BlackSpace</a> with the agency’s design
+and engineering teams, and set up the deploy pipeline.</li>
 </ul>
 <hr />
 <h2 id="selected-projects">Selected Projects</h2>
-<p><em>Self-directed works in progress — problem domains outside the
-ventures.</em></p>
+<p><em>Self-directed, outside the ventures.</em></p>
 <ul>
-<li><strong>crate-agent</strong> — native macOS companion app for Serato
-DJ (Swift/SwiftUI + Rust via UniFFI) that keeps the Serato library in
-sync when tracks are renamed or moved in Finder: watches the filesystem
-and rewrites Serato’s binary library files so their absolute-path track
-links never silently break.</li>
-<li><strong>kraang</strong> — self-hosted personal knowledge graph
-(FastAPI · GraphQL · Postgres): a five-worker IMAP ingestion pipeline
-with an auditable state machine and Postgres-role service isolation,
-plus Claude Code skills wired to the live API for AI-assisted document
-review.</li>
+<li><strong>crate-agent</strong> — macOS companion app for Serato DJ, in
+Swift and Rust. It watches the filesystem and rewrites Serato’s library
+files when tracks are renamed or moved, so the links to them don’t
+break.</li>
+<li><strong>kraang</strong> — self-hosted knowledge graph on FastAPI,
+GraphQL, and Postgres. A five-worker email ingestion pipeline with an
+auditable state machine and a separate Postgres role per service.</li>
 </ul>
 <hr />
 <h2 id="technical">Technical</h2>
-<p><strong>Languages</strong> TypeScript · JavaScript · Elixir · Python
-· Ruby · PHP · Bash</p>
-<p><strong>Frontend</strong> Astro · Next.js · React · Phoenix LiveView
+<p><strong>Languages</strong> TypeScript · JavaScript · Python · Elixir
+· Ruby · PHP · SQL</p>
+<p><strong>Frontend</strong> React · Next.js · Astro · Phoenix LiveView
 · Alpine.js · Tailwind · SCSS</p>
-<p><strong>Backend</strong> Phoenix · Django · Express · Rails ·
-Laravel</p>
-<p><strong>Data</strong> PostgreSQL · MySQL · Redis · MongoDB ·
-Cloudflare R2</p>
-<p><strong>Infrastructure</strong> AWS · Cloudflare · Cloudflare Workers
-· Fly.io · Docker · GitHub Actions · OpenTofu</p>
-<p><strong>Content &amp; commerce</strong> Sanity · Contentful ·
-WordPress · Shopify (Admin GraphQL)</p>
-<p><strong>Practices</strong> SOLID · Service-Oriented Architecture ·
-Test-Driven Development · RBAC · CI/CD · IaC · Postmortem-driven
-invariants</p>
+<p><strong>Backend &amp; data</strong> Django · Phoenix · Rails ·
+Laravel · Express · PostgreSQL · MySQL · Redis</p>
+<p><strong>Infrastructure</strong> AWS · Cloudflare · Fly.io · Docker ·
+Kubernetes · GitHub Actions · OpenTofu</p>
+<p><strong>Content &amp; commerce</strong> Sanity · Contentful · Shopify
+(Admin GraphQL) · WordPress</p>
 <hr />
 <h2 id="education">Education</h2>
 <p><strong>International Business &amp; Trade, AAS</strong> · Highline

@@ -187,7 +187,9 @@ a:hover { color: var(--accent); }
   border-top: 2px solid var(--accent);
   padding-top: 10px;
   margin: 28px 0 14px;
-  display: inline-block;
+  /* Block, not inline-block: the border-top is the section divider, so the
+     element must span the column rather than shrink-wrap its own text. */
+  display: block;
 }
 .resume h3 { font-size: 15px; font-weight: 700; margin: 18px 0 2px; }
 .resume h3 + p { margin: 0 0 6px; color: var(--muted); font-size: 12px; }

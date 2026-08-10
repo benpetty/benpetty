@@ -161,8 +161,8 @@ Records and document systems for a community association management firm.
 
 *Ruby on Rails · Vue.js · Sass · Redis · MySQL · Docker · Heroku · RSpec*
 
-- **Redesigned the legacy credit-card processing module, raising subscription payment
-  acceptance from 70% to 90%.** Categorized failed-charge decline codes from the
+- Redesigned the legacy credit-card processing module, raising subscription payment
+  acceptance from 70% to 90%. Categorized failed-charge decline codes from the
   payment processor and strategically targeted retry scenarios — for example, timing
   retries on insufficient-funds declines for likely account-replenishment windows.
 - On-call rotation for site reliability and production incident response; primary

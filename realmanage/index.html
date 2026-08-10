@@ -43,37 +43,29 @@
 · (206) 353-9874 · benjamin.s.petty@gmail.com ·
 linkedin.com/in/benjaminpetty · github.com/benpetty</p>
 <hr />
-<p>Senior software engineer and founder. Eight years on SaaS engineering
-teams (Tomorrow Ideas, acq. Ethos Life; Crowd Cow; U.S. LawShield), now
-building and operating the systems behind four independent Pacific
-Northwest businesses. I build the back-office layer most teams defer —
-internal tools, compliance and reporting workflows, and pipelines that
-replace manual process — designed by someone who runs the operations
-they serve.</p>
+<p>Senior software engineer and founder. Eight years on SaaS teams
+building legal-document and compliance systems — estate-planning
+document generation at Tomorrow Ideas (acq. Ethos Life), legal-services
+products at U.S. LawShield — both carrying per-state requirements across
+all 50 states. I build document pipelines that hold up under scrutiny:
+content-addressed processing over large messy corpora, with auditable
+state machines that make partial failure visible.</p>
 <p><strong>Available for ongoing consulting engagements.</strong></p>
 <h2 id="engineering-experience">Engineering Experience</h2>
-<h3
-id="northwest-local-cannabis-co-founder-engineer-2021present">Northwest
-Local Cannabis · Co-Founder &amp; Engineer · 2021–Present</h3>
-<p><a href="https://nw-local.com">nw-local.com</a> — a licensed
-Washington producer/processor operating under state seed-to-sale
-compliance.</p>
-<ul>
-<li>Built the internal ops platform: a Django 6 + HTMX CRM for
-retailers, contacts, and deals with magic-link auth, shipped to Fly.io
-through CI/CD. A one-way <code>post_save</code> push keeps the public
-wholesale page in step with internal records, so staff maintain one
-system instead of reconciling two.</li>
-</ul>
 <h3 id="independent-ventures-founder-engineer-2001present">Independent
 Ventures · Founder &amp; Engineer · 2001–Present</h3>
 <p><a href="https://nwclothing.com">nwclothing.com</a> · <a
 href="https://audeos.com">audeos.com</a></p>
 <ul>
-<li>Order-forwarding bridge on a Cloudflare Worker: a scheduled job
-pushes paid storefront orders into a fulfillment partner’s API with
-exactly-once delivery, per-order error tracking, and failure
-alerting.</li>
+<li>Document and asset ingest pipeline: HEIC→JPEG normalization, slug
+renames, and SHA-256 content dedup across a media library, with
+multimodal alt-text backfill at the asset level.</li>
+<li>Structured content platform on a headless CMS as single source of
+truth — a typed Schema.org JSON-LD factory and a rich-text→plaintext
+extractor generate derived documents from it.</li>
+<li>Resumable corpus processing: on interruption, retry resumes from the
+safe overlap point, so a partial failure never silently loses or
+duplicates work.</li>
 </ul>
 <h3
 id="u.s.-lawshield-senior-software-development-engineer-contract-sep-2022-aug-2025">U.S.
@@ -82,19 +74,20 @@ Aug 2025</h3>
 <p><em>PHP · Laravel · React · Next.js · Docker · Kubernetes · AWS EKS ·
 GitLab</em></p>
 <ul>
+<li>Built product and coverage logic for a legal-services platform whose
+offerings varied by state across all 50 — every product configuration
+had to satisfy a different regulatory regime.</li>
 <li>Built a React employee dashboard with role-based access control
 serving customer-support agents, admins, attorneys, and executives — one
 application, four permission surfaces.</li>
 </ul>
 <h3 id="crowd-cow-software-engineer-may-2021-dec-2021">Crowd Cow ·
 Software Engineer · May 2021 – Dec 2021</h3>
-<p><em>Ruby on Rails · Vue.js · Redis · MySQL · Heroku · RSpec</em></p>
 <ul>
 <li><strong>Raised subscription payment acceptance from 70% to
-90%</strong> by redesigning the legacy credit-card processing module:
-categorized processor decline codes and timed each retry to the window
-that code was most likely to clear. On-call for site reliability and
-incident response.</li>
+90%</strong> by redesigning the legacy credit-card processing module on
+a Rails/Vue storefront: categorized processor decline codes and timed
+each retry to the window that code was most likely to clear.</li>
 </ul>
 <h3
 id="tomorrow-ideas-acq.-ethos-life-software-engineer-sde-ii-mar-2017-may-2021">Tomorrow
@@ -103,23 +96,25 @@ Ideas (acq. Ethos Life) · Software Engineer → SDE II · Mar 2017 – May
 <p><em>Python · Django · TypeScript · React · Node · PostgreSQL ·
 AWS</em></p>
 <ul>
+<li>Estate-planning document platform monetized through life insurance:
+built generation logic for wills and related instruments that had to
+meet each state’s execution requirements across all 50 — the document,
+not the app, was the product.</li>
 <li>Built custom admin dashboards for executive, BI, marketing, product,
-and customer-support teams — internal tooling as the primary product
-surface for everyone who was not a customer.</li>
+and customer-support teams.</li>
 </ul>
 <h2 id="technical">Technical</h2>
 <p><strong>Languages</strong> Python · TypeScript · JavaScript · Ruby ·
 PHP · SQL · Bash</p>
-<p><strong>Backend &amp; data</strong> Django · FastAPI · Rails ·
-Laravel · Express · PostgreSQL · MySQL · Redis</p>
-<p><strong>Frontend</strong> React · Next.js · Astro · HTMX · Vue ·
-Tailwind · SCSS</p>
-<p><strong>Practices</strong> RBAC · Test-Driven Development · CI/CD ·
-Infrastructure as Code · Postmortem-driven invariants</p>
-<p><strong>Selected project</strong> <strong>kraang</strong> —
-self-hosted knowledge graph (FastAPI · GraphQL · Postgres): a
-five-worker email-ingestion pipeline with an auditable state machine and
-Postgres-role service isolation.</p>
+<p><strong>Frameworks &amp; data</strong> Django · FastAPI · Rails ·
+Laravel · React · PostgreSQL · MySQL · Redis</p>
+<p><strong>Document &amp; text processing</strong> PDF page-level
+analysis · OCR · content-addressed storage · SHA-256 manifests ·
+structured-data extraction</p>
+<p><strong>Selected project</strong> <strong>kraang</strong>
+(self-directed) — self-hosted knowledge graph (FastAPI · GraphQL ·
+Postgres): a five-worker email-ingestion pipeline with an auditable
+state machine and Postgres-role service isolation.</p>
 <p><strong>Education</strong> International Business &amp; Trade, AAS ·
 Highline College, Des Moines WA · 2018</p>
 </article>

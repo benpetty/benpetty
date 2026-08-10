@@ -120,6 +120,27 @@ community members in King, Snohomish, and Pierce counties.
 
 ## Engineering Experience
 
+### Independent Software Consultant · 2026–Present
+
+Records and document systems for a community association management firm.
+
+*Python 3 · pypdfium2 · Apple Vision · tesseract · pytest · ruff*
+
+- Records-production audit pipeline: SHA-256 content matching across a document
+  archive — zip archives expanded recursively — classifies every document as
+  produced or withheld, then compares withheld PDFs page by page to separate
+  partly-produced documents from fully withheld ones.
+- Built for the legal record: every deliverable package is byte-reproducible,
+  carries a SHA-256 manifest, and prints its own hash for the transmittal
+  record, so a re-run months later proves nothing changed.
+- Full-text index over the same archive: reads each document's own text layer
+  and OCRs the pages that lack one through two independent engines, with
+  per-document coverage reporting so an unreadable document is never silently
+  indistinguishable from a searchable one.
+- Correspondence archive rendered to a bookmarked PDF for legal review, with
+  remote image loading blocked so opening it cannot signal back to the original
+  senders.
+
 ### U.S. LawShield · Senior Software Development Engineer (Contract) · Sep 2022 – Aug 2025
 [uslawshield.com](https://uslawshield.com)
 

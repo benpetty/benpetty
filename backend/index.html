@@ -43,55 +43,48 @@
 353-9874 · benjamin.s.petty@gmail.com · linkedin.com/in/benjaminpetty ·
 github.com/benpetty</p>
 <hr />
-<p>Senior backend engineer with 9+ years shipping production services
-end-to-end — realtime systems, data pipelines, payment reliability, and
+<p>Senior backend engineer with nine years shipping production services.
+Realtime systems, data pipelines, payment reliability, and
 monolith-to-services migrations.</p>
 <hr />
 <h2 id="engineering-experience">Engineering Experience</h2>
 <h3 id="independent-engineering-2021present">Independent Engineering ·
 2021–Present</h3>
+<p><em>Elixir · Phoenix · Postgres · Oban · Cloudflare Workers ·
+Fly.io</em></p>
 <ul>
-<li>Built a multi-channel live-audio streaming backend on Elixir/Phoenix
-— a GenServer-per-channel state machine with PubSub fan-out keeps every
-listener synced to the same audio segment in real time.</li>
-<li>Designed a resumable HLS transcode pipeline (ffmpeg → four bitrate
-variants on Oban workers); on interruption, retry resumes from the safe
-segment-overlap point instead of restarting the job.</li>
-<li>Built a GenServer reconciler that audits the job queue’s in-memory
-producer state against the database in both directions — closing a
-stuck-jobs failure mode surfaced by a production incident.</li>
-<li>Built a cron-driven order-forwarding bridge between Shopify and
-Printful on a Cloudflare Worker — exactly-once delivery via idempotency
-keys, per-order error metadata, and failure alerting.</li>
-<li>Ran production ops: SSRF-hardened X.509 webhook verification,
-privacy-by-design analytics, and a postmortem-driven invariants doc
-backing telemetry-driven incident response on Fly.io.</li>
-<li>Built conversational AI agent tooling — 26 custom Claude Code skills
-that run production storefront operations, content catalogs, and deploy
-pipelines day to day.</li>
+<li>Built a live-audio streaming backend in Elixir. One process per
+channel keeps every listener on the same segment.</li>
+<li>Built the transcode pipeline behind it. ffmpeg cuts uploads into
+segments at four bitrates on background workers, and an interrupted job
+resumes from the last complete segment rather than starting over.</li>
+<li>Built a reconciler that checks the job queue’s in-memory state
+against the database in both directions. It closes a stuck-job failure
+mode a production incident exposed.</li>
+<li>Built an order bridge between Shopify and Printful on a Cloudflare
+Worker. A cron job delivers each paid order exactly once and alerts on
+failures. ### U.S. LawShield · Senior Software Development Engineer
+(Contract) · Sep 2022 – Aug 2025</li>
 </ul>
-<h3
-id="u.s.-lawshield-senior-software-development-engineer-contract-sep-2022-aug-2025">U.S.
-LawShield · Senior Software Development Engineer (Contract) · Sep 2022 –
-Aug 2025</h3>
 <p><em>PHP · Laravel · Docker · Kubernetes · AWS EKS · Helm ·
 GitLab</em></p>
 <ul>
-<li>Migrated a poorly-structured monolith into modern, scalable service
-architecture while maintaining backwards compatibility with the legacy
-API.</li>
-<li>Containerized applications and upgraded CI/CD with Docker,
-Kubernetes, AWS EKS, Helm, and GitLab; added automated test coverage to
-untested codebases.</li>
+<li>Migrated a monolith into separate services while keeping the legacy
+API working for the clients already on it.</li>
+<li>Built product and coverage logic for a legal-services platform whose
+offerings are regulated separately in all 50 states.</li>
+<li>Containerized the applications on Docker, Kubernetes, and AWS EKS,
+and added test coverage to code that had none.</li>
 </ul>
 <h3 id="crowd-cow-software-engineer-may-2021-dec-2021">Crowd Cow ·
 Software Engineer · May 2021 – Dec 2021</h3>
 <p><em>Ruby on Rails · Redis · MySQL · Heroku · RSpec</em></p>
 <ul>
-<li>Redesigned the legacy credit-card processing module, raising
-subscription payment acceptance from 70% to 90% — categorized decline
-codes and timed retries to likely account-replenishment windows. On-call
-for incident response.</li>
+<li>Redesigned the credit-card processing module and raised subscription
+payment acceptance from 70% to 90%. Sorted decline codes by reason and
+retried each one when it was most likely to clear, such as retrying
+insufficient funds on payday. On call for site reliability and
+production incidents.</li>
 </ul>
 <h3
 id="tomorrow-ideas-acq.-ethos-life-software-engineer-sde-ii-mar-2017-may-2021">Tomorrow
@@ -100,20 +93,22 @@ Ideas (acq. Ethos Life) · Software Engineer → SDE II · Mar 2017 – May
 <p><em>Python · Django · Node · Express · PostgreSQL · Redis · Docker ·
 AWS</em></p>
 <ul>
-<li>Led refactoring of a monolithic API into containerized services;
-built efficient, reliable CI/CD pipelines for all backend services.</li>
-<li>Built executive, BI, marketing, product, and support dashboards;
-mentored junior engineers.</li>
+<li>Built document generation for wills and related instruments against
+each state’s execution requirements.</li>
+<li>Converted modules of the monolithic API into containerized services
+and built the CI/CD pipelines for them.</li>
+<li>Built the internal dashboard used by the executive, BI, marketing,
+product, and support teams. Mentored junior engineers.</li>
 </ul>
 <h2 id="technical">Technical</h2>
-<p><strong>Languages</strong> Elixir · PHP · TypeScript · Python · SQL ·
+<p><strong>Languages</strong> Elixir · PHP · Python · TypeScript · SQL ·
 Ruby · Bash</p>
 <p><strong>Backend &amp; data</strong> Phoenix · Laravel · Django ·
-Rails · GraphQL · REST · PostgreSQL · MySQL · Redis</p>
+Rails · Express · GraphQL · PostgreSQL · MySQL · Redis</p>
 <p><strong>Infrastructure</strong> AWS · Docker · Kubernetes · Fly.io ·
 GitHub Actions · OpenTofu</p>
-<p><strong>Practices</strong> Service-Oriented Architecture · TDD ·
-CI/CD · RBAC · Postmortem-driven invariants</p>
+<p><strong>Practices</strong> Service-oriented architecture · TDD ·
+CI/CD · RBAC</p>
 <p><strong>Education</strong> International Business &amp; Trade, AAS ·
 Highline College, Des Moines WA · 2018</p>
 </article>

@@ -43,50 +43,46 @@
 353-9874 · benjamin.s.petty@gmail.com · linkedin.com/in/benjaminpetty ·
 github.com/benpetty</p>
 <hr />
-<p>Senior software engineer with 9+ years shipping production web apps
-and services end-to-end — React/Next.js frontends, Elixir/Phoenix, Node,
-and Django backends, with depth in realtime systems and payment
-reliability.</p>
+<p>Senior software engineer with nine years shipping production web apps
+and services. React and Next.js on the front, Elixir, Node, and Django
+behind it, with depth in realtime systems and payment reliability.</p>
 <h2 id="engineering-experience">Engineering Experience</h2>
 <h3 id="independent-engineering-2021present">Independent Engineering ·
 2021–Present</h3>
+<p><em>Elixir · Phoenix · LiveView · Next.js · React · Astro · Postgres
+· Fly.io</em></p>
 <ul>
-<li>Built a multi-channel live-audio streaming backend on Elixir/Phoenix
-— a GenServer-per-channel state machine with PubSub fan-out keeps every
-listener synced to the same segment in real time, behind server-driven
-LiveView UIs.</li>
-<li>Built a Next.js 16 / React 19 marketing site on Turbopack with
-snapshot-gated caching and promise-level memoization (~200 API calls → 3
-per build); CI gates merges at Lighthouse SEO/a11y ≥90.</li>
-<li>Designed a resumable HLS transcode pipeline (ffmpeg → four bitrate
-variants on Oban workers); shipped typed-Sanity Astro SSG sites to
-perfect Lighthouse scores.</li>
-<li>Built conversational AI agent tooling — 26 custom Claude Code skills
-that run production storefront operations, content catalogs, and deploy
-pipelines day to day.</li>
+<li>Built a live-audio streaming backend in Elixir. One process per
+channel keeps every listener on the same segment, behind server-driven
+LiveView interfaces.</li>
+<li>Built the transcode pipeline behind it. ffmpeg cuts uploads into
+segments at four bitrates on background workers, and an interrupted job
+resumes from the last complete segment rather than starting over.</li>
+<li>Built a Next.js 16 and React 19 marketing site on Turbopack. Caching
+and memoization took it from roughly 200 API calls per build down to 3,
+and CI gates merges at Lighthouse SEO and accessibility scores of 90.
+### U.S. LawShield · Senior Software Development Engineer (Contract) ·
+Sep 2022 – Aug 2025</li>
 </ul>
-<h3
-id="u.s.-lawshield-senior-software-development-engineer-contract-sep-2022-aug-2025">U.S.
-LawShield · Senior Software Development Engineer (Contract) · Sep 2022 –
-Aug 2025</h3>
 <p><em>React · Next.js · TypeScript · PHP · Laravel · Docker ·
 Kubernetes · AWS EKS</em></p>
 <ul>
-<li>Migrated a monolith into a scalable service architecture while
-keeping the legacy API backwards-compatible; containerized with Docker,
-Kubernetes, AWS EKS, Helm, and GitLab.</li>
-<li>Built a React employee dashboard with role-based access control
-(RBAC) for support agents, admins, attorneys, and executives; added
-automated test coverage to previously-untested codebases.</li>
+<li>Migrated a monolith into separate services while keeping the legacy
+API working for the clients already on it, and containerized the result
+on Docker, Kubernetes, and AWS EKS.</li>
+<li>Built the internal dashboard used by support agents, admins,
+attorneys, and executives, with per-role permissions. Added test
+coverage to code that had none.</li>
 </ul>
 <h3 id="crowd-cow-software-engineer-may-2021-dec-2021">Crowd Cow ·
 Software Engineer · May 2021 – Dec 2021</h3>
 <p><em>Ruby on Rails · Vue · Redis · MySQL · Heroku · RSpec</em></p>
 <ul>
-<li>Redesigned the legacy credit-card processing module, raising
-subscription payment acceptance from 70% to 90% — categorized decline
-codes and timed retries to likely account-replenishment windows. On-call
-for incident response.</li>
+<li>Redesigned the credit-card processing module and raised subscription
+payment acceptance from 70% to 90%. Sorted decline codes by reason and
+retried each one when it was most likely to clear, such as retrying
+insufficient funds on payday.</li>
+<li>On call for production incidents.</li>
 </ul>
 <h3
 id="tomorrow-ideas-acq.-ethos-life-software-engineer-sde-ii-mar-2017-may-2021">Tomorrow
@@ -95,12 +91,15 @@ Ideas (acq. Ethos Life) · Software Engineer → SDE II · Mar 2017 – May
 <p><em>TypeScript · React · Redux · Python · Django · Node · PostgreSQL
 · AWS</em></p>
 <ul>
-<li>Engineering project lead from the company’s public product launch
-through a ground-up web app redesign (native-app funnel →
-desktop-friendly web); led the monolith → containerized-services
-refactor and built CI/CD pipelines for all backend services.</li>
-<li>Built executive, BI, marketing, product, and support dashboards;
-mentored junior engineers.</li>
+<li>Led the web build for the public launch, then the redesign that
+moved the product from a native-app funnel to a desktop-friendly web
+app.</li>
+<li>Built document generation for wills and related instruments against
+each state’s execution requirements.</li>
+<li>Converted modules of the monolithic API into containerized services
+and built the CI/CD pipelines for them.</li>
+<li>Built the internal dashboard used by the executive, BI, marketing,
+product, and support teams.</li>
 </ul>
 <h2 id="technical">Technical</h2>
 <p><strong>Languages</strong> TypeScript · Elixir · Python · PHP · SQL ·
@@ -111,8 +110,8 @@ Ruby · JavaScript · Bash</p>
 Django · Rails · GraphQL · PostgreSQL · MySQL · Redis</p>
 <p><strong>Infrastructure</strong> AWS · Docker · Kubernetes · Fly.io ·
 GitHub Actions · OpenTofu</p>
-<p><strong>Practices</strong> Service-Oriented Architecture · TDD ·
-CI/CD · Accessibility (WCAG/Lighthouse) · RBAC</p>
+<p><strong>Practices</strong> Service-oriented architecture · TDD ·
+CI/CD · Accessibility (WCAG, Lighthouse) · RBAC</p>
 <p><strong>Education</strong> International Business &amp; Trade, AAS ·
 Highline College, Des Moines WA · 2018</p>
 </article>

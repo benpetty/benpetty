@@ -54,15 +54,14 @@ Ventures · Founder &amp; Engineer · 2001–Present</h3>
 <p><a href="https://nwclothing.com">nwclothing.com</a> · <a
 href="https://audeos.com">audeos.com</a></p>
 <ul>
-<li>Document and asset ingest pipeline: HEIC→JPEG normalization, slug
-renames, and SHA-256 content dedup across a media library, with
-multimodal alt-text backfill at the asset level.</li>
-<li>Structured content platform on a headless CMS as single source of
-truth — a typed Schema.org JSON-LD factory and a rich-text→plaintext
-extractor generate derived documents from it.</li>
-<li>Resumable corpus processing: on interruption, retry resumes from the
-safe overlap point, so a partial failure never silently loses or
-duplicates work.</li>
+<li>Built an image and document ingest pipeline. It converts HEIC to
+JPEG, renames by slug, drops duplicates by hash, and backfills alt text
+at the asset level.</li>
+<li>Built a content platform on a headless CMS. Structured data and
+plaintext are generated from the same source, so derived documents never
+drift from it.</li>
+<li>Built a long-running processing pipeline that resumes from the last
+complete step after an interruption rather than starting over.</li>
 </ul>
 <h3
 id="u.s.-lawshield-senior-software-development-engineer-contract-sep-2022-aug-2025">U.S.
@@ -72,33 +71,34 @@ Aug 2025</h3>
 GitLab</em></p>
 <ul>
 <li>Built product and coverage logic for a legal-services platform whose
-offerings varied by state across all 50 — every product configuration
-had to satisfy a different regulatory regime.</li>
-<li>Built a React employee dashboard with role-based access control
-serving customer-support agents, admins, attorneys, and executives — one
-application, four permission surfaces.</li>
+offerings are regulated separately in all 50 states.</li>
+<li>Built the internal dashboard used by support agents, admins,
+attorneys, and executives, with per-role permissions.</li>
+<li>Migrated a monolith into separate services while keeping the legacy
+API working for the clients already on it.</li>
 </ul>
 <h3 id="crowd-cow-software-engineer-may-2021-dec-2021">Crowd Cow ·
 Software Engineer · May 2021 – Dec 2021</h3>
 <ul>
-<li>Raised subscription payment acceptance from 70% to 90% by
-redesigning the legacy credit-card processing module on a Rails/Vue
-storefront: categorized processor decline codes and timed each retry to
-the window that code was most likely to clear.</li>
+<li>Redesigned the credit-card processing module on a Rails and Vue
+storefront and raised subscription payment acceptance from 70% to 90%.
+Sorted decline codes by reason and retried each one when it was most
+likely to clear, such as retrying insufficient funds on payday.</li>
 </ul>
 <h3
 id="tomorrow-ideas-acq.-ethos-life-software-engineer-sde-ii-mar-2017-may-2021">Tomorrow
 Ideas (acq. Ethos Life) · Software Engineer → SDE II · Mar 2017 – May
 2021</h3>
+<p>Estate-planning app monetized through life insurance. The product was
+the legal documents themselves, which had to meet the requirements of
+all 50 states.</p>
 <p><em>Python · Django · TypeScript · React · Node · PostgreSQL ·
 AWS</em></p>
 <ul>
-<li>Estate-planning document platform monetized through life insurance:
-built generation logic for wills and related instruments that had to
-meet each state’s execution requirements across all 50 — the document,
-not the app, was the product.</li>
-<li>Built custom admin dashboards for executive, BI, marketing, product,
-and customer-support teams.</li>
+<li>Built document generation for wills and related instruments against
+each state’s execution requirements.</li>
+<li>Built the internal dashboard used by the executive, BI, marketing,
+product, and support teams.</li>
 </ul>
 <h2 id="technical">Technical</h2>
 <p><strong>Languages</strong> Python · TypeScript · JavaScript · Ruby ·

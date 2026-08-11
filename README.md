@@ -64,7 +64,7 @@ print-on-demand fulfillment, which I built and operate.
 *Astro · Sanity · TypeScript · GitHub Actions*
 
 Website for a Washington nonprofit serving system-impacted BIPOC community
-members. Pro bono. I built it and keep it running.
+members. I built it and keep it running.
 
 ## Engineering Experience
 
@@ -78,7 +78,7 @@ which documents were produced and which were withheld, indexes the archive so
 staff can search what they actually hold, and produces output that stands up as
 part of the legal record.
 
-### U.S. LawShield · Senior Software Development Engineer (Contract) · Sep 2022 – Aug 2025
+### U.S. LawShield · Senior Software Development Engineer · Sep 2022 – Aug 2025
 [uslawshield.com](https://uslawshield.com)
 
 *PHP · Laravel · React · Next.js · Docker · Kubernetes · AWS EKS · Helm · GitLab*
@@ -110,7 +110,7 @@ years, through a promotion to SDE II and the acquisition by Ethos Life. I worked
 across the document generation, the customer-facing product, and the internal
 dashboards the rest of the company ran on.
 
-### Instrument · Full Stack Engineer (Contract) · Jun 2022 – Sep 2022
+### Instrument · Full Stack Engineer · Jun 2022 – Sep 2022
 [instrument.com](https://instrument.com)
 
 *Docker · Node · WordPress · MySQL · GitHub Actions · WPEngine*

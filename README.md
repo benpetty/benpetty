@@ -29,12 +29,10 @@ Senior software engineer and founder. Eight years on SaaS engineering teams at T
 
 *Elixir · Phoenix · LiveView · Postgres · Oban · Cloudflare R2 · AWS · Fly.io · Next.js · React*
 
-Audeos is my DJ name and the company I run under it. I perform in Seattle, I
-produce and release music, and I ran a recording studio, 206-HOP Sweatshop, in
-the old OK Hotel building. Audeos.fm is the platform I built for it:
-live-streaming radio, where every channel plays a continuous curated loop, in
-sync for every listener. I designed and built the realtime engine, the audio
-pipeline, and the site, and I run it in production.
+Audeos.fm is an online radio station running curated channels around the clock.
+I designed and built the realtime engine, the audio pipeline, and the site, and
+I run it in production. I DJ and produce music in Seattle, and I do live sound
+engineering and speaker rentals for events.
 
 ### Northwest Local Cannabis · Co-Founder · 2021–Present
 [nw-local.com](https://nw-local.com)

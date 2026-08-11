@@ -60,8 +60,6 @@ members. Pro bono. I built it and keep it running.
 
 *Astro · Sanity · TypeScript · GitHub Actions*
 
----
-
 ## Engineering Experience
 
 ### Independent Software Consultant · 2026–Present
@@ -115,8 +113,6 @@ engineering teams.
 
 *Docker · Node · WordPress · MySQL · GitHub Actions · WPEngine*
 
----
-
 ## Selected Projects
 
 *Self-directed, outside the ventures.*
@@ -125,8 +121,6 @@ engineering teams.
   keeps a DJ library intact when tracks are renamed or moved on disk.
 - **kraang**: self-hosted knowledge graph on FastAPI, GraphQL, and Postgres,
   built around an email ingestion pipeline.
-
----
 
 ## Technical
 
@@ -139,8 +133,6 @@ engineering teams.
 **Infrastructure** AWS · Cloudflare · Fly.io · Docker · Kubernetes · GitHub Actions · OpenTofu
 
 **Content & commerce** Sanity · Contentful · Shopify (Admin GraphQL) · WordPress
-
----
 
 ## Education
 

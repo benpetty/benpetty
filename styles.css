@@ -192,7 +192,11 @@ a:hover { color: var(--accent); }
   display: block;
 }
 .resume h3 { font-size: 15px; font-weight: 700; margin: 18px 0 2px; }
-.resume h3 + p { margin: 0 0 6px; color: var(--muted); font-size: 12px; }
+/* Entries read heading / links / stack / blurb. The link line sits 2px under the
+   heading (h3's bottom margin), and the stack line sits the same 2px under the
+   link line, so the three form one tight header block above the prose. */
+.resume h3 + p { margin: 0 0 2px; color: var(--muted); font-size: 12px; }
+.resume h3 + p + p { margin: 0 0 8px; }
 .resume p em { color: var(--muted); font-style: italic; font-size: 12.5px; }
 .resume ul { padding-left: 18px; margin: 6px 0 12px; }
 .resume li { margin-bottom: 5px; line-height: 1.5; }

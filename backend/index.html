@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Benjamin S. Petty — Senior Backend Engineer</title>
-  <meta name="description" content="Senior backend engineer — realtime systems, data pipelines, payments, and service-oriented architecture. Elixir, Ruby, PHP, Node, Postgres.">
+  <meta name="description" content="Senior backend engineer. Realtime systems, data pipelines, payments, and service-oriented architecture. Elixir, Ruby, PHP, Node, Postgres.">
   <meta name="author" content="Benjamin S. Petty">
   <meta name="robots" content="noindex, nofollow">
   <meta name="theme-color" content="#1f5135">
@@ -42,63 +42,47 @@
 <p><strong>Senior Backend Engineer</strong> · Seattle, WA · (206)
 353-9874 · benjamin.s.petty@gmail.com · linkedin.com/in/benjaminpetty ·
 github.com/benpetty</p>
-<hr />
-<p>Senior backend engineer with nine years shipping production services.
-Realtime systems, data pipelines, payment reliability, and
-monolith-to-services migrations.</p>
 <h2 id="engineering-experience">Engineering Experience</h2>
 <h3 id="independent-engineering-2021present">Independent Engineering ·
 2021–Present</h3>
 <p><em>Elixir · Phoenix · Postgres · Oban · Cloudflare Workers ·
 Fly.io</em></p>
-<ul>
-<li>Built a live-audio streaming backend in Elixir. One process per
-channel keeps every listener on the same segment.</li>
-<li>Built the transcode pipeline behind it. ffmpeg cuts uploads into
-segments at four bitrates on background workers, and an interrupted job
-resumes from the last complete segment rather than starting over.</li>
-<li>Built a reconciler that checks the job queue’s in-memory state
-against the database in both directions. It closes a stuck-job failure
-mode a production incident exposed.</li>
-<li>Built an order bridge between Shopify and Printful on a Cloudflare
-Worker. A cron job delivers each paid order exactly once and alerts on
-failures. ### U.S. LawShield · Senior Software Development Engineer
-(Contract) · Sep 2022 – Aug 2025</li>
-</ul>
+<p>Independent work across several small production systems. The largest
+is a live-streaming radio platform in Elixir and Phoenix, where one
+process per channel keeps every listener on the same audio segment, fed
+by a transcode pipeline that resumes from the last complete segment when
+a job is interrupted. I run these systems in production, on-call
+included.</p>
+<h3
+id="u.s.-lawshield-senior-software-development-engineer-contract-sep-2022-aug-2025">U.S.
+LawShield · Senior Software Development Engineer (Contract) · Sep 2022 –
+Aug 2025</h3>
 <p><em>PHP · Laravel · Docker · Kubernetes · AWS EKS · Helm ·
 GitLab</em></p>
-<ul>
-<li>Migrated a monolith into separate services while keeping the legacy
-API working for the clients already on it.</li>
-<li>Built product and coverage logic for a legal-services platform whose
-offerings are regulated separately in all 50 states.</li>
-<li>Containerized the applications on Docker, Kubernetes, and AWS EKS,
-and added test coverage to code that had none.</li>
-</ul>
+<p>Legal-services membership platform, sold as a separately regulated
+product in all 50 states. Three years modernizing it: I moved a monolith
+onto services without breaking the legacy API existing clients depended
+on, built the product and coverage logic behind the state-by-state
+offerings, and containerized the stack alongside the DevOps lead.</p>
 <h3 id="crowd-cow-software-engineer-may-2021-dec-2021">Crowd Cow ·
 Software Engineer · May 2021 – Dec 2021</h3>
 <p><em>Ruby on Rails · Redis · MySQL · Heroku · RSpec</em></p>
-<ul>
-<li>Redesigned the credit-card processing module and raised subscription
-payment acceptance from 70% to 90%. Sorted decline codes by reason and
-retried each one when it was most likely to clear, such as retrying
-insufficient funds on payday. On call for site reliability and
-production incidents.</li>
-</ul>
+<p>Direct-to-consumer meat subscription. I took over recurring billing
+and raised subscription payment acceptance from 70% to 90% by matching
+retry timing to the reason each charge had failed. Also on call for site
+reliability.</p>
 <h3
 id="tomorrow-ideas-acq.-ethos-life-software-engineer-sde-ii-mar-2017-may-2021">Tomorrow
 Ideas (acq. Ethos Life) · Software Engineer → SDE II · Mar 2017 – May
 2021</h3>
 <p><em>Python · Django · Node · Express · PostgreSQL · Redis · Docker ·
 AWS</em></p>
-<ul>
-<li>Built document generation for wills and related instruments against
-each state’s execution requirements.</li>
-<li>Converted modules of the monolithic API into containerized services
-and built the CI/CD pipelines for them.</li>
-<li>Built the internal dashboard used by the executive, BI, marketing,
-product, and support teams. Mentored junior engineers.</li>
-</ul>
+<p>Estate-planning app that generated wills and other legal documents
+valid in all 50 states. I joined as a contractor for the public launch
+and stayed four years, through a promotion to SDE II and the acquisition
+by Ethos Life. I built the document generation against each state’s
+requirements, converted modules of the monolithic API into services, and
+built the CI/CD behind them.</p>
 <h2 id="technical">Technical</h2>
 <p><strong>Languages</strong> Elixir · PHP · Python · TypeScript · SQL ·
 Ruby · Bash</p>

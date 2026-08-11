@@ -43,7 +43,7 @@ Licensed craft cannabis producer and processor. I co-founded it and own the
 technology: the public brand site and the internal CRM the wholesale side runs
 on. I designed and upgraded much of the production facility and trained the grow
 team. I now run marketing, sales, distribution, brand and label design,
-compliance, payroll, budgets, and record keeping.
+compliance, payroll, and budgets.
 
 ### The North West Clothing · Founder · 2001–Present
 [nwclothing.com](https://nwclothing.com)

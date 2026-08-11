@@ -2,6 +2,8 @@
 
 > Senior Software Engineer & Founder · Pacific Northwest
 
+Senior software engineer and founder. Eight years on SaaS engineering teams at Tomorrow Ideas (acq. Ethos Life), Crowd Cow, and U.S. LawShield. Since 2001 I've built and run the software behind four independent Pacific Northwest businesses.
+
 **Open to senior engineering roles and contract/fractional engagements.**
 
 ## Currently building

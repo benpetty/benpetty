@@ -48,10 +48,10 @@ distribution.
 
 *Shopify (Admin GraphQL) · Liquid · Vite · TypeScript · Alpine.js · Cloudflare Workers*
 
-Apparel brand I started in 2001. In its first era it reached $5K in online sales
-in a day and $20K over a weekend at events and festivals, and I ran all of it,
-from forecasting inventory to hiring and training staff across retail,
-warehouse, and screen printing. Relaunched in 2026 on Shopify with print-on-demand
+Apparel brand I started in 2001. In its first era it did up to $5K a day in
+online sales and up to $20K over a weekend at events and festivals, and I ran
+all of it, from forecasting inventory to hiring and training staff across
+retail, warehouse, and screen printing. Relaunched in 2026 on Shopify with print-on-demand
 fulfillment, which I built and operate.
 
 ### Rooted Community · Engineer · 2024–Present

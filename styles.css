@@ -192,11 +192,17 @@ a:hover { color: var(--accent); }
   display: block;
 }
 .resume h3 { font-size: 15px; font-weight: 700; margin: 18px 0 2px; }
-/* Entries read heading / links / stack / blurb. The link line sits 2px under the
-   heading (h3's bottom margin), and the stack line sits the same 2px under the
-   link line, so the three form one tight header block above the prose. */
+/* Entries read heading / links / stack / blurb, and the link line is optional.
+   The heading, the link line, and the stack line form one tight header block,
+   each 2px under the last, with the prose hugging it.
+
+   The stack line is matched by content (a paragraph whose only child is an em),
+   not by position: `h3 + p + p` landed on the stack line in entries that have a
+   link line and on the blurb in entries that don't, so the gap above the prose
+   came out 15px in one and 2px in the others. */
 .resume h3 + p { margin: 0 0 2px; color: var(--muted); font-size: 12px; }
-.resume h3 + p + p { margin: 0 0 8px; }
+.resume p:has(> em:only-child) { margin: 0 0 2px; }
+.resume p:has(> em:only-child) + p { margin-top: 0; }
 .resume p em { color: var(--muted); font-style: italic; font-size: 12.5px; }
 .resume ul { padding-left: 18px; margin: 6px 0 12px; }
 .resume li { margin-bottom: 5px; line-height: 1.5; }

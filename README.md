@@ -2,7 +2,7 @@
 
 > Senior Software Engineer & Founder · Pacific Northwest
 
-Senior software engineer and founder. Eight years on SaaS engineering teams at Tomorrow Ideas (acq. Ethos Life), Crowd Cow, and U.S. LawShield. Since 2001 I've built and run the software behind four independent Pacific Northwest businesses.
+Senior software engineer and founder. Eight years on SaaS engineering teams at Tomorrow Ideas (acq. Ethos Life), Crowd Cow, and U.S. LawShield. I build and run the software behind four independent Pacific Northwest businesses, starting with my own apparel brand's first online store in 2001.
 
 **Open to senior engineering roles and contract/fractional engagements.**
 
@@ -10,7 +10,7 @@ Senior software engineer and founder. Eight years on SaaS engineering teams at T
 
 | Venture | Role | Since | |
 |---|---|---|---|
-| **Audeos.fm** | Founder & Engineer | 2026 | [audeos.com](https://audeos.com) |
+| **Audeos** | Founder & Engineer | 2004 | [audeos.com](https://audeos.com) |
 | **Northwest Local Cannabis** | Co-Founder | 2021 | [nw-local.com](https://nw-local.com) |
 | **The North West Clothing** | Founder | 2001 | [nwclothing.com](https://nwclothing.com) |
 | **Rooted Community** | Engineer | 2024 | [rootedcommunity.org](https://rootedcommunity.org) |
@@ -22,16 +22,19 @@ Senior software engineer and founder. Eight years on SaaS engineering teams at T
 <details>
 <summary>Full resume</summary>
 
-## Current Ventures · 2021–Present
+## Current Ventures
 
-### Audeos.fm · Founder & Engineer · 2026–Present
+### Audeos · Founder & Engineer · 2004–Present
 [audeos.com](https://audeos.com) · [audeos.fm](https://audeos.fm)
 
 *Elixir · Phoenix · LiveView · Postgres · Oban · Cloudflare R2 · AWS · Fly.io · Next.js · React*
 
-Live-streaming radio. Every channel plays a continuous curated loop, in sync for
-every listener. I designed and built the realtime engine, the audio pipeline,
-and the site, and I run it in production.
+Audeos is my DJ name and the company I run under it. I perform in Seattle, I
+produce and release music, and I ran a recording studio, 206-HOP Sweatshop, in
+the old OK Hotel building. Audeos.fm is the platform I built for it:
+live-streaming radio, where every channel plays a continuous curated loop, in
+sync for every listener. I designed and built the realtime engine, the audio
+pipeline, and the site, and I run it in production.
 
 ### Northwest Local Cannabis · Co-Founder · 2021–Present
 [nw-local.com](https://nw-local.com)
@@ -40,19 +43,22 @@ and the site, and I run it in production.
 
 Licensed craft cannabis producer and processor. I co-founded it and own the
 technology: the public brand site and the internal CRM the wholesale side runs
-on. In a company this size that also means the grow, the brand, and
-distribution.
+on. I designed and upgraded much of the production facility and trained the grow
+team. I now run marketing, sales, distribution, brand and label design,
+compliance, payroll, budgets, and record keeping.
 
 ### The North West Clothing · Founder · 2001–Present
 [nwclothing.com](https://nwclothing.com)
 
 *Shopify (Admin GraphQL) · Liquid · Vite · TypeScript · Alpine.js · Cloudflare Workers*
 
-Apparel brand I started in 2001. In its first era it did up to $5K a day in
-online sales and up to $20K over a weekend at events and festivals, and I ran
+Apparel brand I started in 2001, and the first software I shipped. I built its
+original online store myself, and have run it on Shopify since 2013, on custom
+templates throughout. In its first era it did up to $5K a day
+in online sales and up to $20K over a weekend at events and festivals, and I ran
 all of it, from forecasting inventory to hiring and training staff across
-retail, warehouse, and screen printing. Relaunched in 2026 on Shopify with print-on-demand
-fulfillment, which I built and operate.
+retail, warehouse, and screen printing. Relaunched in 2026 on Shopify with
+print-on-demand fulfillment, which I built and operate.
 
 ### Rooted Community · Engineer · 2024–Present
 [rootedcommunity.org](https://rootedcommunity.org)
@@ -66,7 +72,7 @@ members. Pro bono. I built it and keep it running.
 
 ### Independent Software Consultant · 2026–Present
 
-*Python · pypdfium2 · Apple Vision · tesseract · pytest*
+*Python · pypdfium2 · Tesseract · Apple Vision framework · pytest*
 
 Records and document systems for a community association management firm. I
 built the tooling that answers a records request end to end: it establishes
@@ -85,7 +91,7 @@ without breaking the legacy API existing clients depended on, containerized the
 stack alongside the DevOps lead, and built the internal dashboard that support
 agents, attorneys, and executives all work out of.
 
-### Crowd Cow · Software Engineer (FTE) · May 2021 – Dec 2021
+### Crowd Cow · Software Engineer · May 2021 – Dec 2021
 [crowdcow.com](https://crowdcow.com)
 
 *Ruby on Rails · Vue.js · Redis · MySQL · Docker · Heroku · RSpec*

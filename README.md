@@ -51,11 +51,11 @@ compliance, payroll, and budgets.
 *Shopify (Admin GraphQL) · Liquid · Vite · TypeScript · Alpine.js · Cloudflare Workers*
 
 Apparel brand I started in 2001, and the first software I shipped. I built its
-original online store myself, and have run it on Shopify since 2013, on custom
-templates throughout. In its first era it did up to $5K a day
-in online sales and up to $20K over a weekend at events and festivals, and I ran
-all of it, from forecasting inventory to hiring and training staff across
-retail, warehouse, and screen printing. Relaunched in 2026 on Shopify with
+original online store myself, have been selling on Shopify since 2006 on custom
+templates, and have done most of the brand's design throughout. In its first era
+it did up to $5K/day in online sales and up to $20K/weekend at events and
+festivals, and I ran all of it, from forecasting inventory to hiring and
+training staff across retail, warehouse, and screen printing. Relaunched in 2026 on Shopify with
 print-on-demand fulfillment, which I built and operate.
 
 ### Rooted Community · Engineer · 2024–Present

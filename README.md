@@ -26,8 +26,8 @@ Senior software engineer and founder. Eight years on SaaS engineering teams at T
 [audeos.com](https://audeos.com) · [audeos.fm](https://audeos.fm)
 
 Live-streaming radio. Every channel plays a continuous curated loop, in sync for
-every listener. I designed and built all of it — the realtime engine, the audio
-pipeline, the site — and I run it in production.
+every listener. I designed and built the realtime engine, the audio pipeline,
+and the site, and I run it in production.
 
 *Elixir · Phoenix · LiveView · Postgres · Oban · Cloudflare R2 · AWS · Fly.io · Next.js · React*
 
@@ -45,9 +45,9 @@ distribution.
 [nwclothing.com](https://nwclothing.com)
 
 Apparel brand I started in 2001. In its first era it reached $5K in online sales
-in a day and $20K over a weekend at events and festivals, and I ran all of it —
-forecasting inventory, and hiring and training staff across retail, warehouse,
-and screen printing. Relaunched in 2026 on Shopify with print-on-demand
+in a day and $20K over a weekend at events and festivals, and I ran all of it,
+from forecasting inventory to hiring and training staff across retail,
+warehouse, and screen printing. Relaunched in 2026 on Shopify with print-on-demand
 fulfillment, which I built and operate.
 
 *Shopify (Admin GraphQL) · Liquid · Vite · TypeScript · Alpine.js · Cloudflare Workers*
@@ -121,9 +121,9 @@ engineering teams.
 
 *Self-directed, outside the ventures.*
 
-- **crate-agent** — macOS companion app for Serato DJ, in Swift and Rust. It
+- **crate-agent**: macOS companion app for Serato DJ, in Swift and Rust. It
   keeps a DJ library intact when tracks are renamed or moved on disk.
-- **kraang** — self-hosted knowledge graph on FastAPI, GraphQL, and Postgres,
+- **kraang**: self-hosted knowledge graph on FastAPI, GraphQL, and Postgres,
   built around an email ingestion pipeline.
 
 ---

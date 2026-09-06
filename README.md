@@ -27,7 +27,7 @@ Senior software engineer and founder. Eight years on SaaS engineering teams at T
 ### Audeos · Founder & Engineer · 2004–Present
 [audeos.com](https://audeos.com) · [audeos.fm](https://audeos.fm)
 
-*Elixir · Phoenix · LiveView · Postgres · Oban · Cloudflare R2 · AWS · Fly.io · Next.js · React*
+*Elixir · Phoenix · LiveView · Postgres · Oban · Cloudflare R2 · AWS · OpenTofu · Fly.io · Next.js · React*
 
 Audeos.fm is an online radio station running curated channels around the clock.
 I designed and built the realtime engine, the audio pipeline, and the site, and
@@ -37,18 +37,20 @@ engineering and speaker rentals for events.
 ### Northwest Local Cannabis · Co-Founder · 2021–Present
 [nw-local.com](https://nw-local.com)
 
-*Astro · Sanity · TypeScript · Django · Python · Postgres · HTMX · Fly.io*
+*Astro · Sanity · TypeScript · Django · Django Ninja · Python · Postgres · HTMX · Fly.io*
 
 Licensed craft cannabis producer and processor. I co-founded it and own the
 technology: the public brand site and the internal CRM the wholesale side runs
-on. I designed and upgraded much of the production facility and trained the grow
+on. Two of the vendor systems it depends on have no public API, so I
+reverse-engineered their internal backends to pull the data into the CRM. I
+designed and upgraded much of the production facility and trained the grow
 team. I now run marketing, sales, distribution, brand and label design,
 compliance, payroll, and budgets.
 
 ### The North West Clothing · Founder · 2001–Present
 [nwclothing.com](https://nwclothing.com)
 
-*Shopify (Admin GraphQL) · Liquid · Vite · TypeScript · Alpine.js · Cloudflare Workers*
+*Shopify (Admin GraphQL) · Printful (REST) · Liquid · Vite · TypeScript · Alpine.js · Cloudflare Workers*
 
 Apparel brand I started in 2001, and the first software I shipped. I built its
 original online store myself, have been selling on Shopify since 2006 on custom
@@ -70,13 +72,15 @@ members. I built it and keep it running.
 
 ### Independent Software Consultant · 2026–Present
 
-*Python · pypdfium2 · Tesseract · Apple Vision framework · pytest*
+*Python · Anthropic API · Pydantic · pypdfium2 · Tesseract · Apple Vision framework · pytest*
 
 Records and document systems for a community association management firm. I
 built the tooling that answers a records request end to end: it establishes
 which documents were produced and which were withheld, indexes the archive so
 staff can search what they actually hold, and produces output that stands up as
-part of the legal record.
+part of the legal record. A language model flags the questionable records, and
+code verifies every citation, matching quotes to real pages and checking each
+exported page against its source.
 
 ### U.S. LawShield · Senior Software Development Engineer · Sep 2022 – Aug 2025
 [uslawshield.com](https://uslawshield.com)
@@ -125,8 +129,8 @@ engineering teams.
 
 - **crate-agent**: macOS companion app for Serato DJ, in Swift and Rust. It
   keeps a DJ library intact when tracks are renamed or moved on disk.
-- **kraang**: self-hosted knowledge graph on FastAPI, GraphQL, and Postgres,
-  built around an email ingestion pipeline.
+- **kraang**: self-hosted personal knowledge platform on FastAPI, Postgres, and
+  GraphQL, with an idempotent email-to-document ingestion pipeline.
 
 ## Technical
 

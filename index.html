@@ -113,7 +113,7 @@ Engineer · 2004–Present</h3>
 <p><a href="https://audeos.com">audeos.com</a> · <a
 href="https://audeos.fm">audeos.fm</a></p>
 <p><em>Elixir · Phoenix · LiveView · Postgres · Oban · Cloudflare R2 ·
-AWS · Fly.io · Next.js · React</em></p>
+AWS · OpenTofu · Fly.io · Next.js · React</em></p>
 <p>Audeos.fm is an online radio station running curated channels around
 the clock. I designed and built the realtime engine, the audio pipeline,
 and the site, and I run it in production. I DJ and produce music in
@@ -122,19 +122,21 @@ events.</p>
 <h3 id="northwest-local-cannabis-co-founder-2021present">Northwest Local
 Cannabis · Co-Founder · 2021–Present</h3>
 <p><a href="https://nw-local.com">nw-local.com</a></p>
-<p><em>Astro · Sanity · TypeScript · Django · Python · Postgres · HTMX ·
-Fly.io</em></p>
+<p><em>Astro · Sanity · TypeScript · Django · Django Ninja · Python ·
+Postgres · HTMX · Fly.io</em></p>
 <p>Licensed craft cannabis producer and processor. I co-founded it and
 own the technology: the public brand site and the internal CRM the
-wholesale side runs on. I designed and upgraded much of the production
+wholesale side runs on. Two of the vendor systems it depends on have no
+public API, so I reverse-engineered their internal backends to pull the
+data into the CRM. I designed and upgraded much of the production
 facility and trained the grow team. I now run marketing, sales,
 distribution, brand and label design, compliance, payroll, and
 budgets.</p>
 <h3 id="the-north-west-clothing-founder-2001present">The North West
 Clothing · Founder · 2001–Present</h3>
 <p><a href="https://nwclothing.com">nwclothing.com</a></p>
-<p><em>Shopify (Admin GraphQL) · Liquid · Vite · TypeScript · Alpine.js
-· Cloudflare Workers</em></p>
+<p><em>Shopify (Admin GraphQL) · Printful (REST) · Liquid · Vite ·
+TypeScript · Alpine.js · Cloudflare Workers</em></p>
 <p>Apparel brand I started in 2001, and the first software I shipped. I
 built its original online store myself, have been selling on Shopify
 since 2006 on custom templates, and have done most of the brand’s design
@@ -152,13 +154,16 @@ community members. I built it and keep it running.</p>
 <h2 id="engineering-experience">Engineering Experience</h2>
 <h3 id="independent-software-consultant-2026present">Independent
 Software Consultant · 2026–Present</h3>
-<p><em>Python · pypdfium2 · Tesseract · Apple Vision framework ·
-pytest</em></p>
+<p><em>Python · Anthropic API · Pydantic · pypdfium2 · Tesseract · Apple
+Vision framework · pytest</em></p>
 <p>Records and document systems for a community association management
 firm. I built the tooling that answers a records request end to end: it
 establishes which documents were produced and which were withheld,
 indexes the archive so staff can search what they actually hold, and
-produces output that stands up as part of the legal record.</p>
+produces output that stands up as part of the legal record. A language
+model flags the questionable records, and code verifies every citation,
+matching quotes to real pages and checking each exported page against
+its source.</p>
 <h3
 id="u.s.-lawshield-senior-software-development-engineer-sep-2022-aug-2025">U.S.
 LawShield · Senior Software Development Engineer · Sep 2022 – Aug
@@ -209,8 +214,9 @@ the agency’s design and engineering teams.</p>
 <li><strong>crate-agent</strong>: macOS companion app for Serato DJ, in
 Swift and Rust. It keeps a DJ library intact when tracks are renamed or
 moved on disk.</li>
-<li><strong>kraang</strong>: self-hosted knowledge graph on FastAPI,
-GraphQL, and Postgres, built around an email ingestion pipeline.</li>
+<li><strong>kraang</strong>: self-hosted personal knowledge platform on
+FastAPI, Postgres, and GraphQL, with an idempotent email-to-document
+ingestion pipeline.</li>
 </ul>
 <h2 id="technical">Technical</h2>
 <p><strong>Languages</strong> TypeScript · JavaScript · Python · Elixir

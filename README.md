@@ -37,15 +37,15 @@ engineering and speaker rentals for events.
 ### Northwest Local Cannabis · Co-Founder · 2021–Present
 [nw-local.com](https://nw-local.com)
 
-*Astro · Sanity · TypeScript · Django · Django Ninja · Python · Postgres · HTMX · Fly.io*
+*Astro · Sanity · TypeScript · Django · Django Ninja · Python · Postgres · HTMX · Stimulus · Chart.js · Fly.io*
 
 Licensed craft cannabis producer and processor. I co-founded it and own the
-technology: the public brand site and the internal CRM the wholesale side runs
-on. Two of the vendor systems it depends on have no public API, so I
-reverse-engineered their internal backends to pull the data into the CRM. I
-designed and upgraded much of the production facility and trained the grow
-team. I now run marketing, sales, distribution, brand and label design,
-compliance, payroll, and budgets.
+technology: the public brand site and the internal operations platform the whole
+business runs on. Two vendor systems have no public API, so I reverse-engineered
+their internal backends to pull their data into the platform. I designed and
+upgraded much of the production facility and trained the grow team. I now run
+marketing, sales, distribution, brand and label design, compliance, payroll,
+and budgets.
 
 ### The North West Clothing · Founder · 2001–Present
 [nwclothing.com](https://nwclothing.com)
@@ -65,8 +65,8 @@ print-on-demand fulfillment, which I built and operate.
 
 *Astro · Sanity · TypeScript · GitHub Actions*
 
-Website for a Washington nonprofit serving system-impacted BIPOC community
-members. I built it and keep it running.
+Built and maintain the website for a Washington nonprofit serving
+system-impacted BIPOC communities.
 
 ## Engineering Experience
 
@@ -147,7 +147,5 @@ engineering teams.
 ## Education
 
 **International Business & Trade, AAS** · Highline College, Des Moines WA · 2018
-
-President's List · Vice President's Honor Roll · Phi Theta Kappa Honor Society
 
 </details>

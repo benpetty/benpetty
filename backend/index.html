@@ -26,6 +26,9 @@
          room to spare, so it costs them nothing. */
       .resume h1 + p { margin: 0 0 2pt; }
       .resume hr { margin: 3pt 0; }
+      /* A variant can force its detail section onto a fresh sheet with a
+         pandoc heading attribute: `## Heading {.page-break}`. */
+      .resume .page-break { break-before: page; }
     }
   </style>
 </head>

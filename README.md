@@ -70,7 +70,7 @@ system-impacted BIPOC communities.
 
 ## Engineering Experience
 
-### Independent Software Consultant · 2026–Present
+### Independent Software Consultant · Aug 2026
 
 *Python · Anthropic API · Pydantic · pypdfium2 · Tesseract · Apple Vision framework · pytest*
 

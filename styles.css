@@ -50,7 +50,11 @@
   --rule: #e5e5e5;
   --bg: #fff;
   --bg-soft: #fafaf8;
-  --max-width: 760px;
+  /* Chosen so screen lines break where printed lines do. Print sets 10.25pt
+     (13.67px) text in a 682px column, 49.9em per line; at the 15px screen body
+     size that is 748.5px of text, plus .resume's 36px side padding (border-box).
+     Change it together with the print font size or the @page margins. */
+  --max-width: 820px;
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
   --font-serif: 'Fraunces', Georgia, serif;
 }

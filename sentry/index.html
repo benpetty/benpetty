@@ -145,9 +145,9 @@ Sole engineer.</p>
 <li>Reverse-engineered the two state-traceability vendors the business
 depends on, neither of which offers an API. Orders, inventory, and lab
 results now sync in automatically.</li>
-<li>When a vendor changes its data format, the sync stops and raises an
-alert instead of importing bad data, then catches up once the fix is
-in.</li>
+<li>Shared sales inbox built on AWS SES, S3, and SNS, provisioned with
+OpenTofu. Replies go out from the app and report whether they were
+delivered or bounced.</li>
 <li>Lab results publish straight to the brand site’s public test-result
 pages.</li>
 <li>Turns delivery records into a live public store locator: every

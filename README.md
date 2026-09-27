@@ -98,8 +98,7 @@ agents, attorneys, and executives all work out of.
 
 *Ruby on Rails · Vue.js · Redis · MySQL · Docker · Heroku · RSpec*
 
-Farm-to-table meat subscription delivering Japanese A5 Wagyu, Ibérico pork, and
-seafood from small independent farms. I took over recurring billing and raised
+Farm-to-table meat subscription delivering A5 Wagyu and craft meat from small independent farms. I took over recurring billing and raised
 subscription payment acceptance from 70% to 90% by matching retry timing to the
 reason each charge had failed. Also on call for site reliability.
 

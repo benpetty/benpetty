@@ -206,8 +206,7 @@ address.</li>
 <li>Reverse-engineered Serato’s undocumented binary library format; the
 Rust app reads and writes it.</li>
 <li>Keeps Serato in sync when tracks are renamed or moved on disk,
-holding changes until Serato closes so neither app overwrites the
-other.</li>
+holding writes until Serato closes.</li>
 <li>Identifies tracks by audio fingerprint and tags them from
 MusicBrainz.</li>
 <li>An MCP server lets an AI agent source missing tracks, verifying each

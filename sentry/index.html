@@ -125,156 +125,74 @@ acquisition.</li>
 <h2 class="page-break" id="selected-work">Selected Work</h2>
 <h3 id="northwest-local-operations-platform">Northwest Local operations
 platform</h3>
-<p><em>Python · Django · HTMX · Postgres · httpx · AWS S3/SES/SNS/SQS ·
-OpenTofu · Fly.io</em></p>
-<p>Internal operations platform and CRM for a licensed cannabis
-producer; sole engineer.</p>
+<p><em>Python · Django · HTMX · Postgres · AWS · OpenTofu ·
+Fly.io</em></p>
+<p>The internal system a licensed cannabis producer runs on: sales
+accounts, inventory, harvests, lab results, and marketing in one app.
+Sole engineer.</p>
 <ul>
-<li>Reverse-engineered two state-traceability vendor portals with no
-public API by intercepting their SPAs’ XHR traffic; every endpoint is
-allow-listed by method, path, and body schema.</li>
-<li>Paged reads must reconcile exactly to the vendor’s reported count.
-Repeated pages, shifting counts, and early empty pages fail as
-pagination drift, and rows the vendor silently drops are recovered with
-per-item filter queries.</li>
-<li>Each endpoint is a versioned contract with a schema SHA-256. A
-mismatch opens a drift incident and alerts; once the parser is fixed,
-archived responses are replayed, ordered so a replay can never overwrite
-newer live data.</li>
-<li>Vendor responses are archived to S3 as canonical, content-addressed
-gzip JSON: SHA-256 keys, exact decimals, <code>If-None-Match</code>
-conditional writes, no delete permission. A recursive sanitizer strips
-credentials and signed URLs first.</li>
-<li>A Postgres row-lock rate limiter behind a custom httpx transport
-gives the web, worker, and scheduler processes one shared request budget
-per vendor, with jittered backoff and <code>Retry-After</code> handling.
-No Redis.</li>
-<li>Crash-safe scheduler on a Postgres-backed task queue
-(<code>SKIP LOCKED</code> claims, transactional alert outbox). Inbound
-email runs SES → S3 → SNS with a dead-letter queue and header-verified
-threading.</li>
+<li>Reverse-engineered the two state-traceability vendors the business
+depends on, neither of which offers an API. Orders, inventory, and lab
+results now sync in automatically.</li>
+<li>When a vendor changes its data format, the sync stops and raises an
+alert instead of importing bad data, then catches up once the fix is
+in.</li>
 </ul>
 <h3 id="nw-clothing-store-tooling">NW Clothing store tooling</h3>
-<p><em>TypeScript · React 19 · Hono · Drizzle · Postgres · Zod ·
-Cloudflare Workers · fal.ai · ImageMagick · Shopify GraphQL ·
-Printful</em></p>
-<p>Admin console, AI mockup studio, and fulfillment automation for a
-print-on-demand apparel store.</p>
+<p><em>TypeScript · React · Hono · Postgres · Cloudflare Workers ·
+fal.ai · ImageMagick · Shopify · Printful</em></p>
+<p>Admin console and automation behind a print-on-demand apparel store,
+from product design to fulfillment.</p>
 <ul>
-<li>Admin console (React 19, Hono, Postgres) built on one shared Zod
-contract. Server responses are typed against it at compile time, the
-client parses every response at runtime, and a stored draft that no
-longer parses rolls its transaction back.</li>
-<li>AI mockup studio: fal.ai image models (Stable Diffusion 3.5 Large,
-FLUX Pro) generate grey flat-lay garment blanks, and BiRefNet mattes
-them into a reusable pool. Batch ETAs come from per-model p50 latency,
-and spend is confirmed before each batch.</li>
-<li>Deterministic ImageMagick compositor. Alpha-weighted gamma
-normalization and a duotone CLUT recolor each blank to any colorway
-without clipping highlights. A ratio of Gaussian blurs gives fold-only
-shading, a displacement map bends the artwork into the fabric, and
-heathers are seeded noise blends. The artwork is never regenerated, so
-logos stay pixel-exact.</li>
-<li>Job executor with a keyed serial queue that prevents lost updates to
-step state, bounded-concurrency generation runs, and interrupted-job
-detection on boot.</li>
-<li>A Cloudflare Worker cron forwards paid Shopify orders to Printful
-exactly once: the Shopify order ID becomes Printful’s
-<code>external_id</code> and is checked before create. Failures are
-isolated per order and alert by email.</li>
-<li>Declarative sync across both stores: Shopify <code>productSet</code>
-and a single Printful sync-variant PUT reconcile by external ID and skip
-no-op diffs. Permanent SKUs are derived from SHA-256 in Crockford
-Base32, then backfilled plan-first and re-verified.</li>
+<li>Built the admin console where products are designed, mocked up, and
+published to Shopify, with every size and color linked to Printful for
+printing.</li>
+<li>AI mockup studio: image models on fal.ai generate photos of blank
+shirts, and an ImageMagick pipeline recolors them to each product color
+and lays the artwork into the folds of the fabric. The artwork never
+passes through AI, so logos stay exact.</li>
+<li>Paid orders forward from Shopify to Printful exactly once, on a
+Cloudflare Worker, with an email alert when one fails.</li>
 </ul>
 <h3 id="kraang">kraang</h3>
-<p><em>Python · FastAPI · Strawberry GraphQL · SQLAlchemy · Postgres ·
-Anthropic API · Packer · Ansible · OpenTofu · Tailscale ·
-restic</em></p>
-<p>Self-hosted document and email archive on infrastructure built and
-secured from code.</p>
+<p><em>Python · FastAPI · Postgres · GraphQL · Anthropic API · Packer ·
+Ansible · OpenTofu · Tailscale</em></p>
+<p>A self-hosted archive for personal documents and email, on a server
+built and locked down entirely from code.</p>
 <ul>
-<li>Golden images baked with Packer and Ansible, then stripped of
-machine identity (SSH host keys, Tailscale state, machine-id). An
-OpenTofu precondition refuses any image without the sanitization
-label.</li>
-<li>Reachable only over Tailscale. The firewall admits only the
-WireGuard port, services bind to the tailnet IP, and ACL tests in
-OpenTofu assert that hosts can’t reach each other. Single-use, 24-hour
-auth keys arrive by cloud-init and are deleted once health checks
-pass.</li>
-<li>Recovery backups go to B2 via restic and are restored and
-byte-compared before they’re tagged recoverable.</li>
-<li>Built a resumable Mac-to-VPS cutover controller: crash-safe evidence
-markers (fsync plus atomic link publish), a Merkle-style SHA-256 digest
-of the export, and a declared point of no return around an irreversible
-IMAP move.</li>
-<li>Idempotent multi-account IMAP ingestion: content-derived message
-identity, UIDVALIDITY-scoped high-water-mark cursors, batched RFC 6851
-<code>UID MOVE</code>, and Fernet-encrypted credentials.</li>
-<li>Claude vision extraction with JSON-schema structured outputs for
-OCR-damaged pages, cross-checked against OCR. Findings are immutable,
-with idempotent upserts and Postgres full-text search.</li>
+<li>The server image is built with Packer and Ansible and provisioned
+with OpenTofu. It’s reachable only over Tailscale, and its access rules
+have their own tests.</li>
+<li>Email from several accounts comes in automatically, and Claude reads
+scanned pages so they show up in search.</li>
 </ul>
 <h3 id="audeos.fm">Audeos.fm</h3>
-<p><em>Elixir · OTP · Phoenix LiveView · Postgres · Oban · ffmpeg · HLS
-· MediaMTX · Cloudflare R2 · Fly.io</em></p>
-<p>Multi-channel online radio platform with live DJ broadcasts and chat;
-sole engineer.</p>
+<p><em>Elixir · Phoenix LiveView · Postgres · Oban · ffmpeg · HLS ·
+Cloudflare R2 · Fly.io</em></p>
+<p>An online radio station with channels playing around the clock, live
+DJ broadcasts, and chat. Sole engineer.</p>
 <ul>
-<li>Server-rendered “joiner” segments: one ffmpeg
-<code>filter_complex</code> pass trims and equal-power crossfades each
-mix into its transition, padded to the 4-second HLS grid. That gives
-millisecond-precise edits without shrinking segments. Joiners are
-rendered just in time and deleted once played.</li>
-<li>Per-channel engine GenServers under a DynamicSupervisor resume
-mid-segment after a crash by projecting a Postgres-persisted cursor
-forward from the clock.</li>
-<li>Spec-correct HLS manifests with a discontinuity sequence and a
-monotonic media sequence, so players reset their decoders across encoder
-boundaries.</li>
-<li>Transcodes survive the VM being killed: segments stream to R2 as
-ffmpeg writes them, and a retry resumes from the lowest completed
-segment across all bitrates.</li>
-<li>Listener analytics from Presence-tracked sessions and
-<code>generate_series</code> over session intervals. Country is resolved
-at write time from GeoLite2, and IPs are never stored.</li>
+<li>DJ mixes crossfade into their transitions precisely, even though the
+stream is delivered in 4-second chunks. The server renders each
+crossfade just before it airs.</li>
+<li>Each channel runs as its own supervised Elixir process and picks up
+where it left off after a crash.</li>
 </ul>
 <h3 id="crate-agent">crate-agent</h3>
-<p><em>Swift · SwiftUI · Rust · UniFFI · GRDB/SQLite · FSEvents ·
-Chromaprint</em></p>
-<p>macOS companion app for Serato DJ that keeps the library intact when
-tracks are renamed or moved on disk.</p>
+<p><em>Swift · SwiftUI · Rust · SQLite · FSEvents · Chromaprint</em></p>
+<p>A macOS companion app that manages a Serato DJ library.</p>
 <ul>
-<li>Clean-room Rust parser and writer for Serato’s reverse-engineered
-TLV binary formats (crates, smart crates, <code>database V2</code>).
-Unknown tags round-trip byte for byte.</li>
-<li>Library writes queue while Serato is running and are re-validated
-inside a serialized database write (revision token, process state,
-target file). Stale updates are dropped rather than overwriting newer
-state.</li>
-<li>Moves are detected through FSEvents with persisted event IDs.
-Renames match by volume UUID and inode, cross-volume moves by size plus
-partial SHA-256, and dropped events trigger a full reconciliation.</li>
-<li>Cross-volume moves run as a compensating transaction:
-exclusive-create copy, SHA-256 verification, rollback if the commit
-fails, and the source deleted only after commit.</li>
-<li>AcoustID-compatible Chromaprint fingerprints computed in Rust feed
-MusicBrainz tagging, behind a reentrancy-safe 1 req/s rate limiter and
-an undo/redo journal.</li>
+<li>Reads and rewrites Serato’s undocumented binary library format,
+reverse-engineered and written in Rust.</li>
+<li>Keeps Serato in sync when tracks are renamed or moved on disk,
+holding changes until Serato closes so neither app overwrites the
+other.</li>
+<li>Identifies tracks by audio fingerprint and tags them from
+MusicBrainz, with a review step before anything is written.</li>
 </ul>
-<h2 id="technical">Technical</h2>
-<p><strong>Languages</strong> Python · TypeScript · JavaScript · Elixir
-· Ruby · PHP · SQL</p>
-<p><strong>Frontend</strong> React · Next.js · HTMX · Phoenix LiveView ·
-Astro · Tailwind</p>
-<p><strong>Backend &amp; data</strong> Django · FastAPI · Hono · Phoenix
-· Rails · Laravel · PostgreSQL · Redis</p>
-<p><strong>Infrastructure</strong> AWS · Cloudflare · Fly.io · Docker ·
-Kubernetes · OpenTofu · Packer · Ansible · Tailscale · GitHub
-Actions</p>
-<p><strong>Education</strong> International Business &amp; Trade, AAS ·
-Highline College, Des Moines WA · 2018</p>
+<h2 id="education">Education</h2>
+<p><strong>International Business &amp; Trade, AAS</strong> · Highline
+College, Des Moines WA · 2018</p>
 </article>
 
 </main>

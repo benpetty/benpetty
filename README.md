@@ -28,7 +28,8 @@ Senior software engineer and founder. Eight years on SaaS engineering teams at T
 [nw-local.com](https://nw-local.com) · [nwclothing.com](https://nwclothing.com) · [audeos.fm](https://audeos.fm) · [rootedcommunity.org](https://rootedcommunity.org)
 
 - Northwest Local Cannabis (co-founder, 2021): licensed craft cannabis producer;
-  also runs its marketing, sales, distribution, compliance, payroll, and budgets.
+  runs its marketing, sales, distribution, compliance, payroll, and budgets.
+  Built its operations platform and brand site.
 - The North West Clothing (2001): apparel brand. Built its first online store in
   2001; selling on Shopify since 2006 on custom themes; relaunched in 2026 with
   print-on-demand fulfillment.
@@ -47,10 +48,11 @@ Senior software engineer and founder. Eight years on SaaS engineering teams at T
 ### Senior Software Development Engineer · U.S. LawShield · Sep 2022 – Aug 2025
 [uslawshield.com](https://uslawshield.com)
 
+- Overhauled the legacy codebase of a national legal-services membership
+  platform: split it into services, fixed bugs, and added features without
+  breaking the legacy API contract for existing clients.
 - Built the internal React dashboard used by support agents, attorneys, and
   executives.
-- Overhauled the legacy codebase: split it into services, fixed bugs, added
-  features.
 - Containerized the stack on Kubernetes (AWS EKS) with the DevOps lead.
 
 ### Full Stack Engineer · Instrument · Jun 2022 – Sep 2022
@@ -58,6 +60,7 @@ Senior software engineer and founder. Eight years on SaaS engineering teams at T
 
 - Rebuilt the website for the nonprofit [BlackSpace](https://blackspace.org/)
   with the agency's design and engineering teams.
+- Owned the team's dev environment, database sync tooling, and CI/CD.
 
 ### Software Engineer · Crowd Cow · May 2021 – Dec 2021
 [crowdcow.com](https://crowdcow.com)
@@ -69,14 +72,15 @@ Senior software engineer and founder. Eight years on SaaS engineering teams at T
 ### Software Engineer → SDE II · Tomorrow Ideas (acq. Ethos Life) · Mar 2017 – May 2021
 [tmro.com](https://tmro.com)
 
-- Joined as a contractor to lead the launch web build; stayed four years,
-  through the promotion and the acquisition.
+- Joined as a contractor to lead the web build for the public launch; stayed
+  four years, through a promotion to SDE II and the acquisition.
 - Built the admin dashboards the executive, BI, marketing, product, and support
   teams ran on.
 - Built API integrations for partner companies, working with their engineers and
   product teams.
-- Built the document generation for an estate-planning app: wills and legal
-  documents valid in all 50 states.
+- Mentored junior engineers through pair programming and code review.
+- Built the document generation that produced wills and legal documents valid
+  in all 50 states.
 
 ## Technologies
 

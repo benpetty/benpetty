@@ -72,14 +72,10 @@ Senior software engineer and founder. Eight years on SaaS engineering teams at T
 - Built the document generation for an estate-planning app: wills and legal
   documents valid in all 50 states.
 
-## Skills
+---
 
-**Languages** Python · TypeScript · JavaScript · Elixir · Ruby · PHP · SQL
+**Technologies:** Python · TypeScript · JavaScript · Elixir · Ruby · PHP · SQL · Django · React · Next.js · Vue.js · HTMX · Phoenix LiveView · Node · Rails · Laravel · Postgres · MySQL · Redis · AWS · Docker · Kubernetes · Cloudflare · Fly.io
 
-**Frameworks** Django · React · Next.js · Vue.js · HTMX · Phoenix LiveView · Node · Rails · Laravel
-
-**Data & cloud** Postgres · MySQL · Redis · AWS · Docker · Kubernetes · Cloudflare · Fly.io
-
-**Education** International Business & Trade, AAS · Highline College, Des Moines WA · 2018
+**Education:** International Business & Trade, AAS · Highline College, Des Moines WA · 2018
 
 </details>

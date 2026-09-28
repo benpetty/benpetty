@@ -241,7 +241,9 @@ a:hover { color: var(--accent); }
   .resume h1 + p { margin: 0 0 2pt; }
   .resume h2 { font-size: 9pt; margin: 6.5pt 0 3pt; }
   .resume h3 { font-size: 11.5pt; margin: 4pt 0 2pt; }
-  .resume hr { margin: 3pt 0; }
+  /* The one hr on a resume divides the last entry from the untitled
+     Technologies and Education lines, so it gets room on both sides. */
+  .resume hr { margin: 7pt 0 5pt; }
   .resume p { margin: 1.25pt 0; }
   .resume ul { margin: 2pt 0 2pt; }
   .resume li { font-size: 10.25pt; margin-bottom: 0.4pt; line-height: 1.27; }

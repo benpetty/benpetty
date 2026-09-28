@@ -251,14 +251,11 @@ a:hover { color: var(--accent); }
      gaps (Apple PDFKit, which Preview copies with) read "E N G I N E E R I N G",
      so an ATS may miss the section names. Print untracked, like the name. */
   .resume h2 { font-size: 9pt; margin: 6.5pt 0 3pt; letter-spacing: 0; }
-  /* The space above each entry. A page with room to spare widens it through
-     its `entryGap` in render/build.mjs, which render/template.html sets as
-     --print-entry-gap on the article. */
-  .resume h3 { font-size: 11.5pt; margin: var(--print-entry-gap, 4pt) 0 2pt; }
+  .resume h3 { font-size: 11.5pt; margin: 4pt 0 2pt; }
   .resume hr { margin: 3pt 0; }
   .resume p { margin: 1.25pt 0; }
   .resume ul { margin: 2pt 0 2pt; }
-  .resume li { font-size: 10.25pt; margin-bottom: 0.4pt; line-height: 1.27; }
+  .resume li { font-size: 10.25pt; margin-bottom: 0.4pt; line-height: 1.42; }
   /* A resume can force its detail section onto a fresh sheet with a pandoc
      heading attribute: `## Heading {.page-break}`. The build measures
      segments with PAGE_BREAK_SELECTOR in render/lib/print-segments.mjs; a

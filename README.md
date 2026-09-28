@@ -29,9 +29,9 @@ Senior software engineer and founder. Eight years on SaaS engineering teams at T
 
 - Consulting (2026): built records tooling and a searchable archive for an HOA
   management firm.
-- Northwest Local Cannabis (co-founder, 2021): licensed craft cannabis producer;
-  runs its marketing, sales, distribution, compliance, payroll, and budgets.
-  Built its operations platform and brand site.
+- Northwest Local Cannabis (co-founder, 2021): licensed craft cannabis producer.
+  Built its operations platform and brand site. Manage marketing, sales,
+  distribution, compliance, payroll, and budgets.
 - The North West Clothing (2001): apparel brand. Built its first online store in
   2001; selling on Shopify since 2006 on custom themes; relaunched in 2026 with
   print-on-demand fulfillment.

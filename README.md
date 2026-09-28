@@ -22,6 +22,10 @@ Senior software engineer and founder. Eight years on SaaS engineering teams at T
 <details>
 <summary>Full resume</summary>
 
+## Technologies
+
+Python · TypeScript · JavaScript · Elixir · Ruby · PHP · SQL · Swift · Rust · Django · React · HTMX · Phoenix LiveView · Node · Rails · Laravel · Postgres · MySQL · Redis · AWS · Docker · Kubernetes · Cloudflare · Shopify · Language-model tooling · Agentic workflows · IaC · System design · Software architecture
+
 ## Engineering Experience
 
 ### Founder & Engineer · 2001–Present
@@ -76,10 +80,6 @@ Senior software engineer and founder. Eight years on SaaS engineering teams at T
 - Mentored junior engineers through pair programming and code review.
 - Built the document generation that produced wills and legal documents valid
   in all 50 states.
-
-## Technologies
-
-Python · TypeScript · JavaScript · Elixir · Ruby · PHP · SQL · Swift · Rust · Django · React · HTMX · Phoenix LiveView · Node · Rails · Laravel · Postgres · MySQL · Redis · AWS · Docker · Kubernetes · Cloudflare · Shopify · Language-model tooling · Agentic workflows · IaC · System design · Software architecture
 
 ## Education
 

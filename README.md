@@ -28,7 +28,7 @@ Senior software engineer and founder. Eight years on SaaS engineering teams at T
 [nw-local.com](https://nw-local.com) · [nwclothing.com](https://nwclothing.com) · [audeos.fm](https://audeos.fm) · [rootedcommunity.org](https://rootedcommunity.org)
 
 - Consulting (2026): built records tooling and a searchable archive for an HOA
-  management firm; every language-model finding is checked against its source.
+  management firm.
 - Northwest Local Cannabis (co-founder, 2021): licensed craft cannabis producer;
   runs its marketing, sales, distribution, compliance, payroll, and budgets.
   Built its operations platform and brand site.

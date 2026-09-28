@@ -53,6 +53,12 @@ Senior software engineer and founder. Eight years on SaaS engineering teams at T
   features.
 - Containerized the stack on Kubernetes (AWS EKS) with the DevOps lead.
 
+### Full Stack Engineer · Instrument · Jun 2022 – Sep 2022
+[instrument.com](https://instrument.com)
+
+- Rebuilt the website for the nonprofit [BlackSpace](https://blackspace.org/)
+  with the agency's design and engineering teams.
+
 ### Software Engineer · Crowd Cow · May 2021 – Dec 2021
 [crowdcow.com](https://crowdcow.com)
 
@@ -72,10 +78,12 @@ Senior software engineer and founder. Eight years on SaaS engineering teams at T
 - Built the document generation for an estate-planning app: wills and legal
   documents valid in all 50 states.
 
----
+## Technologies
 
-**Technologies:** Python · TypeScript · JavaScript · Elixir · Ruby · PHP · SQL · Django · React · Next.js · Vue.js · HTMX · Phoenix LiveView · Node · Rails · Laravel · Postgres · MySQL · Redis · AWS · Docker · Kubernetes · Cloudflare · Fly.io
+Python · TypeScript · JavaScript · Elixir · Ruby · PHP · SQL · Django · React · Next.js · Vue.js · HTMX · Phoenix LiveView · Node · Rails · Laravel · Postgres · MySQL · Redis · AWS · Docker · Kubernetes · Cloudflare · Fly.io
 
-**Education:** International Business & Trade, AAS · Highline College, Des Moines WA · 2018
+## Education
+
+International Business & Trade, AAS · Highline College, Des Moines WA · 2018
 
 </details>

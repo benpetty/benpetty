@@ -22,130 +22,79 @@ Senior software engineer and founder. Eight years on SaaS engineering teams at T
 <details>
 <summary>Full resume</summary>
 
-## Current Ventures
-
-### Audeos · Founder & Engineer · 2004–Present
-[audeos.com](https://audeos.com) · [audeos.fm](https://audeos.fm)
-
-*Elixir · Phoenix · LiveView · Postgres · Oban · Cloudflare R2 · AWS · OpenTofu · Fly.io · Next.js · React*
-
-Audeos.fm is an online radio station running curated channels around the clock.
-I designed and built the realtime engine, the audio pipeline, and the site, and
-I run it in production. I DJ and produce music in Seattle, and I do live sound
-engineering and speaker rentals for events.
-
-### Northwest Local Cannabis · Co-Founder · 2021–Present
-[nw-local.com](https://nw-local.com)
-
-*Astro · Sanity · TypeScript · Django · Django Ninja · Python · Postgres · HTMX · Stimulus · Chart.js · Fly.io*
-
-Licensed craft cannabis producer and processor. I co-founded it and own the
-technology: the public brand site and the internal operations platform the whole
-business runs on. Two vendor systems have no public API, so I reverse-engineered
-their internal backends to pull their data into the platform. I designed and
-upgraded much of the production facility and trained the grow team. I now run
-marketing, sales, distribution, brand and label design, compliance, payroll,
-and budgets.
-
-### The North West Clothing · Founder · 2001–Present
-[nwclothing.com](https://nwclothing.com)
-
-*Shopify (Admin GraphQL) · Printful (REST) · Liquid · Vite · TypeScript · Alpine.js · Cloudflare Workers*
-
-Apparel brand I started in 2001, and the first software I shipped. I built its
-original online store myself, have been selling on Shopify since 2006 on custom
-templates, and have done most of the brand's design throughout. In its first era
-it did up to $5K/day in online sales and up to $20K/weekend at events and
-festivals, and I ran all of it, from forecasting inventory to hiring and
-training staff across retail, warehouse, and screen printing. Relaunched in 2026 on Shopify with
-print-on-demand fulfillment, which I built and operate.
-
-### Rooted Community · Engineer · 2024–Present
-[rootedcommunity.org](https://rootedcommunity.org)
-
-*Astro · Sanity · TypeScript · GitHub Actions*
-
-Built and maintain the website for a Washington nonprofit serving
-system-impacted BIPOC communities.
-
 ## Engineering Experience
 
-### Independent Software Consultant · Aug 2026
+### Founder & Engineer · 2001–Present
+[nw-local.com](https://nw-local.com) · [nwclothing.com](https://nwclothing.com) · [audeos.fm](https://audeos.fm) · [rootedcommunity.org](https://rootedcommunity.org)
 
-*Python · Anthropic API · Pydantic · pypdfium2 · Tesseract · Apple Vision framework · pytest*
+Builds and runs the software for four businesses.
 
-Records and document systems for a community association management firm. I
-built the tooling that answers a records request end to end: it establishes
-which documents were produced and which were withheld, indexes the archive so
-staff can search what they actually hold, and produces output that stands up as
-part of the legal record. A language model flags the questionable records, and
-code verifies every citation, matching quotes to real pages and checking each
-exported page against its source.
+- Northwest Local Cannabis (co-founder, 2021): licensed craft cannabis producer;
+  also runs its marketing, sales, distribution, compliance, payroll, and budgets.
+- The North West Clothing (2001): apparel brand. Built its first online store in
+  2001; selling on Shopify since 2006 on custom themes; relaunched in 2026 with
+  print-on-demand fulfillment.
+- Audeos (2004): Seattle DJ and music production business, and an online radio
+  station.
+- Rooted Community (2024): website for a WA nonprofit serving
+  system-impacted BIPOC communities.
 
-### U.S. LawShield · Senior Software Development Engineer · Sep 2022 – Aug 2025
+### Software Consultant · Aug 2026
+
+One-month contract for a community association management firm, working with
+its litigation counsel.
+
+- Built tooling that answers a records request: what was produced or withheld,
+  and a searchable archive.
+- Language-model review flags questionable records; code verifies every
+  citation against its source.
+
+### Senior Software Development Engineer · U.S. LawShield · Sep 2022 – Aug 2025
 [uslawshield.com](https://uslawshield.com)
 
-*PHP · Laravel · React · Next.js · Docker · Kubernetes · AWS EKS · Helm · GitLab*
-
 Legal-services membership platform, sold as a separately regulated product in
-all 50 states. Three years modernizing it: I moved a monolith onto services
-without breaking the legacy API existing clients depended on, containerized the
-stack alongside the DevOps lead, and built the internal dashboard that support
-agents, attorneys, and executives all work out of.
+all 50 states.
 
-### Crowd Cow · Software Engineer · May 2021 – Dec 2021
+- Built the internal React dashboard used by support agents, attorneys, and
+  executives.
+- Moved a monolith onto services without breaking the legacy API existing
+  clients depended on.
+- Containerized the stack on Kubernetes (AWS EKS) with the DevOps lead.
+
+### Software Engineer · Crowd Cow · May 2021 – Dec 2021
 [crowdcow.com](https://crowdcow.com)
 
-*Ruby on Rails · Vue.js · Redis · MySQL · Docker · Heroku · RSpec*
+Farm-to-table meat subscription delivering A5 Wagyu and craft meat from small independent farms.
 
-Farm-to-table meat subscription delivering A5 Wagyu and craft meat from small independent farms. I took over recurring billing and raised
-subscription payment acceptance from 70% to 90% by matching retry timing to the
-reason each charge had failed. Also on call for site reliability.
+- Owned recurring billing; lifted payment acceptance from 70% to 90% with reason-aware retries.
+- On-call rotation covering production incidents and support tickets escalated
+  to engineering.
 
-### Tomorrow Ideas (acq. Ethos Life) · Software Engineer → SDE II · Mar 2017 – May 2021
+### Software Engineer → SDE II · Tomorrow Ideas (acq. Ethos Life) · Mar 2017 – May 2021
 [tmro.com](https://tmro.com)
 
-*Python · Django · TypeScript · React · Redux · Node · PostgreSQL · Docker · AWS*
+Estate-planning app; acquired by Ethos Life.
 
-Estate-planning app that generated wills and other legal documents valid in all
-50 states, and earned its money selling life insurance alongside them. I joined
-as a contractor to lead the web build for the public launch and stayed four
-years, through a promotion to SDE II and the acquisition by Ethos Life. I worked
-across the document generation, the customer-facing product, and the internal
-dashboards the rest of the company ran on.
+- Joined as a contractor to lead the launch web build; stayed four years,
+  through the promotion and the acquisition.
+- Built the admin dashboards the executive, BI, marketing, product, and support
+  teams ran on.
+- Led the move from a monolith to services and built CI/CD for every backend
+  and web project.
+- Built API integrations for partner companies, working with their engineers and
+  product teams.
+- Mentored junior engineers through pair programming and code review.
+- Built the document generation that produced wills and legal documents valid
+  in all 50 states.
 
-### Instrument · Full Stack Engineer · Jun 2022 – Sep 2022
-[instrument.com](https://instrument.com)
+## Skills
 
-*Docker · Node · WordPress · MySQL · GitHub Actions · WPEngine*
+**Languages** Python · TypeScript · JavaScript · Elixir · Ruby · PHP · SQL
 
-Digital product agency. A three-month contract rebuilding the website for the
-nonprofit [BlackSpace](https://blackspace.org/) with the agency's design and
-engineering teams.
+**Frameworks** Django · React · Next.js · Vue.js · HTMX · Phoenix LiveView · Node · Rails · Laravel
 
-## Selected Projects
+**Data & cloud** Postgres · MySQL · Redis · AWS · Docker · Kubernetes · Cloudflare · Fly.io
 
-*Self-directed, outside the ventures.*
-
-- **crate-agent**: macOS companion app for Serato DJ, in Swift and Rust. It
-  keeps a DJ library intact when tracks are renamed or moved on disk.
-- **kraang**: self-hosted personal knowledge platform on FastAPI, Postgres, and
-  GraphQL, with an idempotent email-to-document ingestion pipeline.
-
-## Technical
-
-**Languages** TypeScript · JavaScript · Python · Elixir · Ruby · PHP · SQL
-
-**Frontend** React · Next.js · Astro · Phoenix LiveView · Alpine.js · Tailwind · SCSS
-
-**Backend & data** Django · Phoenix · Rails · Laravel · Express · PostgreSQL · MySQL · Redis
-
-**Infrastructure** AWS · Cloudflare · Fly.io · Docker · Kubernetes · GitHub Actions · OpenTofu
-
-**Content & commerce** Sanity · Contentful · Shopify (Admin GraphQL) · WordPress
-
-## Education
-
-**International Business & Trade, AAS** · Highline College, Des Moines WA · 2018
+**Education** International Business & Trade, AAS · Highline College, Des Moines WA · 2018
 
 </details>

@@ -196,15 +196,18 @@ a:hover { color: var(--accent); }
   display: block;
 }
 .resume h3 { font-size: 15px; font-weight: 700; margin: 18px 0 2px; }
-/* Entries read heading / links / stack / blurb, and the link line is optional.
-   The heading, the link line, and the stack line form one tight header block,
-   each 2px under the last, with the prose hugging it.
+/* Entries read heading / links / blurb, and the link line is optional. The
+   heading, the link line, and (in Selected Work) the stack line form one tight
+   header block, each 2px under the last, with the prose hugging it.
 
-   The stack line is matched by content (a paragraph whose only child is an em),
-   not by position: `h3 + p + p` landed on the stack line in entries that have a
-   link line and on the blurb in entries that don't, so the gap above the prose
-   came out 15px in one and 2px in the others. */
-.resume h3 + p { margin: 0 0 2px; color: var(--muted); font-size: 12px; }
+   Both metadata lines are matched by content, never by position, because the
+   optional link line shifts every following paragraph by one: `h3 + p` styled
+   the blurb as a caption in entries without a link line, and `h3 + p + p` put
+   15px above the prose in one entry and 2px in the rest. The link line gets its
+   class from render/entry-links.lua; the stack line is a paragraph whose only
+   child is an em. */
+.resume .entry-links p { margin: 0 0 2px; color: var(--muted); font-size: 12px; }
+.resume .entry-links + p { margin-top: 0; }
 .resume p:has(> em:only-child) { margin: 0 0 2px; }
 .resume p:has(> em:only-child) + p { margin-top: 0; }
 .resume p em { color: var(--muted); font-style: italic; font-size: 12.5px; }
@@ -232,12 +235,21 @@ a:hover { color: var(--accent); }
   /* Negative tracking on the name makes PDF text extractors (ATS parsers)
      drop the word spaces — "Benjamin S.Petty". Print at natural spacing. */
   .resume h1 { font-size: 22pt; margin-bottom: 3pt; letter-spacing: 0; }
-  .resume h2 { font-size: 9pt; margin: 11pt 0 5pt; }
-  .resume h3 { font-size: 11.5pt; margin: 8pt 0 2pt; }
-  .resume hr { margin: 10pt 0; }
-  .resume p { margin: 3pt 0; }
-  .resume ul { margin: 3pt 0 7pt; }
-  .resume li { font-size: 10.25pt; margin-bottom: 2pt; line-height: 1.38; }
+  /* Every resume, hub included, is a one-page artifact (/sentry's page 1 is
+     the hub resume), so the spacing is tight enough for a full page of
+     content to clear a single sheet. */
+  .resume h1 + p { margin: 0 0 2pt; }
+  .resume h2 { font-size: 9pt; margin: 6.5pt 0 3pt; }
+  .resume h3 { font-size: 11.5pt; margin: 4pt 0 2pt; }
+  .resume hr { margin: 3pt 0; }
+  .resume p { margin: 1.25pt 0; }
+  .resume ul { margin: 2pt 0 2pt; }
+  .resume li { font-size: 10.25pt; margin-bottom: 0.4pt; line-height: 1.27; }
+  /* A resume can force its detail section onto a fresh sheet with a pandoc
+     heading attribute: `## Heading {.page-break}`. The build measures
+     segments with PAGE_BREAK_SELECTOR in render/lib/print-segments.mjs; a
+     test keeps it equal to this rule. */
+  .resume .page-break { break-before: page; }
   a { color: inherit; border-bottom: none; }
   h2, h3 { break-after: avoid; }
   ul { break-inside: avoid-column; }

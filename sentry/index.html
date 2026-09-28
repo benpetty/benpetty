@@ -10,29 +10,6 @@
   <meta name="theme-color" content="#1f5135">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="stylesheet" href="/styles.css">
-  <style>
-    /* Targeted resumes are one-page artifacts: tighten print spacing a touch
-       so a full page of content clears a single sheet with margin. Scoped to
-       these pages only — the shared hub resume keeps its roomier spacing. */
-    @media print {
-      .resume li { margin-bottom: 0.4pt; line-height: 1.27; }
-      .resume ul { margin: 2pt 0 2pt; }
-      .resume p { margin: 1.25pt 0; }
-      .resume h3 { margin: 4pt 0 2pt; }
-      .resume h2 { margin: 6.5pt 0 3pt; }
-      /* Reclaim the vertical whitespace stacked around the summary: tighten the
-         contact line and collapse the two dividers bracketing it. The densest
-         variant (/fullstack) needs this to clear a single sheet; the others have
-         room to spare, so it costs them nothing. */
-      .resume h1 + p { margin: 0 0 2pt; }
-      .resume hr { margin: 3pt 0; }
-      /* A variant can force its detail section onto a fresh sheet with a
-         pandoc heading attribute: `## Heading {.page-break}`. The build
-         measures segments with PAGE_BREAK_SELECTOR in
-         render/lib/print-segments.mjs; a test keeps it equal to this rule. */
-      .resume .page-break { break-before: page; }
-    }
-  </style>
 </head>
 <body>
 
@@ -48,14 +25,14 @@
 · (206) 353-9874 · benjamin.s.petty@gmail.com ·
 linkedin.com/in/benjaminpetty · github.com/benpetty</p>
 <h2 id="engineering-experience">Engineering Experience</h2>
-<h3 id="independent-ventures-founder-engineer-2001present">Independent
-Ventures · Founder &amp; Engineer · 2001–Present</h3>
+<h3 id="founder-engineer-2001present">Founder &amp; Engineer ·
+2001–Present</h3>
+<div class="entry-links">
 <p><a href="https://nw-local.com">nw-local.com</a> · <a
 href="https://nwclothing.com">nwclothing.com</a> · <a
 href="https://audeos.fm">audeos.fm</a> · <a
 href="https://rootedcommunity.org">rootedcommunity.org</a></p>
-<p><em>Python · Django · TypeScript · React · Elixir · Phoenix ·
-Postgres · AWS · Cloudflare · Fly.io</em></p>
+</div>
 <p>Builds and runs the software for four businesses.</p>
 <ul>
 <li>Northwest Local Cannabis (co-founder, 2021): licensed craft cannabis
@@ -69,25 +46,23 @@ online radio station.</li>
 <li>Rooted Community (2024): website for a WA nonprofit serving
 system-impacted BIPOC communities.</li>
 </ul>
-<h3 id="independent-software-consultant-aug-2026">Independent Software
-Consultant · Aug 2026</h3>
-<p><em>Python · Anthropic API · Pydantic · Tesseract · pytest</em></p>
+<h3 id="software-consultant-aug-2026">Software Consultant · Aug
+2026</h3>
 <p>One-month contract for a community association management firm,
 working with its litigation counsel.</p>
 <ul>
-<li>Built tooling that answers a records request end to end: which
-documents were produced, which were withheld, and a searchable index of
-the archive.</li>
+<li>Built tooling that answers a records request: what was produced or
+withheld, and a searchable archive.</li>
 <li>Language-model review flags questionable records; code verifies
 every citation against its source.</li>
 </ul>
 <h3
-id="u.s.-lawshield-senior-software-development-engineer-sep-2022-aug-2025">U.S.
-LawShield · Senior Software Development Engineer · Sep 2022 – Aug
+id="senior-software-development-engineer-u.s.-lawshield-sep-2022-aug-2025">Senior
+Software Development Engineer · U.S. LawShield · Sep 2022 – Aug
 2025</h3>
+<div class="entry-links">
 <p><a href="https://uslawshield.com">uslawshield.com</a></p>
-<p><em>PHP · Laravel · React · Next.js · Docker · Kubernetes · AWS EKS ·
-Helm · GitLab</em></p>
+</div>
 <p>Legal-services membership platform, sold as a separately regulated
 product in all 50 states.</p>
 <ul>
@@ -98,10 +73,11 @@ existing clients depended on.</li>
 <li>Containerized the stack on Kubernetes (AWS EKS) with the DevOps
 lead.</li>
 </ul>
-<h3 id="crowd-cow-software-engineer-may-2021-dec-2021">Crowd Cow ·
-Software Engineer · May 2021 – Dec 2021</h3>
+<h3 id="software-engineer-crowd-cow-may-2021-dec-2021">Software Engineer
+· Crowd Cow · May 2021 – Dec 2021</h3>
+<div class="entry-links">
 <p><a href="https://crowdcow.com">crowdcow.com</a></p>
-<p><em>Ruby on Rails · Vue.js · Redis · MySQL · Heroku · RSpec</em></p>
+</div>
 <p>Farm-to-table meat subscription delivering A5 Wagyu and craft meat
 from small independent farms.</p>
 <ul>
@@ -111,17 +87,16 @@ with reason-aware retries.</li>
 escalated to engineering.</li>
 </ul>
 <h3
-id="tomorrow-ideas-acq.-ethos-life-software-engineer-sde-ii-mar-2017-may-2021">Tomorrow
-Ideas (acq. Ethos Life) · Software Engineer → SDE II · Mar 2017 – May
+id="software-engineer-sde-ii-tomorrow-ideas-acq.-ethos-life-mar-2017-may-2021">Software
+Engineer → SDE II · Tomorrow Ideas (acq. Ethos Life) · Mar 2017 – May
 2021</h3>
+<div class="entry-links">
 <p><a href="https://tmro.com">tmro.com</a></p>
-<p><em>Python · Django · TypeScript · React · Node · PostgreSQL ·
-AWS</em></p>
+</div>
 <p>Estate-planning app; acquired by Ethos Life.</p>
 <ul>
-<li>Joined as a contractor to lead the web build for the public launch;
-stayed four years, through a promotion to SDE II and the
-acquisition.</li>
+<li>Joined as a contractor to lead the launch web build; stayed four
+years, through the promotion and the acquisition.</li>
 <li>Built the admin dashboards the executive, BI, marketing, product,
 and support teams ran on.</li>
 <li>Led the move from a monolith to services and built CI/CD for every
@@ -133,6 +108,15 @@ review.</li>
 <li>Built the document generation that produced wills and legal
 documents valid in all 50 states.</li>
 </ul>
+<h2 id="skills">Skills</h2>
+<p><strong>Languages</strong> Python · TypeScript · JavaScript · Elixir
+· Ruby · PHP · SQL</p>
+<p><strong>Frameworks</strong> Django · React · Next.js · Vue.js · HTMX
+· Phoenix LiveView · Node · Rails · Laravel</p>
+<p><strong>Data &amp; cloud</strong> Postgres · MySQL · Redis · AWS ·
+Docker · Kubernetes · Cloudflare · Fly.io</p>
+<p><strong>Education</strong> International Business &amp; Trade, AAS ·
+Highline College, Des Moines WA · 2018</p>
 <h2 class="page-break" id="selected-work">Selected Work</h2>
 <h3 id="northwest-local-operations-platform">Northwest Local operations
 platform</h3>
@@ -212,9 +196,6 @@ MusicBrainz.</li>
 <li>An MCP server lets an AI agent source missing tracks, verifying each
 download by audio fingerprint.</li>
 </ul>
-<h2 id="education">Education</h2>
-<p><strong>International Business &amp; Trade, AAS</strong> · Highline
-College, Des Moines WA · 2018</p>
 </article>
 
 </main>

@@ -10,29 +10,6 @@
   <meta name="theme-color" content="#1f5135">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="stylesheet" href="/styles.css">
-  <style>
-    /* Targeted resumes are one-page artifacts: tighten print spacing a touch
-       so a full page of content clears a single sheet with margin. Scoped to
-       these pages only — the shared hub resume keeps its roomier spacing. */
-    @media print {
-      .resume li { margin-bottom: 0.4pt; line-height: 1.27; }
-      .resume ul { margin: 2pt 0 2pt; }
-      .resume p { margin: 1.25pt 0; }
-      .resume h3 { margin: 4pt 0 2pt; }
-      .resume h2 { margin: 6.5pt 0 3pt; }
-      /* Reclaim the vertical whitespace stacked around the summary: tighten the
-         contact line and collapse the two dividers bracketing it. The densest
-         variant (/fullstack) needs this to clear a single sheet; the others have
-         room to spare, so it costs them nothing. */
-      .resume h1 + p { margin: 0 0 2pt; }
-      .resume hr { margin: 3pt 0; }
-      /* A variant can force its detail section onto a fresh sheet with a
-         pandoc heading attribute: `## Heading {.page-break}`. The build
-         measures segments with PAGE_BREAK_SELECTOR in
-         render/lib/print-segments.mjs; a test keeps it equal to this rule. */
-      .resume .page-break { break-before: page; }
-    }
-  </style>
 </head>
 <body>
 
@@ -48,38 +25,31 @@
 353-9874 · benjamin.s.petty@gmail.com · linkedin.com/in/benjaminpetty ·
 github.com/benpetty</p>
 <h2 id="engineering-experience">Engineering Experience</h2>
-<h3 id="independent-engineering-2021present">Independent Engineering ·
+<h3 id="software-engineer-2021present">Software Engineer ·
 2021–Present</h3>
-<p><em>Elixir · Phoenix · Postgres · Oban · Cloudflare Workers ·
-Fly.io</em></p>
 <p>Independent work across several small production systems. The largest
 is a live-streaming radio platform in Elixir and Phoenix: many channels,
 every listener on one of them hearing the same thing at the same time. I
 designed the backend and the pipeline that prepares the audio for it. I
 run all of it in production and I am the one on call.</p>
 <h3
-id="u.s.-lawshield-senior-software-development-engineer-sep-2022-aug-2025">U.S.
-LawShield · Senior Software Development Engineer · Sep 2022 – Aug
+id="senior-software-development-engineer-u.s.-lawshield-sep-2022-aug-2025">Senior
+Software Development Engineer · U.S. LawShield · Sep 2022 – Aug
 2025</h3>
-<p><em>PHP · Laravel · Docker · Kubernetes · AWS EKS · Helm ·
-GitLab</em></p>
 <p>Legal-services membership platform, sold as a separately regulated
 product in all 50 states. Three years modernizing it: I moved a monolith
 onto services without breaking the legacy API existing clients depended
 on and containerized the stack alongside the DevOps lead.</p>
-<h3 id="crowd-cow-software-engineer-may-2021-dec-2021">Crowd Cow ·
-Software Engineer · May 2021 – Dec 2021</h3>
-<p><em>Ruby on Rails · Redis · MySQL · Heroku · RSpec</em></p>
+<h3 id="software-engineer-crowd-cow-may-2021-dec-2021">Software Engineer
+· Crowd Cow · May 2021 – Dec 2021</h3>
 <p>Direct-to-consumer meat subscription. I took over recurring billing
 and raised subscription payment acceptance from 70% to 90% by matching
 retry timing to the reason each charge had failed. Also on call for site
 reliability.</p>
 <h3
-id="tomorrow-ideas-acq.-ethos-life-software-engineer-sde-ii-mar-2017-may-2021">Tomorrow
-Ideas (acq. Ethos Life) · Software Engineer → SDE II · Mar 2017 – May
+id="software-engineer-sde-ii-tomorrow-ideas-acq.-ethos-life-mar-2017-may-2021">Software
+Engineer → SDE II · Tomorrow Ideas (acq. Ethos Life) · Mar 2017 – May
 2021</h3>
-<p><em>Python · Django · Node · Express · PostgreSQL · Redis · Docker ·
-AWS</em></p>
 <p>Estate-planning app that generated wills and other legal documents
 valid in all 50 states. I joined as a contractor for the public launch
 and stayed four years, through a promotion to SDE II and the acquisition
@@ -95,15 +65,16 @@ GraphQL, and Postgres, built around an email ingestion pipeline.</li>
 Swift and Rust. It keeps a DJ library intact when tracks are renamed or
 moved on disk.</li>
 </ul>
-<h2 id="technical">Technical</h2>
+<h2 id="skills">Skills</h2>
 <p><strong>Languages</strong> Elixir · PHP · Python · TypeScript · SQL ·
 Ruby · Bash</p>
-<p><strong>Backend &amp; data</strong> Phoenix · Laravel · Django ·
-Rails · Express · GraphQL · PostgreSQL · MySQL · Redis</p>
-<p><strong>Infrastructure</strong> AWS · Docker · Kubernetes · Fly.io ·
-GitHub Actions · OpenTofu</p>
-<p><strong>Practices</strong> Service-oriented architecture · TDD ·
-CI/CD · RBAC</p>
+<p><strong>Backend &amp; data</strong> Phoenix · Oban · Laravel · Django
+· Rails · Node · Express · GraphQL · PostgreSQL · MySQL · Redis</p>
+<p><strong>Infrastructure</strong> AWS (EKS) · Docker · Kubernetes ·
+Helm · Fly.io · Cloudflare Workers · Heroku · GitHub Actions · GitLab CI
+· OpenTofu</p>
+<p><strong>Practices</strong> Service-oriented architecture · TDD
+(RSpec) · CI/CD · RBAC</p>
 <p><strong>Education</strong> International Business &amp; Trade, AAS ·
 Highline College, Des Moines WA · 2018</p>
 </article>

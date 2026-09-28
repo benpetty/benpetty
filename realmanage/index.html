@@ -10,29 +10,6 @@
   <meta name="theme-color" content="#1f5135">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="stylesheet" href="/styles.css">
-  <style>
-    /* Targeted resumes are one-page artifacts: tighten print spacing a touch
-       so a full page of content clears a single sheet with margin. Scoped to
-       these pages only — the shared hub resume keeps its roomier spacing. */
-    @media print {
-      .resume li { margin-bottom: 0.4pt; line-height: 1.27; }
-      .resume ul { margin: 2pt 0 2pt; }
-      .resume p { margin: 1.25pt 0; }
-      .resume h3 { margin: 4pt 0 2pt; }
-      .resume h2 { margin: 6.5pt 0 3pt; }
-      /* Reclaim the vertical whitespace stacked around the summary: tighten the
-         contact line and collapse the two dividers bracketing it. The densest
-         variant (/fullstack) needs this to clear a single sheet; the others have
-         room to spare, so it costs them nothing. */
-      .resume h1 + p { margin: 0 0 2pt; }
-      .resume hr { margin: 3pt 0; }
-      /* A variant can force its detail section onto a fresh sheet with a
-         pandoc heading attribute: `## Heading {.page-break}`. The build
-         measures segments with PAGE_BREAK_SELECTOR in
-         render/lib/print-segments.mjs; a test keeps it equal to this rule. */
-      .resume .page-break { break-before: page; }
-    }
-  </style>
 </head>
 <body>
 
@@ -48,12 +25,12 @@
 · (206) 353-9874 · benjamin.s.petty@gmail.com ·
 linkedin.com/in/benjaminpetty · github.com/benpetty</p>
 <h2 id="engineering-experience">Engineering Experience</h2>
-<h3 id="independent-ventures-founder-engineer-2001present">Independent
-Ventures · Founder &amp; Engineer · 2001–Present</h3>
+<h3 id="founder-engineer-2001present">Founder &amp; Engineer ·
+2001–Present</h3>
+<div class="entry-links">
 <p><a href="https://nwclothing.com">nwclothing.com</a> · <a
 href="https://audeos.com">audeos.com</a></p>
-<p><em>Python · Django · TypeScript · Astro · Sanity · Elixir · Postgres
-· Fly.io</em></p>
+</div>
 <p>Four businesses I own or co-own. I build and run all of their
 software: the storefronts, the content sites, the internal tools the
 day-to-day work happens in, and the deploys and on-call behind them. One
@@ -61,28 +38,23 @@ is a CRM that a wholesale operation runs its orders and compliance
 reporting out of, where updates publish straight through to the public
 site.</p>
 <h3
-id="u.s.-lawshield-senior-software-development-engineer-sep-2022-aug-2025">U.S.
-LawShield · Senior Software Development Engineer · Sep 2022 – Aug
+id="senior-software-development-engineer-u.s.-lawshield-sep-2022-aug-2025">Senior
+Software Development Engineer · U.S. LawShield · Sep 2022 – Aug
 2025</h3>
-<p><em>PHP · Laravel · React · Next.js · Docker · Kubernetes · AWS EKS ·
-GitLab</em></p>
 <p>Legal-services membership platform, sold as a separately regulated
 product in all 50 states. Three years modernizing it: I moved a monolith
 onto services without breaking the legacy API existing clients depended
 on, and built the internal dashboard that support agents, attorneys, and
 executives all work out of.</p>
-<h3 id="crowd-cow-software-engineer-may-2021-dec-2021">Crowd Cow ·
-Software Engineer · May 2021 – Dec 2021</h3>
-<p><em>Ruby on Rails · Vue.js · Redis · MySQL · Heroku · RSpec</em></p>
+<h3 id="software-engineer-crowd-cow-may-2021-dec-2021">Software Engineer
+· Crowd Cow · May 2021 – Dec 2021</h3>
 <p>Direct-to-consumer meat subscription. I took over recurring billing
 and raised subscription payment acceptance from 70% to 90% by matching
 retry timing to the reason each charge had failed.</p>
 <h3
-id="tomorrow-ideas-acq.-ethos-life-software-engineer-sde-ii-mar-2017-may-2021">Tomorrow
-Ideas (acq. Ethos Life) · Software Engineer → SDE II · Mar 2017 – May
+id="software-engineer-sde-ii-tomorrow-ideas-acq.-ethos-life-mar-2017-may-2021">Software
+Engineer → SDE II · Tomorrow Ideas (acq. Ethos Life) · Mar 2017 – May
 2021</h3>
-<p><em>Python · Django · TypeScript · React · Node · PostgreSQL ·
-AWS</em></p>
 <p>Estate-planning app monetized through life insurance. The product was
 the legal documents themselves, which had to meet the requirements of
 all 50 states. I joined as a contractor to lead the web build for the
@@ -99,11 +71,14 @@ GraphQL, and Postgres, built around an email ingestion pipeline.</li>
 Swift and Rust. It keeps a DJ library intact when tracks are renamed or
 moved on disk.</li>
 </ul>
-<h2 id="technical">Technical</h2>
-<p><strong>Languages</strong> Python · TypeScript · JavaScript · Ruby ·
-PHP · SQL · Bash</p>
+<h2 id="skills">Skills</h2>
+<p><strong>Languages</strong> Python · TypeScript · JavaScript · Elixir
+· Ruby · PHP · SQL · Bash</p>
 <p><strong>Frameworks &amp; data</strong> Django · FastAPI · Rails ·
-Laravel · React · PostgreSQL · MySQL · Redis</p>
+Laravel · Node · React · Next.js · Astro · Sanity · PostgreSQL · MySQL ·
+Redis</p>
+<p><strong>Infrastructure</strong> AWS (EKS) · Docker · Kubernetes ·
+Fly.io · Heroku · GitLab CI</p>
 <p><strong>Documents &amp; text</strong> PDF parsing · OCR · text
 extraction · file hashing and integrity checks</p>
 <p><strong>Education</strong> International Business &amp; Trade, AAS ·

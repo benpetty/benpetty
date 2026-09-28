@@ -27,6 +27,8 @@ Senior software engineer and founder. Eight years on SaaS engineering teams at T
 ### Founder & Engineer · 2001–Present
 [nw-local.com](https://nw-local.com) · [nwclothing.com](https://nwclothing.com) · [audeos.fm](https://audeos.fm) · [rootedcommunity.org](https://rootedcommunity.org)
 
+- Consulting (2026): built records tooling and a searchable archive for an HOA
+  management firm; every language-model finding is checked against its source.
 - Northwest Local Cannabis (co-founder, 2021): licensed craft cannabis producer;
   runs its marketing, sales, distribution, compliance, payroll, and budgets.
   Built its operations platform and brand site.
@@ -37,13 +39,6 @@ Senior software engineer and founder. Eight years on SaaS engineering teams at T
   station.
 - Rooted Community (2024): website for a WA nonprofit serving
   system-impacted BIPOC communities.
-
-### Software Consultant · Aug 2026
-
-- Built records-request tooling and a searchable archive for an HOA management
-  firm.
-- Language-model review flags questionable records; code verifies every
-  citation against its source.
 
 ### Senior Software Development Engineer · U.S. LawShield · Sep 2022 – Aug 2025
 [uslawshield.com](https://uslawshield.com)

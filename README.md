@@ -22,6 +22,10 @@ Senior software engineer and founder. Eight years on SaaS engineering teams at T
 <details>
 <summary>Full resume</summary>
 
+## Technologies
+
+Python · TypeScript · JavaScript · Elixir · Ruby · SQL · Django · React · Phoenix LiveView · Node · Rails · Postgres · Redis · AWS · Docker · Kubernetes · Cloudflare
+
 ## Engineering Experience
 
 ### Founder & Engineer · 2001–Present
@@ -64,11 +68,11 @@ Senior software engineer and founder. Eight years on SaaS engineering teams at T
 - On-call rotation covering production incidents and support tickets escalated
   to engineering.
 
-### Software Engineer → SDE II · Tomorrow Ideas (acq. Ethos Life) · Mar 2017 – May 2021
+### Software Development Engineer II · Tomorrow Ideas (acq. Ethos Life) · Mar 2017 – May 2021
 [tmro.com](https://tmro.com)
 
-- Joined as a contractor to lead the web build for the public launch; stayed
-  four years, through a promotion to SDE II and the acquisition.
+- Joined as a contractor to lead the web build for the public launch; promoted
+  from Software Engineer to SDE II and stayed through the acquisition.
 - Built the admin dashboards the executive, BI, marketing, product, and support
   teams ran on.
 - Built API integrations for partner companies, working with their engineers and
@@ -76,10 +80,6 @@ Senior software engineer and founder. Eight years on SaaS engineering teams at T
 - Mentored junior engineers through pair programming and code review.
 - Built the document generation that produced wills and legal documents valid
   in all 50 states.
-
-## Technologies
-
-Python · TypeScript · JavaScript · Elixir · Ruby · PHP · SQL · Swift · Rust · Django · React · HTMX · Phoenix LiveView · Node · Rails · Laravel · Postgres · MySQL · Redis · AWS · Docker · Kubernetes · Cloudflare · Shopify · Language-model tooling · Agentic workflows · IaC · System design · Software architecture
 
 ## Education
 

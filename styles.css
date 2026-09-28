@@ -49,7 +49,6 @@
   --muted: #666;
   --rule: #e5e5e5;
   --bg: #fff;
-  --bg-soft: #fafaf8;
   /* Chosen so screen lines break where printed lines do. Print sets 10.25pt
      (13.67px) text in a 682px column, 49.9em per line; at the 15px screen body
      size that is 748.5px of text, plus .resume's 36px side padding (border-box).
@@ -78,7 +77,7 @@ body {
 a { color: var(--ink); text-decoration: none; border-bottom: 1px solid currentColor; }
 a:hover { color: var(--accent); }
 
-/* ─── HUB: nav + hero ─────────────────────────────── */
+/* ─── HUB: nav ────────────────────────────────────── */
 
 .nav-row {
   max-width: var(--max-width);
@@ -86,7 +85,7 @@ a:hover { color: var(--accent); }
   padding: 28px 36px 0;
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 0.16em;
@@ -94,78 +93,35 @@ a:hover { color: var(--accent); }
 }
 .nav-row a { border-bottom: none; }
 .nav-row a:hover { color: var(--accent); }
-
-.hero {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 32px 36px 40px;
-  border-bottom: 1px solid var(--rule);
-}
-.hero h1 {
-  font-weight: 800;
-  font-size: 44px;
-  letter-spacing: -0.025em;
-  line-height: 1;
-  margin: 0 0 8px;
-}
-.hero .tagline {
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 0.18em;
-  color: var(--accent);
-  font-weight: 700;
-  margin: 0 0 20px;
-}
-
-.cta-row {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin: 0 0 28px;
-  flex-wrap: wrap;
-}
-.cta {
+.nav-links {
   display: inline-flex;
   align-items: center;
   gap: 6px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+/* The hub's call to action, the pill at the end of the nav row. */
+.nav-row .cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: 10px;
   background: var(--accent);
   color: #fff;
-  border-bottom: none;
   padding: 8px 14px;
   border-radius: 999px;
   font-size: 13px;
   font-weight: 600;
+  text-transform: none;
   letter-spacing: 0.01em;
   transition: background 0.15s, transform 0.15s;
 }
-.cta:hover {
+.nav-row .cta:hover {
   background: #163826;
   color: #fff;
   transform: translateY(-1px);
 }
-.cta-hint {
-  font-size: 12px;
-  color: var(--muted);
-  font-variant-numeric: tabular-nums;
-}
-
-.ventures {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 14px;
-}
-.venture {
-  border: 1px solid var(--rule);
-  border-radius: 6px;
-  padding: 16px 18px;
-  background: var(--bg-soft);
-  transition: border-color 0.15s, transform 0.15s;
-}
-.venture:hover { border-color: var(--accent); transform: translateY(-1px); }
-.venture .v-name { font-family: var(--font-serif); font-weight: 600; font-size: 18px; color: var(--ink); margin: 0 0 2px; }
-.venture .v-role { font-size: 10px; text-transform: uppercase; letter-spacing: 0.12em; color: var(--accent); font-weight: 700; margin: 0 0 6px; }
-.venture .v-desc { font-size: 13px; line-height: 1.5; color: var(--muted); margin: 0 0 6px; }
-.venture .v-url { font-size: 11px; color: var(--muted); border-bottom: none; }
 
 /* ─── RESUME body ─────────────────────────────────── */
 
@@ -238,7 +194,7 @@ a:hover { color: var(--accent); }
 @media print {
   @page { size: letter; margin: 0.55in 0.7in; }
   body { font-size: 10.25pt; line-height: 1.4; widows: 3; orphans: 3; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-  .nav-row, .hero { display: none !important; }
+  .nav-row { display: none !important; }
   .resume { padding: 0; max-width: none; }
   /* Negative tracking on the name makes PDF text extractors (ATS parsers)
      drop the word spaces — "Benjamin S.Petty". Print at natural spacing. */

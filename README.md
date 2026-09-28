@@ -51,7 +51,7 @@ Senior software engineer and founder. Eight years on SaaS engineering teams at T
 - Containerized the stack on Kubernetes (AWS EKS) with the DevOps lead.
 
 ### Full Stack Engineer · Instrument · Jun 2022 – Sep 2022
-[instrument.com](https://instrument.com)
+[instrument.com](https://instrument.com) [+ blackspace.org](https://blackspace.org/)
 
 - Rebuilt the website for the nonprofit [BlackSpace](https://blackspace.org/)
   with the agency's design and engineering teams.

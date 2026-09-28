@@ -196,6 +196,15 @@ a:hover { color: var(--accent); }
   display: block;
 }
 .resume h3 { font-size: 15px; font-weight: 700; margin: 18px 0 2px; }
+/* The date closing a job heading, tagged by render/entry-dates.lua. No letter
+   spacing: tracked caps split into single letters in PDF text extraction. */
+.resume h3 .entry-date {
+  font-size: 0.78em;
+  font-weight: 400;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0;
+}
 /* Entries read heading / links / blurb, and the link line is optional. The
    heading, the link line, and (in Selected Work) the stack line form one tight
    header block, each 2px under the last, with the prose hugging it.

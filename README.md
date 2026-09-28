@@ -24,7 +24,7 @@ Senior software engineer and founder. Eight years on SaaS engineering teams at T
 
 ## Technologies
 
-Python · TypeScript · JavaScript · Elixir · Ruby · PHP · SQL · Swift · Rust · Django · React · HTMX · Phoenix LiveView · Node · Rails · Laravel · Postgres · MySQL · Redis · AWS · Docker · Kubernetes · Cloudflare · Shopify · Language-model tooling · Agentic workflows · IaC · System design · Software architecture
+Software architecture · System design · IaC · Agentic workflows · Language-model tooling · Python · Node · TypeScript · JavaScript · Elixir · Ruby · PHP · SQL · Swift · Rust · React · Django · HTMX · Phoenix LiveView · Laravel · Rails · Postgres · MySQL · Redis · Docker · Kubernetes · AWS · Cloudflare · Shopify
 
 ## Engineering Experience
 

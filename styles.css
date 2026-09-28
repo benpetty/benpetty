@@ -243,9 +243,9 @@ a:hover { color: var(--accent); }
   /* Negative tracking on the name makes PDF text extractors (ATS parsers)
      drop the word spaces — "Benjamin S.Petty". Print at natural spacing. */
   .resume h1 { font-size: 22pt; margin-bottom: 3pt; letter-spacing: 0; }
-  /* Every resume, hub included, is a one-page artifact (/sentry's page 1 is
-     the hub resume), so the spacing is tight enough for a full page of
-     content to clear a single sheet. */
+  /* The hub resume is a one-page artifact (and /extended's page 1), so the
+     spacing is tight enough for a full page of content to clear a single
+     sheet. */
   .resume h1 + p { margin: 0 0 2pt; }
   /* Wide tracking makes PDF text extractors that infer word breaks from glyph
      gaps (Apple PDFKit, which Preview copies with) read "E N G I N E E R I N G",
